@@ -1,36 +1,5 @@
 <!DOCTYPE html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- =========================================================
 * Materio - Bootstrap Material Design Admin Template | v1.0.0
 ==============================================================
@@ -53,7 +22,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Login Cover - Pages | Materio - Bootstrap Material Design Admin Template</title>
+    <title>Login | SIMARDI</title>
 
     
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 5" />
@@ -138,7 +107,7 @@
   </svg>
 </span>
 </span>
-    <span class="app-brand-text demo text-heading fw-semibold">Materio</span>
+    <span class="app-brand-text demo text-heading fw-semibold">SIMARDI</span>
   </a>
   <!-- /Logo -->
   <div class="authentication-inner row m-0">
@@ -155,13 +124,14 @@
     <!-- Login -->
     <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg position-relative py-sm-5 px-12 py-4">
       <div class="w-px-400 mx-auto pt-5 pt-lg-0">
-        <h4 class="mb-1">Welcome to Materio! 👋🏻</h4>
-        <p class="mb-5">Please sign-in to your account and start the adventure</p>
+        <h4 class="mb-1">Welcome to SIMARDI 👋🏻</h4>
+        <br>
+        <!-- <p class="mb-5">Please sign-in to  your account and start the adventure</p> -->
 
         <form id="formAuthentication" class="mb-5" action="https://demos.themeselection.com/materio-bootstrap-html-admin-template/html/vertical-menu-template/index.html" method="GET">
           <div class="form-floating form-floating-outline mb-5">
-            <input type="text" class="form-control" id="email" name="email-username" placeholder="Enter your email or username" autofocus>
-            <label for="email">Email or Username</label>
+            <input type="text" class="form-control" id="email" name="email-username" placeholder="Enter your username" autofocus>
+            <label for="email">Username</label>
           </div>
           <div class="mb-5">
             <div class="form-password-toggle">
@@ -191,13 +161,13 @@
         </form>
 
         <p class="text-center">
-          <span>New on our platform?</span>
+          <span>Don't have an account yet?</span>
           <a href="register">
             <span>Create an account</span>
           </a>
         </p>
 
-        <div class="divider my-5">
+        <!-- <div class="divider my-5">
           <div class="divider-text">or</div>
         </div>
 
@@ -217,7 +187,7 @@
           <a href="javascript:;" class="btn btn-icon btn-lg rounded-pill btn-text-google-plus">
             <i class="tf-icons ri-google-fill ri-24px"></i>
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- /Login -->
