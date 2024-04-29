@@ -269,8 +269,6 @@
 
             <h2>The small framework with powerful features</h2>
 
-            <h2>ini uji coba dari bung iqbal</h2>
-
         </div>
 
     </header>
