@@ -145,7 +145,7 @@
       <ul class="menu-sub">
         <li class="menu-item">
           <a href="dashboards-crm.html" class="menu-link">
-            <div data-i18n="CRM">CRM</div>
+            <div data-i18n="CRM">CRM TES AJA DULU</div>
           </a>
         </li>
         <li class="menu-item">
