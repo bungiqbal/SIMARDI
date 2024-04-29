@@ -103,7 +103,7 @@
         <i class="tf-icons ri-menu-fill ri-24px align-middle"></i>
       </button>
       <!-- Mobile menu toggle: End-->
-      <a href="" class="app-brand-link">
+      <a href="<?= base_url('/'); ?>" class="app-brand-link">
         <span class="app-brand-logo demo">
 <span style="color:#9055FD;">
   <svg width="30" height="24" viewBox="0 0 250 196" fill="none" xmlns="http://www.w3.org/2000/svg">

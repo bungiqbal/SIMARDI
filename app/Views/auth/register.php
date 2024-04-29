@@ -90,7 +90,7 @@
 
 <div class="authentication-wrapper authentication-cover">
   <!-- Logo -->
-  <a href="../" class="auth-cover-brand d-flex align-items-center gap-3">
+  <a href="<?= base_url('/'); ?>" class="auth-cover-brand d-flex align-items-center gap-3">
     <span class="app-brand-logo demo">
 <span style="color:var(--bs-primary);">
   <svg width="30" height="24" viewBox="0 0 250 196" fill="none" xmlns="http://www.w3.org/2000/svg">
