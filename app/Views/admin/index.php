@@ -137,11 +137,12 @@
         <div data-i18n="Dashboard">Dashboard</div>
       </a>
     </li>
+    <!-- Incoming Mail -->
     <li class="menu-item">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ri-home-smile-line"></i>
-        <div data-i18n="Dashboards">Dashboards</div>
-        <div class="badge bg-danger rounded-pill ms-auto">5</div>
+        <i class="menu-icon tf-icons ri-mail-open-line"></i>
+        <div data-i18n="Incoming Mail">Incoming Mail</div>
+        <div class="badge bg-danger rounded-pill ms-auto">4</div>
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
@@ -154,19 +155,24 @@
             <div data-i18n="Analytics">Analytics</div>
           </a>
         </li>
+      </ul>
+    </li>
+    <!-- Outgoing Mail -->
+    <li class="menu-item">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons ri-mail-close-line"></i>
+        <div data-i18n="Outgoing Mail">Outgoing Mail</div>
+        <div class="badge bg-danger rounded-pill ms-auto">7</div>
+      </a>
+      <ul class="menu-sub">
         <li class="menu-item">
-          <a href="app-ecommerce-dashboard.html" class="menu-link">
-            <div data-i18n="eCommerce">eCommerce</div>
+          <a href="dashboards-crm.html" class="menu-link">
+            <div data-i18n="CRM">CRM</div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="app-logistics-dashboard.html" class="menu-link">
-            <div data-i18n="Logistics">Logistics</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="app-academy-dashboard.html" class="menu-link">
-            <div data-i18n="Academy">Academy</div>
+          <a href="index-2.html" class="menu-link">
+            <div data-i18n="Analytics">Analytics</div>
           </a>
         </li>
       </ul>
