@@ -36,9 +36,9 @@
 </div>
 <!-- / Layout wrapper -->
 
-<div class="buy-now">
+<!-- <div class="buy-now">
     <a href="https://www.instagram.com/bung.iqbal/" target="_blank" class="btn btn-outline-danger btn-buy-now">BUNG.IQBAL</a>
-</div>
+</div> -->
 
 <!-- Core JS -->
 <!-- build:js assets/vendor/js/core.js -->
