@@ -10,3 +10,5 @@ $routes->get('/auth/login', 'Home::login');
 $routes->get('/auth/register', 'Home::register');
 $routes->get('/admin', 'Admin::index');
 $routes->get('/admin/user_manager', 'Admin::user_manager');
+$routes->get('/admin/user_account', 'Admin::user_account');
+$routes->get('/admin/user_setting', 'Admin::user_setting');

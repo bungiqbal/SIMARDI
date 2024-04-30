@@ -1,1594 +1,804 @@
-<!DOCTYPE html>
+<?= $this->extend('admin/layout/template'); ?>
 
-<!-- =========================================================
-* Materio - Bootstrap Material Design Admin Template | v1.0.0
-==============================================================
+<?= $this->section('content'); ?>
 
-* Product Page: https://themeselection.com/item/materio-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
+<!-- Content wrapper -->
+<div class="content-wrapper">
 
-=========================================================
- -->
-<!-- beautify ignore:start -->
+  <!-- Content -->
+  <div class="container-xxl flex-grow-1 container-p-y">
 
-
-<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-compact " dir="ltr" data-theme="theme-default" data-assets-path="../../assets/" data-template="vertical-menu-template" data-style="light">
-
-  
-<!-- Mirrored from demos.themeselection.com/materio-bootstrap-html-admin-template/html/vertical-menu-template/dashboards-crm.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Apr 2024 02:34:03 GMT -->
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
-    <title>Admin | SIMARDI</title>
-
-    
-    <meta name="description" content="Start your development with a Dashboard for Bootstrap 5" />
-    <meta name="keywords" content="dashboard, material, material design, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5">
-    <!-- Canonical SEO -->
-    <link rel="canonical" href="https://themeselection.com/item/materio-bootstrap-html-admin-template/">
-    
-    
-    <!-- ? PROD Only: Google Tag Manager (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      '../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-5DDHKGP');</script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/favicon/favicon.ico" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;ampdisplay=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="../../assets/vendor/fonts/remixicon/remixicon.css" />
-    <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icons.css" />
-    
-    <!-- Menu waves for no-customizer fix -->
-    <link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
-
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="../../assets/css/demo.css" />
-    
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" /> 
-    <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
-
-    <!-- Page CSS -->
-    <link rel="stylesheet" href="../../assets/vendor/css/pages/dashboards-crm.css" />
-
-    <!-- Helpers -->
-    <script src="../../assets/vendor/js/helpers.js"></script>
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="../../assets/vendor/js/template-customizer.js"></script>
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../../assets/js/config.js"></script>
-    
-</head>
-
-<body>
-
-  
-  <!-- ?PROD Only: Google Tag Manager (noscript) (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DDHKGP" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  
-  <!-- Layout wrapper -->
-<div class="layout-wrapper layout-content-navbar  ">
-  <div class="layout-container">
-
-    
-    
-
-
-
-
-<!-- Menu -->
-
-<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-
-  
-  <div class="app-brand demo ">
-    <a href="admin" class="app-brand-link">
-      <span class="app-brand-logo demo me-1">
-<span style="color:var(--bs-primary);">
-  <svg width="30" height="24" viewBox="0 0 250 196" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3002 1.25469L56.655 28.6432C59.0349 30.1128 60.4839 32.711 60.4839 35.5089V160.63C60.4839 163.468 58.9941 166.097 56.5603 167.553L12.2055 194.107C8.3836 196.395 3.43136 195.15 1.14435 191.327C0.395485 190.075 0 188.643 0 187.184V8.12039C0 3.66447 3.61061 0.0522461 8.06452 0.0522461C9.56056 0.0522461 11.0271 0.468577 12.3002 1.25469Z" fill="currentColor" />
-    <path opacity="0.077704" fill-rule="evenodd" clip-rule="evenodd" d="M0 65.2656L60.4839 99.9629V133.979L0 65.2656Z" fill="black" />
-    <path opacity="0.077704" fill-rule="evenodd" clip-rule="evenodd" d="M0 65.2656L60.4839 99.0795V119.859L0 65.2656Z" fill="black" />
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M237.71 1.22393L193.355 28.5207C190.97 29.9889 189.516 32.5905 189.516 35.3927V160.631C189.516 163.469 191.006 166.098 193.44 167.555L237.794 194.108C241.616 196.396 246.569 195.151 248.856 191.328C249.605 190.076 250 188.644 250 187.185V8.09597C250 3.64006 246.389 0.027832 241.935 0.027832C240.444 0.027832 238.981 0.441882 237.71 1.22393Z" fill="currentColor" />
-    <path opacity="0.077704" fill-rule="evenodd" clip-rule="evenodd" d="M250 65.2656L189.516 99.8897V135.006L250 65.2656Z" fill="black" />
-    <path opacity="0.077704" fill-rule="evenodd" clip-rule="evenodd" d="M250 65.2656L189.516 99.0497V120.886L250 65.2656Z" fill="black" />
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2787 1.18923L125 70.3075V136.87L0 65.2465V8.06814C0 3.61223 3.61061 0 8.06452 0C9.552 0 11.0105 0.411583 12.2787 1.18923Z" fill="currentColor" />
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2787 1.18923L125 70.3075V136.87L0 65.2465V8.06814C0 3.61223 3.61061 0 8.06452 0C9.552 0 11.0105 0.411583 12.2787 1.18923Z" fill="white" fill-opacity="0.15" />
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M237.721 1.18923L125 70.3075V136.87L250 65.2465V8.06814C250 3.61223 246.389 0 241.935 0C240.448 0 238.99 0.411583 237.721 1.18923Z" fill="currentColor" />
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M237.721 1.18923L125 70.3075V136.87L250 65.2465V8.06814C250 3.61223 246.389 0 241.935 0C240.448 0 238.99 0.411583 237.721 1.18923Z" fill="white" fill-opacity="0.3" />
-  </svg>
-</span>
-</span>
-      <span class="app-brand-text demo menu-text fw-semibold ms-2">SIMARDI</span>
-    </a>
-
-    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
-      <i class="menu-toggle-icon d-xl-block align-middle"></i>
-    </a>
-  </div>
-
-  <div class="menu-inner-shadow"></div>
-
-  
-  
-  <ul class="menu-inner py-1">
-    <!-- Dashboards -->
-    <li class="menu-item active">
-      <a href="admin" class="menu-link">
-        <i class="menu-icon tf-icons ri-home-8-line"></i>
-        <div data-i18n="Dashboard">Dashboard</div>
-      </a>
-    </li>
-    <!-- Incoming Mail -->
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ri-mail-open-line"></i>
-        <div data-i18n="Incoming Mail">Incoming Mail</div>
-        <div class="badge bg-danger rounded-pill ms-auto">4</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="dashboards-crm.html" class="menu-link">
-            <div data-i18n="CRM">CRM</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index-2.html" class="menu-link">
-            <div data-i18n="Analytics">Analytics</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <!-- Outgoing Mail -->
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ri-mail-line"></i>
-        <div data-i18n="Outgoing Mail">Outgoing Mail</div>
-        <div class="badge bg-danger rounded-pill ms-auto">7</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="dashboards-crm.html" class="menu-link">
-            <div data-i18n="CRM">CRM</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index-2.html" class="menu-link">
-            <div data-i18n="Analytics">Analytics</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <!-- Account -->
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ri-user-line"></i>
-        <div data-i18n="My Profiles">My Profiles</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="pages-faq.html" class="menu-link">
-            <div data-i18n="Profile">Profile</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="pages-faq.html" class="menu-link">
-            <div data-i18n="Account">Account</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="pages-faq.html" class="menu-link">
-            <div data-i18n="Setting">Setting</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <!-- Users -->
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ri-user-settings-line"></i>
-        <div data-i18n="Users">Users</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="app-user-list.html" class="menu-link">
-            <div data-i18n="User Manager">User Manager</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="app-user-list.html" class="menu-link">
-            <div data-i18n="User Account">User Account</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="app-user-list.html" class="menu-link">
-            <div data-i18n="User Setting">User Setting</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-</aside>
-<!-- / Menu -->
-
-    
-
-    <!-- Layout container -->
-    <div class="layout-page">
-      
-      
-
-
-
-<!-- Navbar -->
-
-<nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
-  
-
-  
-
-      
-      
-
-      
-      
-      <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0   d-xl-none ">
-        <a class="nav-item nav-link px-0 me-xl-6" href="javascript:void(0)">
-          <i class="ri-menu-fill ri-24px"></i>
-        </a>
-      </div>
-      
-
-      <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-
-        
-        <!-- Search -->
-        <div class="navbar-nav align-items-center">
-          <div class="nav-item navbar-search-wrapper mb-0">
-            <a class="nav-item nav-link search-toggler fw-normal px-0" href="javascript:void(0);">
-              <i class="ri-search-line ri-22px scaleX-n1-rtl me-1_5"></i>
-              <span class="d-none d-md-inline-block text-muted ms-1_5">Search (Ctrl+/)</span>
-            </a>
-          </div>
-        </div>
-        <!-- /Search -->
-        
-        
-
-        
-
-        <ul class="navbar-nav flex-row align-items-center ms-auto">
-
-          
-          
-          <!-- Language -->
-          <li class="nav-item dropdown-language dropdown">
-            <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-              <i class='ri-translate-2 ri-22px'></i>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end py-2">
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-language="en" data-text-direction="ltr">
-                  <span class="align-middle">English</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-language="fr" data-text-direction="ltr">
-                  <span class="align-middle">French</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-language="ar" data-text-direction="rtl">
-                  <span class="align-middle">Arabic</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-language="de" data-text-direction="ltr">
-                  <span class="align-middle">German</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--/ Language -->
-          
-          <!-- Style Switcher -->
-          <li class="nav-item dropdown-style-switcher dropdown">
-            <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-              <i class='ri-22px'></i>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end dropdown-styles">
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-theme="light">
-                  <span class="align-middle"><i class='ri-sun-line ri-22px me-2'></i>Light</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
-                  <span class="align-middle"><i class="ri-moon-clear-line ri-22px me-2"></i>Dark</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
-                  <span class="align-middle"><i class="ri-computer-line ri-22px me-2"></i>System</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!-- / Style Switcher-->
-          
-          <!-- Quick links  -->
-          <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown">
-            <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-              <i class='ri-star-smile-line ri-22px'></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-end py-0">
-              <div class="dropdown-menu-header border-bottom py-50">
-                <div class="dropdown-header d-flex align-items-center py-2">
-                  <h6 class="mb-0 me-auto">Shortcuts</h6>
-                  <a href="javascript:void(0)" class="btn btn-text-secondary rounded-pill btn-icon dropdown-shortcuts-add" data-bs-toggle="tooltip" data-bs-placement="top" title="Add shortcuts"><i class="ri-layout-grid-line ri-24px text-heading"></i></a>
-                </div>
-              </div>
-              <div class="dropdown-shortcuts-list scrollable-container">
-                <div class="row row-bordered overflow-visible g-0">
-                  <div class="dropdown-shortcuts-item col">
-                    <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                      <i class="ri-calendar-line ri-26px text-heading"></i>
-                    </span>
-                    <a href="app-calendar.html" class="stretched-link">Calendar</a>
-                    <small>Appointments</small>
-                  </div>
-                  <div class="dropdown-shortcuts-item col">
-                    <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                      <i class="ri-file-text-line ri-26px text-heading"></i>
-                    </span>
-                    <a href="app-invoice-list.html" class="stretched-link">Invoice App</a>
-                    <small>Manage Accounts</small>
-                  </div>
-                </div>
-                <div class="row row-bordered overflow-visible g-0">
-                  <div class="dropdown-shortcuts-item col">
-                    <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                      <i class="ri-user-line ri-26px text-heading"></i>
-                    </span>
-                    <a href="app-user-list.html" class="stretched-link">User App</a>
-                    <small>Manage Users</small>
-                  </div>
-                  <div class="dropdown-shortcuts-item col">
-                    <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                      <i class="ri-computer-line ri-26px text-heading"></i>
-                    </span>
-                    <a href="app-access-roles.html" class="stretched-link">Role Management</a>
-                    <small>Permission</small>
-                  </div>
-                </div>
-                <div class="row row-bordered overflow-visible g-0">
-                  <div class="dropdown-shortcuts-item col">
-                    <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                      <i class="ri-pie-chart-2-line ri-26px text-heading"></i>
-                    </span>
-                    <a href="index-2.html" class="stretched-link">Dashboard</a>
-                    <small>Analytics</small>
-                  </div>
-                  <div class="dropdown-shortcuts-item col">
-                    <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                      <i class="ri-settings-4-line ri-26px text-heading"></i>
-                    </span>
-                    <a href="pages-account-settings-account.html" class="stretched-link">Setting</a>
-                    <small>Account Settings</small>
-                  </div>
-                </div>
-                <div class="row row-bordered overflow-visible g-0">
-                  <div class="dropdown-shortcuts-item col">
-                    <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                      <i class="ri-question-line ri-26px text-heading"></i>
-                    </span>
-                    <a href="pages-faq.html" class="stretched-link">FAQs</a>
-                    <small class="text-muted mb-0">FAQs & Articles</small>
-                  </div>
-                  <div class="dropdown-shortcuts-item col">
-                    <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                      <i class="ri-tv-2-line ri-26px text-heading"></i>
-                    </span>
-                    <a href="modal-examples.html" class="stretched-link">Modals</a>
-                    <small>Useful Popups</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <!-- Quick links -->
-
-          <!-- Notification -->
-          <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-4 me-xl-1">
-            <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-              <i class="ri-notification-2-line ri-22px"></i>
-              <span class="position-absolute top-0 start-50 translate-middle-y badge badge-dot bg-danger mt-2 border"></span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end py-0">
-              <li class="dropdown-menu-header border-bottom">
-                <div class="dropdown-header d-flex align-items-center py-3">
-                  <h6 class="mb-0 me-auto">Notification</h6>
-                  <div class="d-flex align-items-center">
-                    <span class="badge rounded-pill bg-label-primary me-2">8 New</span>
-                    <a href="javascript:void(0)" class="btn btn-text-secondary rounded-pill btn-icon dropdown-notifications-all" data-bs-toggle="tooltip" data-bs-placement="top" title="Mark all as read"><i class="ri-mail-open-line ri-20px text-body"></i></a>
-                  </div>
-                </div>
-              </li>
-              <li class="dropdown-notifications-list scrollable-container">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                    <div class="d-flex">
-                      <div class="flex-shrink-0 me-3">
-                        <div class="avatar">
-                          <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
-                        </div>
-                      </div>
-                      <div class="flex-grow-1">
-                        <h6 class="small mb-1">Congratulation Lettie 🎉</h6>
-                        <small class="mb-1 d-block text-body">Won the monthly best seller gold badge</small>
-                        <small class="text-muted">1h ago</small>
-                      </div>
-                      <div class="flex-shrink-0 dropdown-notifications-actions">
-                        <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                        <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line"></span></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                    <div class="d-flex">
-                      <div class="flex-shrink-0 me-3">
-                        <div class="avatar">
-                          <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
-                        </div>
-                      </div>
-                      <div class="flex-grow-1">
-                        <h6 class="mb-1 small">Charles Franklin</h6>
-                        <small class="mb-1 d-block text-body">Accepted your connection</small>
-                        <small class="text-muted">12hr ago</small>
-                      </div>
-                      <div class="flex-shrink-0 dropdown-notifications-actions">
-                        <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                        <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line"></span></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                    <div class="d-flex">
-                      <div class="flex-shrink-0 me-3">
-                        <div class="avatar">
-                          <img src="../../assets/img/avatars/2.png" alt class="w-px-40 h-auto rounded-circle">
-                        </div>
-                      </div>
-                      <div class="flex-grow-1">
-                        <h6 class="mb-1 small">New Message ✉️</h6>
-                        <small class="mb-1 d-block text-body">You have new message from Natalie</small>
-                        <small class="text-muted">1h ago</small>
-                      </div>
-                      <div class="flex-shrink-0 dropdown-notifications-actions">
-                        <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                        <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line"></span></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                    <div class="d-flex">
-                      <div class="flex-shrink-0 me-3">
-                        <div class="avatar">
-                          <span class="avatar-initial rounded-circle bg-label-success"><i class="ri-shopping-cart-2-line"></i></span>
-                        </div>
-                      </div>
-                      <div class="flex-grow-1">
-                        <h6 class="mb-1 small">Whoo! You have new order 🛒 </h6>
-                        <small class="mb-1 d-block text-body">ACME Inc. made new order $1,154</small>
-                        <small class="text-muted">1 day ago</small>
-                      </div>
-                      <div class="flex-shrink-0 dropdown-notifications-actions">
-                        <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                        <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line"></span></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                    <div class="d-flex">
-                      <div class="flex-shrink-0 me-3">
-                        <div class="avatar">
-                          <img src="../../assets/img/avatars/9.png" alt class="w-px-40 h-auto rounded-circle">
-                        </div>
-                      </div>
-                      <div class="flex-grow-1">
-                        <h6 class="mb-1 small">Application has been approved 🚀 </h6>
-                        <small class="mb-1 d-block text-body">Your ABC project application has been approved.</small>
-                        <small class="text-muted">2 days ago</small>
-                      </div>
-                      <div class="flex-shrink-0 dropdown-notifications-actions">
-                        <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                        <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line"></span></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                    <div class="d-flex">
-                      <div class="flex-shrink-0 me-3">
-                        <div class="avatar">
-                          <span class="avatar-initial rounded-circle bg-label-success"><i class="ri-pie-chart-2-line"></i></span>
-                        </div>
-                      </div>
-                      <div class="flex-grow-1">
-                        <h6 class="mb-1 small">Monthly report is generated</h6>
-                        <small class="mb-1 d-block text-body">July monthly financial report is generated </small>
-                        <small class="text-muted">3 days ago</small>
-                      </div>
-                      <div class="flex-shrink-0 dropdown-notifications-actions">
-                        <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                        <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line"></span></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                    <div class="d-flex">
-                      <div class="flex-shrink-0 me-3">
-                        <div class="avatar">
-                          <img src="../../assets/img/avatars/5.png" alt class="w-px-40 h-auto rounded-circle">
-                        </div>
-                      </div>
-                      <div class="flex-grow-1">
-                        <h6 class="mb-1 small">Send connection request</h6>
-                        <small class="mb-1 d-block text-body">Peter sent you connection request</small>
-                        <small class="text-muted">4 days ago</small>
-                      </div>
-                      <div class="flex-shrink-0 dropdown-notifications-actions">
-                        <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                        <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line"></span></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                    <div class="d-flex">
-                      <div class="flex-shrink-0 me-3">
-                        <div class="avatar">
-                          <img src="../../assets/img/avatars/6.png" alt class="w-px-40 h-auto rounded-circle">
-                        </div>
-                      </div>
-                      <div class="flex-grow-1">
-                        <h6 class="mb-1 small">New message from Jane</h6>
-                        <small class="mb-1 d-block text-body">Your have new message from Jane</small>
-                        <small class="text-muted">5 days ago</small>
-                      </div>
-                      <div class="flex-shrink-0 dropdown-notifications-actions">
-                        <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                        <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line"></span></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                    <div class="d-flex">
-                      <div class="flex-shrink-0 me-3">
-                        <div class="avatar">
-                          <span class="avatar-initial rounded-circle bg-label-warning"><i class="ri-error-warning-line"></i></span>
-                        </div>
-                      </div>
-                      <div class="flex-grow-1">
-                        <h6 class="mb-1 small">CPU is running high</h6>
-                        <small class="mb-1 d-block text-body">CPU Utilization Percent is currently at 88.63%,</small>
-                        <small class="text-muted">5 days ago</small>
-                      </div>
-                      <div class="flex-shrink-0 dropdown-notifications-actions">
-                        <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                        <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line"></span></a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="border-top">
-                <div class="d-grid p-4">
-                  <a class="btn btn-primary btn-sm d-flex" href="javascript:void(0);">
-                    <small class="align-middle">View all notifications</small>
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <!--/ Notification -->
-
-          <!-- User -->
-          <li class="nav-item navbar-dropdown dropdown-user dropdown">
-            <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
-              <div class="avatar avatar-online">
-                <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
-              </div>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end mt-3 py-2">
-              <li>
-                <a class="dropdown-item pb-3" href="pages-account-settings-account.html">
-                  <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0 me-3">
-                      <div class="avatar avatar-online">
-                        <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
-                      </div>
-                    </div>
-                    <div class="flex-grow-1">
-                      <h6 class="mb-0 small">John Doe</h6>
-                      <small class="text-muted">Admin</small>
-
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <div class="dropdown-divider my-0"></div>
-              </li>
-              <li>
-                <a class="dropdown-item" href="pages-profile-user.html">
-                  <i class="ri-user-3-line ri-22px me-2"></i>
-                  <span class="align-middle">My Profile</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="pages-account-settings-account.html">
-                  <i class="ri-settings-4-line ri-22px me-2"></i>
-                  <span class="align-middle">Settings</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="pages-account-settings-billing.html">
-                  <span class="d-flex align-items-center align-middle">
-                    <i class="flex-shrink-0 ri-file-text-line ri-22px me-2"></i>
-                    <span class="flex-grow-1 align-middle">Billing</span>
-                    <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger h-px-20 d-flex align-items-center justify-content-center">4</span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <div class="dropdown-divider"></div>
-              </li>
-              <li>
-                <a class="dropdown-item" href="pages-pricing.html">
-                  <i class="ri-money-dollar-circle-line ri-22px me-2"></i>
-                  <span class="align-middle">Pricing</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="pages-faq.html">
-                  <i class="ri-question-line ri-22px me-2"></i>
-                  <span class="align-middle">FAQ</span>
-                </a>
-              </li>
-              <li>
-                <div class="d-grid px-4 pt-2 pb-1">
-                  <a class="btn btn-danger d-flex" href="auth-login-cover.html" target="_blank">
-                    <small class="align-middle">Logout</small>
-                    <i class="ri-logout-box-r-line ms-2 ri-16px"></i>
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <!--/ User -->
-          
-
-
-        </ul>
-      </div>
-
-      
-      <!-- Search Small Screens -->
-      <div class="navbar-search-wrapper search-input-wrapper  d-none">
-        <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
-        <i class="ri-close-fill search-toggler cursor-pointer"></i>
-      </div>
-      
-      
-  
-</nav>
-
-<!-- / Navbar -->
-
-      
-
-      <!-- Content wrapper -->
-      <div class="content-wrapper">
-
-        <!-- Content -->
-        
-          <div class="container-xxl flex-grow-1 container-p-y">
-            
-            
-<div class="row g-6">
-  <!-- Ratings -->
-  <div class="col-xxl-3 col-sm-6">
-    <div class="card">
-      <div class="row">
-        <div class="col-6">
-          <div class="card-body">
-            <div class="card-info">
-              <h6 class="mb-4 pb-1 text-nowrap">Ratings</h6>
-              <div class="d-flex align-items-center mb-3">
-                <h4 class="mb-0 me-2">13k</h4>
-                <p class="text-success mb-0">+15.6%</p>
-              </div>
-              <div class="badge bg-label-primary rounded-pill mb-xl-1">Year of 2021</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="h-100 position-relative">
-            <img src="../../assets/img/illustrations/illustration-1.png" alt="Ratings" class="position-absolute card-img-position scaleX-n1-rtl bottom-0 w-auto end-0 me-3 me-xl-0 me-xxl-3 pe-2" width="95">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Ratings -->
-  <!-- Sessions -->
-  <div class="col-xxl-3 col-sm-6">
-    <div class="card">
-      <div class="row">
-        <div class="col-6">
-          <div class="card-body">
-            <div class="card-info">
-              <h6 class="mb-4 pb-1 text-nowrap">Sessions</h6>
-              <div class="d-flex align-items-center mb-3">
-                <h4 class="mb-0 me-2">24.5k</h4>
-                <p class="text-danger mb-0">-20%</p>
-              </div>
-              <div class="badge bg-label-secondary rounded-pill mb-xl-1">Last Week</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="h-100 position-relative">
-            <img src="../../assets/img/illustrations/illustration-2.png" alt="Ratings" class="position-absolute card-img-position scaleX-n1-rtl bottom-0 w-auto end-0 me-3 me-xl-0 me-xxl-3 pe-2" width="81">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Sessions -->
-  <!-- Transactions -->
-  <div class="col-xxl-6 align-self-end">
-    <div class="card">
-      <div class="card-header">
-        <div class="d-flex align-items-center justify-content-between">
-          <h5 class="card-title m-0 me-2">Transactions</h5>
-          <div class="dropdown">
-            <button class="btn text-muted p-0" type="button" id="transactionID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="ri-more-2-line ri-24px"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
-              <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-              <a class="dropdown-item" href="javascript:void(0);">Share</a>
-              <a class="dropdown-item" href="javascript:void(0);">Update</a>
-            </div>
-          </div>
-        </div>
-        <p class="small mb-0"><span class="h6 mb-0">Total 48.5% Growth</span> 😎 this month</p>
-      </div>
-      <div class="card-body">
-        <div class="row g-3">
-          <div class="col-md-3 col-6">
-            <div class="d-flex align-items-center">
-              <div class="avatar">
-                <div class="avatar-initial bg-primary rounded shadow-xs">
-                  <i class="ri-pie-chart-2-line ri-24px"></i>
-                </div>
-              </div>
-              <div class="ms-3">
-                <p class="mb-0">Sales</p>
-                <h5 class="mb-0">245k</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-6">
-            <div class="d-flex align-items-center">
-              <div class="avatar">
-                <div class="avatar-initial bg-success rounded shadow-xs">
-                  <i class="ri-group-line ri-24px"></i>
-                </div>
-              </div>
-              <div class="ms-3">
-                <p class="mb-0">Customers</p>
-                <h5 class="mb-0">12.5k</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-6">
-            <div class="d-flex align-items-center">
-              <div class="avatar">
-                <div class="avatar-initial bg-warning rounded shadow-xs">
-                  <i class="ri-macbook-line ri-24px"></i>
-                </div>
-              </div>
-              <div class="ms-3">
-                <p class="mb-0">Product</p>
-                <h5 class="mb-0">1.54k</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-6">
-            <div class="d-flex align-items-center">
-              <div class="avatar">
-                <div class="avatar-initial bg-info rounded shadow-xs">
-                  <i class="ri-money-dollar-circle-line ri-24px"></i>
-                </div>
-              </div>
-              <div class="ms-3">
-                <p class="mb-0">Revenue</p>
-                <h5 class="mb-0">$88k</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Transactions -->
-  <!-- Total Sales Chart-->
-  <div class="col-xxl-3 col-md-6">
-    <div class="card h-100">
-      <div class="card-header">
-        <div class="d-flex justify-content-between">
-          <h5 class="mb-1">Total Sales</h5>
-          <div class="dropdown">
-            <button class="btn text-muted p-0" type="button" id="totalSalesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="ri-more-2-line ri-24px"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalSalesDropdown">
-              <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
-              <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-              <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
-            </div>
-          </div>
-        </div>
-        <p class="card-subtitle mb-0">$21,845</p>
-      </div>
-      <div class="card-body">
-        <div id="totalSalesChart"></div>
-      </div>
-    </div>
-  </div>
-  <!--/ Total Sales Chart-->
-  <!-- Revenue Report Chart-->
-  <div class="col-xxl-3 col-md-6">
-    <div class="card h-100">
-      <div class="card-header">
-        <div class="d-flex justify-content-between">
-          <h5 class="mb-0">Revenue Report</h5>
-          <div class="dropdown">
-            <button class="btn text-muted p-0" type="button" id="revenueReportDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="ri-more-2-line ri-24px"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="revenueReportDropdown">
-              <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
-              <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-              <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div id="revenueReportChart"></div>
-      </div>
-    </div>
-  </div>
-  <!--/ Revenue Report Chart-->
-  <!-- Sales Overview Chart -->
-  <div class="col-xl-6">
-    <div class="card h-100">
-      <div class="card-header">
-        <div class="d-flex justify-content-between">
-          <h5 class="mb-0">Sales Overview</h5>
-          <div class="dropdown">
-            <button class="btn text-muted p-0" type="button" id="salesOverviewDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="ri-more-2-line ri-24px"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="salesOverviewDropdown">
-              <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
-              <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-              <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card-body pt-lg-5">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <div id="salesOverviewChart"></div>
-          </div>
-          <div class="col-md-6 mt-3 mt-md-0">
-            <div class="d-flex align-items-center">
-              <div class="avatar">
-                <div class="avatar-initial bg-label-primary rounded">
-                  <i class="ri-wallet-line ri-24px"></i>
-                </div>
-              </div>
-              <div class="ms-3 d-flex flex-column">
-                <p class="mb-0">Number of Sales</p>
-                <h5 class="mb-0">$86,400</h5>
-              </div>
-            </div>
-            <hr class="my-6">
-            <div class="row g-4">
-              <div class="col-6">
-                <div class="d-flex align-items-center mb-1">
-                  <div class="badge badge-dot bg-primary me-2"></div>
-                  <p class="mb-0">Apparel</p>
-                </div>
-                <p class="fw-medium mb-0">$12,150</p>
-              </div>
-              <div class="col-6">
-                <div class="d-flex align-items-center mb-1">
-                  <div class="badge badge-dot bg-primary me-2"></div>
-                  <p class="mb-0">Electronic</p>
-                </div>
-                <p class="fw-medium mb-0">$24,900</p>
-              </div>
-              <div class="col-6">
-                <div class="d-flex align-items-center mb-1">
-                  <div class="badge badge-dot bg-primary me-2"></div>
-                  <p class="mb-0">FMCG</p>
-                </div>
-                <p class="fw-medium mb-0">$12,750</p>
-              </div>
-              <div class="col-6">
-                <div class="d-flex align-items-center mb-1">
-                  <div class="badge badge-dot bg-primary me-2"></div>
-                  <p class="mb-0">Other Sales</p>
-                </div>
-                <p class="fw-medium mb-0">$50,200</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Sales Overview Chart -->
-  <!-- Activity Timeline -->
-  <div class="col-xl-6 col-lg-8">
-    <div class="card h-100">
-      <div class="card-header">
-        <div class="d-flex justify-content-between">
-          <h5 class="mb-0">Activity Timeline</h5>
-        </div>
-      </div>
-      <div class="card-body pt-4">
-        <ul class="timeline card-timeline mb-0">
-          <li class="timeline-item timeline-item-transparent">
-            <span class="timeline-point timeline-point-primary"></span>
-            <div class="timeline-event">
-              <div class="timeline-header mb-3">
-                <h6 class="mb-0">12 Invoices have been paid</h6>
-                <small class="text-muted">12 min ago</small>
-              </div>
-              <p class="mb-2">
-                Invoices have been paid to the company
-              </p>
-              <div class="d-flex align-items-center mb-1">
-                <div class="badge bg-lightest">
-                  <img src="../../assets/img/icons/misc/pdf.png" alt="img" width="15" class="me-2">
-                  <span class="h6 mb-0">invoices.pdf</span>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="timeline-item timeline-item-transparent">
-            <span class="timeline-point timeline-point-success"></span>
-            <div class="timeline-event">
-              <div class="timeline-header mb-3">
-                <h6 class="mb-0">Client Meeting</h6>
-                <small class="text-muted">45 min ago</small>
-              </div>
-              <p class="mb-2">
-                Project meeting with john @10:15am
-              </p>
-              <div class="d-flex justify-content-between flex-wrap gap-2">
-                <div class="d-flex flex-wrap align-items-center">
-                  <div class="avatar avatar-sm me-2">
-                    <img src="../../assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
-                  </div>
-                  <div>
-                    <p class="mb-0 small fw-medium">Lester McCarthy (Client)</p>
-                    <small>CEO of ThemeSelection</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="timeline-item timeline-item-transparent">
-            <span class="timeline-point timeline-point-info"></span>
-            <div class="timeline-event">
-              <div class="timeline-header mb-3">
-                <h6 class="mb-0">Create a new project for client</h6>
-                <small class="text-muted">2 Day Ago</small>
-              </div>
-              <p class="mb-2">
-                6 team members in a project
-              </p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap p-0">
-                  <div class="d-flex flex-wrap align-items-center">
-                    <ul class="list-unstyled users-list d-flex align-items-center avatar-group m-0 me-2">
-                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Vinnie Mostowy" class="avatar pull-up">
-                        <img class="rounded-circle" src="../../assets/img/avatars/5.png" alt="Avatar" />
-                      </li>
-                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Allen Rieske" class="avatar pull-up">
-                        <img class="rounded-circle" src="../../assets/img/avatars/12.png" alt="Avatar" />
-                      </li>
-                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Julee Rossignol" class="avatar pull-up">
-                        <img class="rounded-circle" src="../../assets/img/avatars/6.png" alt="Avatar" />
-                      </li>
-                      <li class="avatar">
-                        <span class="avatar-initial rounded-circle pull-up text-heading" data-bs-toggle="tooltip" data-bs-placement="bottom" title="3 more">+3</span>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--/ Activity Timeline -->
-  <!-- Weekly Sales Chart -->
-  <div class="col-xxl-4 col-xl-6 col-lg-4 col-md-6">
-    <div class="card h-100">
-      <div class="card-header">
-        <div class="d-flex justify-content-between">
-          <h5 class="mb-0">Weekly Sales</h5>
-          <div class="dropdown">
-            <button class="btn text-muted p-0" type="button" id="weeklySalesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="ri-more-2-line ri-24px"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="weeklySalesDropdown">
-              <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
-              <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-              <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
-            </div>
-          </div>
-        </div>
-        <p class="text-body mb-0">Total 85.4k Sales</p>
-      </div>
-      <div class="card-body">
-        <div id="weeklySalesChart"></div>
-        <div class="d-flex align-items-center justify-content-around mt-5">
-          <div class="d-flex align-items-center">
-            <div class="avatar">
-              <div class="avatar-initial bg-label-primary rounded">
-                <i class="ri-pie-chart-2-line ri-24px"></i>
-              </div>
-            </div>
-            <div class="ms-3 d-flex flex-column">
-              <h6 class="mb-0">34.6k</h6>
-              <p class="mb-0">Sales</p>
-            </div>
-          </div>
-          <div class="d-flex align-items-center">
-            <div class="avatar">
-              <div class="avatar-initial bg-label-success rounded">
-                <i class="ri-money-dollar-circle-line ri-24px"></i>
-              </div>
-            </div>
-            <div class="ms-3 d-flex flex-column">
-              <h6 class="mb-0">$482k</h6>
-              <p class="mb-0">Total Profit</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Weekly Sales Chart -->
-  <div class="col-xxl-2 col-xl-6 col-lg-4 col-sm-6">
-    <div class="row gy-4">
-      <!-- Total Growth chart -->
-      <div class="col-12">
+    <div class="row g-6">
+      <!-- Ratings -->
+      <div class="col-xxl-3 col-sm-6">
         <div class="card">
-          <div class="card-header pb-0">
-            <h4 class="mb-0">42.5k</h4>
-          </div>
-          <div class="card-body">
-            <div id="totalGrowthAreaChart" class="mb-3"></div>
-            <h6 class="text-center mb-0">Total Growth</h6>
+          <div class="row">
+            <div class="col-6">
+              <div class="card-body">
+                <div class="card-info">
+                  <h6 class="mb-4 pb-1 text-nowrap">Ratings</h6>
+                  <div class="d-flex align-items-center mb-3">
+                    <h4 class="mb-0 me-2">13k</h4>
+                    <p class="text-success mb-0">+15.6%</p>
+                  </div>
+                  <div class="badge bg-label-primary rounded-pill mb-xl-1">Year of 2021</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="h-100 position-relative">
+                <img src="../../assets/img/illustrations/illustration-1.png" alt="Ratings" class="position-absolute card-img-position scaleX-n1-rtl bottom-0 w-auto end-0 me-3 me-xl-0 me-xxl-3 pe-2" width="95">
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!--/ Total Growth chart -->
-      <div class="col-12">
+      <!--/ Ratings -->
+      <!-- Sessions -->
+      <div class="col-xxl-3 col-sm-6">
         <div class="card">
+          <div class="row">
+            <div class="col-6">
+              <div class="card-body">
+                <div class="card-info">
+                  <h6 class="mb-4 pb-1 text-nowrap">Sessions</h6>
+                  <div class="d-flex align-items-center mb-3">
+                    <h4 class="mb-0 me-2">24.5k</h4>
+                    <p class="text-danger mb-0">-20%</p>
+                  </div>
+                  <div class="badge bg-label-secondary rounded-pill mb-xl-1">Last Week</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="h-100 position-relative">
+                <img src="../../assets/img/illustrations/illustration-2.png" alt="Ratings" class="position-absolute card-img-position scaleX-n1-rtl bottom-0 w-auto end-0 me-3 me-xl-0 me-xxl-3 pe-2" width="81">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Sessions -->
+      <!-- Transactions -->
+      <div class="col-xxl-6 align-self-end">
+        <div class="card">
+          <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between">
+              <h5 class="card-title m-0 me-2">Transactions</h5>
+              <div class="dropdown">
+                <button class="btn text-muted p-0" type="button" id="transactionID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="ri-more-2-line ri-24px"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
+                  <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Update</a>
+                </div>
+              </div>
+            </div>
+            <p class="small mb-0"><span class="h6 mb-0">Total 48.5% Growth</span> 😎 this month</p>
+          </div>
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-3 col-6">
+                <div class="d-flex align-items-center">
+                  <div class="avatar">
+                    <div class="avatar-initial bg-primary rounded shadow-xs">
+                      <i class="ri-pie-chart-2-line ri-24px"></i>
+                    </div>
+                  </div>
+                  <div class="ms-3">
+                    <p class="mb-0">Sales</p>
+                    <h5 class="mb-0">245k</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="d-flex align-items-center">
+                  <div class="avatar">
+                    <div class="avatar-initial bg-success rounded shadow-xs">
+                      <i class="ri-group-line ri-24px"></i>
+                    </div>
+                  </div>
+                  <div class="ms-3">
+                    <p class="mb-0">Customers</p>
+                    <h5 class="mb-0">12.5k</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="d-flex align-items-center">
+                  <div class="avatar">
+                    <div class="avatar-initial bg-warning rounded shadow-xs">
+                      <i class="ri-macbook-line ri-24px"></i>
+                    </div>
+                  </div>
+                  <div class="ms-3">
+                    <p class="mb-0">Product</p>
+                    <h5 class="mb-0">1.54k</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="d-flex align-items-center">
+                  <div class="avatar">
+                    <div class="avatar-initial bg-info rounded shadow-xs">
+                      <i class="ri-money-dollar-circle-line ri-24px"></i>
+                    </div>
+                  </div>
+                  <div class="ms-3">
+                    <p class="mb-0">Revenue</p>
+                    <h5 class="mb-0">$88k</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Transactions -->
+      <!-- Total Sales Chart-->
+      <div class="col-xxl-3 col-md-6">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="d-flex justify-content-between">
+              <h5 class="mb-1">Total Sales</h5>
+              <div class="dropdown">
+                <button class="btn text-muted p-0" type="button" id="totalSalesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="ri-more-2-line ri-24px"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalSalesDropdown">
+                  <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                </div>
+              </div>
+            </div>
+            <p class="card-subtitle mb-0">$21,845</p>
+          </div>
+          <div class="card-body">
+            <div id="totalSalesChart"></div>
+          </div>
+        </div>
+      </div>
+      <!--/ Total Sales Chart-->
+      <!-- Revenue Report Chart-->
+      <div class="col-xxl-3 col-md-6">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="d-flex justify-content-between">
+              <h5 class="mb-0">Revenue Report</h5>
+              <div class="dropdown">
+                <button class="btn text-muted p-0" type="button" id="revenueReportDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="ri-more-2-line ri-24px"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="revenueReportDropdown">
+                  <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="revenueReportChart"></div>
+          </div>
+        </div>
+      </div>
+      <!--/ Revenue Report Chart-->
+      <!-- Sales Overview Chart -->
+      <div class="col-xl-6">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="d-flex justify-content-between">
+              <h5 class="mb-0">Sales Overview</h5>
+              <div class="dropdown">
+                <button class="btn text-muted p-0" type="button" id="salesOverviewDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="ri-more-2-line ri-24px"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="salesOverviewDropdown">
+                  <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body pt-lg-5">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div id="salesOverviewChart"></div>
+              </div>
+              <div class="col-md-6 mt-3 mt-md-0">
+                <div class="d-flex align-items-center">
+                  <div class="avatar">
+                    <div class="avatar-initial bg-label-primary rounded">
+                      <i class="ri-wallet-line ri-24px"></i>
+                    </div>
+                  </div>
+                  <div class="ms-3 d-flex flex-column">
+                    <p class="mb-0">Number of Sales</p>
+                    <h5 class="mb-0">$86,400</h5>
+                  </div>
+                </div>
+                <hr class="my-6">
+                <div class="row g-4">
+                  <div class="col-6">
+                    <div class="d-flex align-items-center mb-1">
+                      <div class="badge badge-dot bg-primary me-2"></div>
+                      <p class="mb-0">Apparel</p>
+                    </div>
+                    <p class="fw-medium mb-0">$12,150</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center mb-1">
+                      <div class="badge badge-dot bg-primary me-2"></div>
+                      <p class="mb-0">Electronic</p>
+                    </div>
+                    <p class="fw-medium mb-0">$24,900</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center mb-1">
+                      <div class="badge badge-dot bg-primary me-2"></div>
+                      <p class="mb-0">FMCG</p>
+                    </div>
+                    <p class="fw-medium mb-0">$12,750</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center mb-1">
+                      <div class="badge badge-dot bg-primary me-2"></div>
+                      <p class="mb-0">Other Sales</p>
+                    </div>
+                    <p class="fw-medium mb-0">$50,200</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Sales Overview Chart -->
+      <!-- Activity Timeline -->
+      <div class="col-xl-6 col-lg-8">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="d-flex justify-content-between">
+              <h5 class="mb-0">Activity Timeline</h5>
+            </div>
+          </div>
+          <div class="card-body pt-4">
+            <ul class="timeline card-timeline mb-0">
+              <li class="timeline-item timeline-item-transparent">
+                <span class="timeline-point timeline-point-primary"></span>
+                <div class="timeline-event">
+                  <div class="timeline-header mb-3">
+                    <h6 class="mb-0">12 Invoices have been paid</h6>
+                    <small class="text-muted">12 min ago</small>
+                  </div>
+                  <p class="mb-2">
+                    Invoices have been paid to the company
+                  </p>
+                  <div class="d-flex align-items-center mb-1">
+                    <div class="badge bg-lightest">
+                      <img src="../../assets/img/icons/misc/pdf.png" alt="img" width="15" class="me-2">
+                      <span class="h6 mb-0">invoices.pdf</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item timeline-item-transparent">
+                <span class="timeline-point timeline-point-success"></span>
+                <div class="timeline-event">
+                  <div class="timeline-header mb-3">
+                    <h6 class="mb-0">Client Meeting</h6>
+                    <small class="text-muted">45 min ago</small>
+                  </div>
+                  <p class="mb-2">
+                    Project meeting with john @10:15am
+                  </p>
+                  <div class="d-flex justify-content-between flex-wrap gap-2">
+                    <div class="d-flex flex-wrap align-items-center">
+                      <div class="avatar avatar-sm me-2">
+                        <img src="../../assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
+                      </div>
+                      <div>
+                        <p class="mb-0 small fw-medium">Lester McCarthy (Client)</p>
+                        <small>CEO of ThemeSelection</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item timeline-item-transparent">
+                <span class="timeline-point timeline-point-info"></span>
+                <div class="timeline-event">
+                  <div class="timeline-header mb-3">
+                    <h6 class="mb-0">Create a new project for client</h6>
+                    <small class="text-muted">2 Day Ago</small>
+                  </div>
+                  <p class="mb-2">
+                    6 team members in a project
+                  </p>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap p-0">
+                      <div class="d-flex flex-wrap align-items-center">
+                        <ul class="list-unstyled users-list d-flex align-items-center avatar-group m-0 me-2">
+                          <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Vinnie Mostowy" class="avatar pull-up">
+                            <img class="rounded-circle" src="../../assets/img/avatars/5.png" alt="Avatar" />
+                          </li>
+                          <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Allen Rieske" class="avatar pull-up">
+                            <img class="rounded-circle" src="../../assets/img/avatars/12.png" alt="Avatar" />
+                          </li>
+                          <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Julee Rossignol" class="avatar pull-up">
+                            <img class="rounded-circle" src="../../assets/img/avatars/6.png" alt="Avatar" />
+                          </li>
+                          <li class="avatar">
+                            <span class="avatar-initial rounded-circle pull-up text-heading" data-bs-toggle="tooltip" data-bs-placement="bottom" title="3 more">+3</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--/ Activity Timeline -->
+      <!-- Weekly Sales Chart -->
+      <div class="col-xxl-4 col-xl-6 col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="d-flex justify-content-between">
+              <h5 class="mb-0">Weekly Sales</h5>
+              <div class="dropdown">
+                <button class="btn text-muted p-0" type="button" id="weeklySalesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="ri-more-2-line ri-24px"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="weeklySalesDropdown">
+                  <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                </div>
+              </div>
+            </div>
+            <p class="text-body mb-0">Total 85.4k Sales</p>
+          </div>
+          <div class="card-body">
+            <div id="weeklySalesChart"></div>
+            <div class="d-flex align-items-center justify-content-around mt-5">
+              <div class="d-flex align-items-center">
+                <div class="avatar">
+                  <div class="avatar-initial bg-label-primary rounded">
+                    <i class="ri-pie-chart-2-line ri-24px"></i>
+                  </div>
+                </div>
+                <div class="ms-3 d-flex flex-column">
+                  <h6 class="mb-0">34.6k</h6>
+                  <p class="mb-0">Sales</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="avatar">
+                  <div class="avatar-initial bg-label-success rounded">
+                    <i class="ri-money-dollar-circle-line ri-24px"></i>
+                  </div>
+                </div>
+                <div class="ms-3 d-flex flex-column">
+                  <h6 class="mb-0">$482k</h6>
+                  <p class="mb-0">Total Profit</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Weekly Sales Chart -->
+      <div class="col-xxl-2 col-xl-6 col-lg-4 col-sm-6">
+        <div class="row gy-4">
+          <!-- Total Growth chart -->
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header pb-0">
+                <h4 class="mb-0">42.5k</h4>
+              </div>
+              <div class="card-body">
+                <div id="totalGrowthAreaChart" class="mb-3"></div>
+                <h6 class="text-center mb-0">Total Growth</h6>
+              </div>
+            </div>
+          </div>
+          <!--/ Total Growth chart -->
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header d-flex align-items-center justify-content-between">
+                <div class="avatar">
+                  <div class="avatar-initial bg-primary rounded-circle shadow-xs">
+                    <i class="ri-file-word-2-line ri-24px"></i>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <button class="btn text-muted p-0" type="button" id="newProjectID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="ri-more-2-line ri-24px"></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="newProjectID">
+                    <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                    <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                    <a class="dropdown-item" href="javascript:void(0);">Update</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h6 class="mb-1">New Project</h6>
+                <div class="d-flex flex-wrap mb-1 align-items-center">
+                  <h4 class="mb-0 me-2">862</h4>
+                  <p class="text-danger mb-0">-18%</p>
+                </div>
+                <small>Yearly Project</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Upgrade Plan -->
+      <div class="col-xxl-4 col-xl-6 col-lg-8 col-md-6">
+        <div class="card h-100">
           <div class="card-header d-flex align-items-center justify-content-between">
-            <div class="avatar">
-              <div class="avatar-initial bg-primary rounded-circle shadow-xs">
-                <i class="ri-file-word-2-line ri-24px"></i>
-              </div>
-            </div>
+            <h5 class="card-title m-0 me-2">Upgrade Your Plan</h5>
             <div class="dropdown">
-              <button class="btn text-muted p-0" type="button" id="newProjectID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn text-muted p-0" type="button" id="upgradePlanCard" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="ri-more-2-line ri-24px"></i>
               </button>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="newProjectID">
-                <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-                <a class="dropdown-item" href="javascript:void(0);">Share</a>
-                <a class="dropdown-item" href="javascript:void(0);">Update</a>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="upgradePlanCard">
+                <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
               </div>
             </div>
           </div>
           <div class="card-body">
-            <h6 class="mb-1">New Project</h6>
-            <div class="d-flex flex-wrap mb-1 align-items-center">
-              <h4 class="mb-0 me-2">862</h4>
-              <p class="text-danger mb-0">-18%</p>
+            <small>Please make the payment to start enjoying all the features of our premium plan as soon as possible.</small>
+            <div class="bg-label-primary p-4 rounded my-3">
+              <div class="d-flex">
+                <div class="avatar flex-shrink-0 me-4">
+                  <div class="avatar-initial bg-label-primary rounded">
+                    <div>
+                      <img src="../../assets/img/icons/unicons/briefcase.png" alt="paypal">
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Platinum</h6>
+                    <a href="javascript:void(0)" class="small" data-bs-target="#upgradePlanModal" data-bs-toggle="modal">Upgrade Plan</a>
+                  </div>
+                  <div class="user-progress">
+                    <div class="d-flex justify-content-center">
+                      <sup class="mt-5 mb-0 text-heading small">$</sup>
+                      <h4 class="fw-medium mb-0">5,250</h4>
+                      <sub class="mt-auto mb-4 text-heading small"> /Year</sub>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <small>Yearly Project</small>
+            <form id="paymentDetailsForm" onsubmit="return false">
+              <h6 class="mb-2">Payment Details</h6>
+              <div class="d-flex align-items-center mb-2">
+                <div class="me-3">
+                  <img src="../../assets/img/icons/payments/logo-mastercard-small.png" alt="credit card" height="30">
+                </div>
+                <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                  <div>
+                    <h6 class="mb-1">Credit Card</h6>
+                    <small>5688 xxxx xxxx 2356</small>
+                  </div>
+                  <div class="w-px-75">
+                    <input type="text" class="form-control form-control-sm cvv-code-payment" maxlength="3" placeholder="CVV" />
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-2">
+                <div class="me-3">
+                  <img src="../../assets/img/icons/payments/logo-credit-card-2.png" alt="credit card" height="30">
+                </div>
+                <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                  <div>
+                    <h6 class="mb-1">Credit Card</h6>
+                    <small>8562 xxxx xxxx 4563</small>
+                  </div>
+                  <div class="w-px-75">
+                    <input type="text" class="form-control form-control-sm cvv-code-payment" maxlength="3" placeholder="CVV" />
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:;" class="d-block my-2 small" data-bs-toggle="modal" data-bs-target="#addNewCCModal"> Add Payment Method </a>
+              <div class="col-12 mb-2 pb-2">
+                <input id="addEmail" name="addEmail" class="form-control form-control-sm" type="text" placeholder="Email Address" />
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary w-100"><span class="me-1">Contact Now</span></button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Upgrade Plan -->
-  <div class="col-xxl-4 col-xl-6 col-lg-8 col-md-6">
-    <div class="card h-100">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="card-title m-0 me-2">Upgrade Your Plan</h5>
-        <div class="dropdown">
-          <button class="btn text-muted p-0" type="button" id="upgradePlanCard" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ri-more-2-line ri-24px"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="upgradePlanCard">
-            <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+      <!--/ Upgrade Plan -->
+      <!-- Meeting Schedule -->
+      <div class="col-xxl-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-header d-flex align-items-center justify-content-between">
+            <h5 class="card-title m-0 me-2">Meeting Schedule</h5>
+            <div class="dropdown">
+              <button class="btn text-muted p-0" type="button" id="meetingSchedule" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="ri-more-2-line ri-24px"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="meetingSchedule">
+                <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <ul class="p-0 m-0">
+              <li class="d-flex mb-4 pb-2">
+                <div class="avatar flex-shrink-0 me-4">
+                  <img src="../../assets/img/avatars/4.png" alt="avatar" class="rounded-circle">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Call with Woods</h6>
+                    <small class="d-flex align-items-center">
+                      <i class="ri-calendar-line ri-14px"></i>
+                      <span class="ms-2">21 Jul | 08:20-10:30</span>
+                    </small>
+                  </div>
+                  <div class="badge bg-label-primary rounded-pill">Business</div>
+                </div>
+              </li>
+              <li class="d-flex mb-4 pb-2">
+                <div class="avatar flex-shrink-0 me-4">
+                  <img src="../../assets/img/avatars/5.png" alt="avatar" class="rounded-circle">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Conference call</h6>
+                    <small class="d-flex align-items-center">
+                      <i class="ri-calendar-line ri-14px"></i>
+                      <span class="ms-2">21 Jul | 08:20-10:30</span>
+                    </small>
+                  </div>
+                  <div class="badge bg-label-warning rounded-pill">Dinner</div>
+                </div>
+              </li>
+              <li class="d-flex mb-4 pb-2">
+                <div class="avatar flex-shrink-0 me-4">
+                  <img src="../../assets/img/avatars/3.png" alt="avatar" class="rounded-circle">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Meeting with Mark</h6>
+                    <small class="d-flex align-items-center">
+                      <i class="ri-calendar-line ri-14px"></i>
+                      <span class="ms-2">21 Jul | 08:20-10:30</span>
+                    </small>
+                  </div>
+                  <div class="badge bg-label-secondary rounded-pill">Meetup</div>
+                </div>
+              </li>
+              <li class="d-flex mb-4 pb-2">
+                <div class="avatar flex-shrink-0 me-4">
+                  <img src="../../assets/img/avatars/14.png" alt="avatar" class="rounded-circle">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Meeting in Oakland</h6>
+                    <small class="d-flex align-items-center">
+                      <i class="ri-calendar-line ri-14px"></i>
+                      <span class="ms-2">21 Jul | 08:20-10:30</span>
+                    </small>
+                  </div>
+                  <div class="badge bg-label-danger rounded-pill">Dinner</div>
+                </div>
+              </li>
+              <li class="d-flex mb-4 pb-2">
+                <div class="avatar flex-shrink-0 me-4">
+                  <img src="../../assets/img/avatars/8.png" alt="avatar" class="rounded-circle">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Call with hilda</h6>
+                    <small class="d-flex align-items-center">
+                      <i class="ri-calendar-line ri-14px"></i>
+                      <span class="ms-2">21 Jul | 08:20-10:30</span>
+                    </small>
+                  </div>
+                  <div class="badge bg-label-success rounded-pill">Meditation</div>
+                </div>
+              </li>
+              <li class="d-flex">
+                <div class="avatar flex-shrink-0 me-4">
+                  <img src="../../assets/img/avatars/1.png" alt="avatar" class="rounded-circle">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Meeting with Carl</h6>
+                    <small class="d-flex align-items-center">
+                      <i class="ri-calendar-line ri-14px"></i>
+                      <span class="ms-2">21 Jul | 08:20-10:30</span>
+                    </small>
+                  </div>
+                  <div class="badge bg-label-primary rounded-pill">Business</div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="card-body">
-        <small>Please make the payment to start enjoying all the features of our premium plan as soon as possible.</small>
-        <div class="bg-label-primary p-4 rounded my-3">
-          <div class="d-flex">
-            <div class="avatar flex-shrink-0 me-4">
-              <div class="avatar-initial bg-label-primary rounded">
+      <!--/ Meeting Schedule -->
+      <!-- Developer Meetup -->
+      <div class="col-xxl-4 col-md-6">
+        <div class="card h-100">
+          <img class="card-img-top h-px-200" src="../../assets/img/elements/laptop.png" alt="laptop image cap" style="object-fit: cover;">
+          <div class="card-body">
+            <div class="d-flex border-bottom pb-4">
+              <div class="badge bg-label-primary d-flex flex-column justify-content-center px-4 rounded-3 me-4">
+                <h6 class="text-primary mb-0 fw-normal">Jan</h6>
+                <h5 class="text-primary mb-0">24</h5>
+              </div>
+              <div>
+                <h6 class="card-title mb-1">Developer Meetup</h6>
+                <small class="mb-0">The WordPress open source,free software project is the community behind the…</small>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between border-bottom mt-4">
+              <div class="text-center">
+                <span class="ri-star-smile-line ri-24px"></span>
+                <p class="mt-1">Interested</p>
+              </div>
+              <div class="text-center">
+                <span class="ri-check-double-line ri-24px"></span>
+                <p class="mt-1">Joined</p>
+              </div>
+              <div class="text-center text-primary">
+                <span class="ri-group-line ri-24px"></span>
+                <p class="mt-1">Invited</p>
+              </div>
+              <div class="text-center">
+                <span class="ri-more-fill ri-24px"></span>
+                <p class="mt-1">More</p>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex mt-4 gap-2">
+                <span class="ri-time-line ri-20px"></span>
                 <div>
-                  <img src="../../assets/img/icons/unicons/briefcase.png" alt="paypal">
+                  <p class="mb-0">Tuesday, 24 january, 10:20 - 12:30</p>
+                  <p class="mb-0">After 1 week</p>
                 </div>
               </div>
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Platinum</h6>
-                <a href="javascript:void(0)" class="small" data-bs-target="#upgradePlanModal" data-bs-toggle="modal">Upgrade Plan</a>
-              </div>
-              <div class="user-progress">
-                <div class="d-flex justify-content-center">
-                  <sup class="mt-5 mb-0 text-heading small">$</sup>
-                  <h4 class="fw-medium mb-0">5,250</h4>
-                  <sub class="mt-auto mb-4 text-heading small"> /Year</sub>
+              <div class="d-flex mt-3 gap-2">
+                <span class="ri-map-pin-line ri-20px"></span>
+                <div>
+                  <p class="mb-0">The Rochard NYC</p>
+                  <p class="mb-0">1305 Lexington Ave, New York</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <form id="paymentDetailsForm" onsubmit="return false">
-          <h6 class="mb-2">Payment Details</h6>
-          <div class="d-flex align-items-center mb-2">
-            <div class="me-3">
-              <img src="../../assets/img/icons/payments/logo-mastercard-small.png" alt="credit card" height="30">
+      </div>
+      <!--/ Developer Meetup -->
+    </div>
+
+    <!-- Modal -->
+    <!-- Add New Credit Card Modal -->
+    <div class="modal fade" id="addNewCCModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered1 modal-simple modal-add-new-cc">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="text-center mb-6">
+              <h4 class="mb-2">Add New Card</h4>
+              <p>Add new card to complete payment</p>
             </div>
-            <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
-              <div>
-                <h6 class="mb-1">Credit Card</h6>
-                <small>5688 xxxx xxxx 2356</small>
+            <form id="addNewCCForm" class="row g-5" onsubmit="return false">
+              <div class="col-12">
+                <div class="input-group input-group-merge">
+                  <div class="form-floating form-floating-outline">
+                    <input id="modalAddCard" name="modalAddCard" class="form-control credit-card-mask" type="text" placeholder="1356 3215 6548 7898" aria-describedby="modalAddCard2" />
+                    <label for="modalAddCard">Card Number</label>
+                  </div>
+                  <span class="input-group-text cursor-pointer p-1" id="modalAddCard2"><span class="card-type"></span></span>
+                </div>
               </div>
-              <div class="w-px-75">
-                <input type="text" class="form-control form-control-sm cvv-code-payment" maxlength="3" placeholder="CVV" />
+              <div class="col-12 col-md-6">
+                <div class="form-floating form-floating-outline">
+                  <input type="text" id="modalAddCardName" class="form-control" placeholder="John Doe" />
+                  <label for="modalAddCardName">Name</label>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="d-flex align-items-center mb-2">
-            <div class="me-3">
-              <img src="../../assets/img/icons/payments/logo-credit-card-2.png" alt="credit card" height="30">
-            </div>
-            <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
-              <div>
-                <h6 class="mb-1">Credit Card</h6>
-                <small>8562 xxxx xxxx 4563</small>
+              <div class="col-6 col-md-3">
+                <div class="form-floating form-floating-outline">
+                  <input type="text" id="modalAddCardExpiryDate" class="form-control expiry-date-mask" placeholder="MM/YY" />
+                  <label for="modalAddCardExpiryDate">Expiry</label>
+                </div>
               </div>
-              <div class="w-px-75">
-                <input type="text" class="form-control form-control-sm cvv-code-payment" maxlength="3" placeholder="CVV" />
+              <div class="col-6 col-md-3">
+                <div class="input-group input-group-merge">
+                  <div class="form-floating form-floating-outline">
+                    <input type="text" id="modalAddCardCvv" class="form-control cvv-code-mask" maxlength="3" placeholder="654" />
+                    <label for="modalAddCardCvv" class="pe-1_5">CVV</label>
+                  </div>
+                  <span class="input-group-text cursor-pointer ps-0" id="modalAddCardCvv2"><i class="ri-question-line" data-bs-toggle="tooltip" data-bs-placement="top" title="Card Verification Value"></i></span>
+                </div>
               </div>
-            </div>
+              <div class="col-12">
+                <div class="form-check form-switch">
+                  <input type="checkbox" class="form-check-input" id="futureAddress" />
+                  <label for="futureAddress" class="text-heading">Save card for future billing?</label>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary me-3">Submit</button>
+                <button type="reset" class="btn btn-outline-secondary btn-reset" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+              </div>
+            </form>
           </div>
-          <a href="javascript:;" class="d-block my-2 small" data-bs-toggle="modal" data-bs-target="#addNewCCModal"> Add Payment Method </a>
-          <div class="col-12 mb-2 pb-2">
-            <input id="addEmail" name="addEmail" class="form-control form-control-sm" type="text" placeholder="Email Address" />
-          </div>
-          <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary w-100"><span class="me-1">Contact Now</span></button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
-  </div>
-  <!--/ Upgrade Plan -->
-  <!-- Meeting Schedule -->
-  <div class="col-xxl-4 col-md-6">
-    <div class="card h-100">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="card-title m-0 me-2">Meeting Schedule</h5>
-        <div class="dropdown">
-          <button class="btn text-muted p-0" type="button" id="meetingSchedule" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ri-more-2-line ri-24px"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="meetingSchedule">
-            <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <ul class="p-0 m-0">
-          <li class="d-flex mb-4 pb-2">
-            <div class="avatar flex-shrink-0 me-4">
-              <img src="../../assets/img/avatars/4.png" alt="avatar" class="rounded-circle">
+    <!--/ Add New Credit Card Modal -->
+
+    <!-- Add New Credit Card Modal -->
+    <div class="modal fade" id="upgradePlanModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-simple modal-upgrade-plan">
+        <div class="modal-content">
+          <div class="modal-body pt-md-0 px-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="text-center mb-6">
+              <h4 class="mb-2">Upgrade Plan</h4>
+              <p>Choose the best plan for user.</p>
             </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Call with Woods</h6>
-                <small class="d-flex align-items-center">
-                  <i class="ri-calendar-line ri-14px"></i>
-                  <span class="ms-2">21 Jul | 08:20-10:30</span>
-                </small>
+            <form id="upgradePlanForm" class="row g-5 d-flex align-items-center" onsubmit="return false">
+              <div class="col-sm-9">
+                <select id="choosePlan" name="choosePlan" class="form-select form-select-sm" aria-label="Choose Plan">
+                  <option selected>Choose Plan</option>
+                  <option value="standard">Standard - $99/month</option>
+                  <option value="exclusive">Exclusive - $249/month</option>
+                  <option value="Enterprise">Enterprise - $499/month</option>
+                </select>
               </div>
-              <div class="badge bg-label-primary rounded-pill">Business</div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-2">
-            <div class="avatar flex-shrink-0 me-4">
-              <img src="../../assets/img/avatars/5.png" alt="avatar" class="rounded-circle">
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Conference call</h6>
-                <small class="d-flex align-items-center">
-                  <i class="ri-calendar-line ri-14px"></i>
-                  <span class="ms-2">21 Jul | 08:20-10:30</span>
-                </small>
+              <div class="col-sm-3 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary">Upgrade</button>
               </div>
-              <div class="badge bg-label-warning rounded-pill">Dinner</div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-2">
-            <div class="avatar flex-shrink-0 me-4">
-              <img src="../../assets/img/avatars/3.png" alt="avatar" class="rounded-circle">
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Meeting with Mark</h6>
-                <small class="d-flex align-items-center">
-                  <i class="ri-calendar-line ri-14px"></i>
-                  <span class="ms-2">21 Jul | 08:20-10:30</span>
-                </small>
+            </form>
+          </div>
+          <hr class="mx-md-n5 mx-n3">
+          <div class="modal-body pb-md-0 px-0">
+            <p class="mb-0">User current plan is standard plan</p>
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+              <div class="d-flex justify-content-center me-2 mt-3">
+                <sup class="h5 pricing-currency pt-1 mt-2 mb-0 me-1 text-primary">$</sup>
+                <h1 class="display-3 mb-0 text-primary">99</h1>
+                <sub class="h6 pricing-duration mt-auto mb-2 pb-1 text-body">/month</sub>
               </div>
-              <div class="badge bg-label-secondary rounded-pill">Meetup</div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-2">
-            <div class="avatar flex-shrink-0 me-4">
-              <img src="../../assets/img/avatars/14.png" alt="avatar" class="rounded-circle">
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Meeting in Oakland</h6>
-                <small class="d-flex align-items-center">
-                  <i class="ri-calendar-line ri-14px"></i>
-                  <span class="ms-2">21 Jul | 08:20-10:30</span>
-                </small>
-              </div>
-              <div class="badge bg-label-danger rounded-pill">Dinner</div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-2">
-            <div class="avatar flex-shrink-0 me-4">
-              <img src="../../assets/img/avatars/8.png" alt="avatar" class="rounded-circle">
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Call with hilda</h6>
-                <small class="d-flex align-items-center">
-                  <i class="ri-calendar-line ri-14px"></i>
-                  <span class="ms-2">21 Jul | 08:20-10:30</span>
-                </small>
-              </div>
-              <div class="badge bg-label-success rounded-pill">Meditation</div>
-            </div>
-          </li>
-          <li class="d-flex">
-            <div class="avatar flex-shrink-0 me-4">
-              <img src="../../assets/img/avatars/1.png" alt="avatar" class="rounded-circle">
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Meeting with Carl</h6>
-                <small class="d-flex align-items-center">
-                  <i class="ri-calendar-line ri-14px"></i>
-                  <span class="ms-2">21 Jul | 08:20-10:30</span>
-                </small>
-              </div>
-              <div class="badge bg-label-primary rounded-pill">Business</div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--/ Meeting Schedule -->
-  <!-- Developer Meetup -->
-  <div class="col-xxl-4 col-md-6">
-    <div class="card h-100">
-      <img class="card-img-top h-px-200" src="../../assets/img/elements/laptop.png" alt="laptop image cap" style="object-fit: cover;">
-      <div class="card-body">
-        <div class="d-flex border-bottom pb-4">
-          <div class="badge bg-label-primary d-flex flex-column justify-content-center px-4 rounded-3 me-4">
-            <h6 class="text-primary mb-0 fw-normal">Jan</h6>
-            <h5 class="text-primary mb-0">24</h5>
-          </div>
-          <div>
-            <h6 class="card-title mb-1">Developer Meetup</h6>
-            <small class="mb-0">The WordPress open source,free software project is the community behind the…</small>
-          </div>
-        </div>
-        <div class="d-flex justify-content-between border-bottom mt-4">
-          <div class="text-center">
-            <span class="ri-star-smile-line ri-24px"></span>
-            <p class="mt-1">Interested</p>
-          </div>
-          <div class="text-center">
-            <span class="ri-check-double-line ri-24px"></span>
-            <p class="mt-1">Joined</p>
-          </div>
-          <div class="text-center text-primary">
-            <span class="ri-group-line ri-24px"></span>
-            <p class="mt-1">Invited</p>
-          </div>
-          <div class="text-center">
-            <span class="ri-more-fill ri-24px"></span>
-            <p class="mt-1">More</p>
-          </div>
-        </div>
-        <div>
-          <div class="d-flex mt-4 gap-2">
-            <span class="ri-time-line ri-20px"></span>
-            <div>
-              <p class="mb-0">Tuesday, 24 january, 10:20 - 12:30</p>
-              <p class="mb-0">After 1 week</p>
-            </div>
-          </div>
-          <div class="d-flex mt-3 gap-2">
-            <span class="ri-map-pin-line ri-20px"></span>
-            <div>
-              <p class="mb-0">The Rochard NYC</p>
-              <p class="mb-0">1305 Lexington Ave, New York</p>
+              <button class="btn btn-outline-danger cancel-subscription mt-4">Cancel Subscription</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!--/ Add New Credit Card Modal -->
+
+    <!--/ Modal -->
+
+
   </div>
-  <!--/ Developer Meetup -->
-</div>
+  <!-- / Content -->
 
-<!-- Modal -->
-<!-- Add New Credit Card Modal -->
-<div class="modal fade" id="addNewCCModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered1 modal-simple modal-add-new-cc">
-    <div class="modal-content">
-      <div class="modal-body p-0">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        <div class="text-center mb-6">
-          <h4 class="mb-2">Add New Card</h4>
-          <p>Add new card to complete payment</p>
-        </div>
-        <form id="addNewCCForm" class="row g-5" onsubmit="return false">
-          <div class="col-12">
-            <div class="input-group input-group-merge">
-              <div class="form-floating form-floating-outline">
-                <input id="modalAddCard" name="modalAddCard" class="form-control credit-card-mask" type="text" placeholder="1356 3215 6548 7898" aria-describedby="modalAddCard2" />
-                <label for="modalAddCard">Card Number</label>
-              </div>
-              <span class="input-group-text cursor-pointer p-1" id="modalAddCard2"><span class="card-type"></span></span>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="form-floating form-floating-outline">
-              <input type="text" id="modalAddCardName" class="form-control" placeholder="John Doe" />
-              <label for="modalAddCardName">Name</label>
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="form-floating form-floating-outline">
-              <input type="text" id="modalAddCardExpiryDate" class="form-control expiry-date-mask" placeholder="MM/YY" />
-              <label for="modalAddCardExpiryDate">Expiry</label>
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="input-group input-group-merge">
-              <div class="form-floating form-floating-outline">
-                <input type="text" id="modalAddCardCvv" class="form-control cvv-code-mask" maxlength="3" placeholder="654" />
-                <label for="modalAddCardCvv" class="pe-1_5">CVV</label>
-              </div>
-              <span class="input-group-text cursor-pointer ps-0" id="modalAddCardCvv2"><i class="ri-question-line" data-bs-toggle="tooltip" data-bs-placement="top" title="Card Verification Value"></i></span>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="form-check form-switch">
-              <input type="checkbox" class="form-check-input" id="futureAddress" />
-              <label for="futureAddress" class="text-heading">Save card for future billing?</label>
-            </div>
-          </div>
-          <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary me-3">Submit</button>
-            <button type="reset" class="btn btn-outline-secondary btn-reset" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<!--/ Add New Credit Card Modal -->
+  <!-- beautify ignore:end -->
 
-<!-- Add New Credit Card Modal -->
-<div class="modal fade" id="upgradePlanModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-simple modal-upgrade-plan">
-    <div class="modal-content">
-      <div class="modal-body pt-md-0 px-0">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        <div class="text-center mb-6">
-          <h4 class="mb-2">Upgrade Plan</h4>
-          <p>Choose the best plan for user.</p>
-        </div>
-        <form id="upgradePlanForm" class="row g-5 d-flex align-items-center" onsubmit="return false">
-          <div class="col-sm-9">
-            <select id="choosePlan" name="choosePlan" class="form-select form-select-sm" aria-label="Choose Plan">
-              <option selected>Choose Plan</option>
-              <option value="standard">Standard - $99/month</option>
-              <option value="exclusive">Exclusive - $249/month</option>
-              <option value="Enterprise">Enterprise - $499/month</option>
-            </select>
-          </div>
-          <div class="col-sm-3 d-flex align-items-end">
-            <button type="submit" class="btn btn-primary">Upgrade</button>
-          </div>
-        </form>
-      </div>
-      <hr class="mx-md-n5 mx-n3">
-      <div class="modal-body pb-md-0 px-0">
-        <p class="mb-0">User current plan is standard plan</p>
-        <div class="d-flex justify-content-between align-items-center flex-wrap">
-          <div class="d-flex justify-content-center me-2 mt-3">
-            <sup class="h5 pricing-currency pt-1 mt-2 mb-0 me-1 text-primary">$</sup>
-            <h1 class="display-3 mb-0 text-primary">99</h1>
-            <sub class="h6 pricing-duration mt-auto mb-2 pb-1 text-body">/month</sub>
-          </div>
-          <button class="btn btn-outline-danger cancel-subscription mt-4">Cancel Subscription</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--/ Add New Credit Card Modal -->
-
-<!--/ Modal -->
-
-
-          </div>
-          <!-- / Content -->
-
-          
-          
-
-<!-- Footer -->
-<footer class="content-footer footer bg-footer-theme">
-  <div class="container-xxl">
-    <div class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
-      <div class="text-body mb-2 mb-md-0">
-        © <script>
-        document.write(new Date().getFullYear())
-
-        </script>, made with <span class="text-danger"><i class="tf-icons ri-heart-fill"></i></span> by <a href="https://themeselection.com/" target="_blank" class="footer-link">ThemeSelection</a>
-      </div>
-      <div class="d-none d-lg-inline-block">
-        
-        <a href="https://themeselection.com/license/" class="footer-link me-3" target="_blank">License</a>
-        <a href="https://themeselection.com/" target="_blank" class="footer-link me-3">More Themes</a>
-        
-        <a href="https://demos.themeselection.com/materio-bootstrap-html-admin-template/documentation/" target="_blank" class="footer-link me-3">Documentation</a>
-        
-        
-        <a href="https://themeselection.com/support/" target="_blank" class="footer-link d-none d-sm-inline-block">Support</a>
-        
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- / Footer -->
-
-          
-          <div class="content-backdrop fade"></div>
-        </div>
-        <!-- Content wrapper -->
-      </div>
-      <!-- / Layout page -->
-    </div>
-
-    
-    
-    <!-- Overlay -->
-    <div class="layout-overlay layout-menu-toggle"></div>
-    
-    
-    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-    <div class="drag-target"></div>
-    
-  </div>
-  <!-- / Layout wrapper -->
-
-  
-  <!-- <div class="buy-now">
-    <a href="https://themeselection.com/item/materio-bootstrap-html-admin-template/" target="_blank" class="btn btn-danger btn-buy-now">Buy Now</a>
-  </div> -->
-  
-
-  
-
-  <!-- Core JS -->
-  <!-- build:js assets/vendor/js/core.js -->
-  <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="../../assets/vendor/libs/popper/popper.js"></script>
-  <script src="../../assets/vendor/js/bootstrap.js"></script>
-  <script src="../../assets/vendor/libs/node-waves/node-waves.js"></script>
-  <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-  <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
-  <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
-  <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
-  <script src="../../assets/vendor/js/menu.js"></script>
-  
-  <!-- endbuild -->
-
-  <!-- Vendors JS -->
-  <script src="../../assets/vendor/libs/apex-charts/apexcharts.js"></script>
-<script src="../../assets/vendor/libs/cleavejs/cleave.js"></script>
-<script src="../../assets/vendor/libs/cleavejs/cleave-phone.js"></script>
-
-  <!-- Main JS -->
-  <script src="../../assets/js/main.js"></script>
-  
-
-  <!-- Page JS -->
-  <script src="../../assets/js/dashboards-crm.js"></script>
-  
-</body>
-
-
-<!-- Mirrored from demos.themeselection.com/materio-bootstrap-html-admin-template/html/vertical-menu-template/dashboards-crm.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Apr 2024 02:34:07 GMT -->
-</html>
-
-<!-- beautify ignore:end -->
+  <?= $this->endSection(); ?>
