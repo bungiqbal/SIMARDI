@@ -192,18 +192,18 @@
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
-          <a href="pages-faq.html" class="menu-link">
+          <a href="<?= base_url('/admin/profile'); ?>" class="menu-link">
             <div data-i18n="Profile">Profile</div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="pages-faq.html" class="menu-link">
+          <a href="<?= base_url('/admin/account'); ?>" class="menu-link">
             <div data-i18n="Account">Account</div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="pages-faq.html" class="menu-link">
-            <div data-i18n="Setting">Setting</div>
+          <a href="<?= base_url('/admin/password'); ?>" class="menu-link">
+            <div data-i18n="Password">Password</div>
           </a>
         </li>
       </ul>
@@ -226,8 +226,18 @@
           </a>
         </li>
         <li class="menu-item">
+          <a href="<?= base_url('/admin/user_profile'); ?>" class="menu-link">
+            <div data-i18n="User Profile">User Profile</div>
+          </a>
+        </li>
+        <li class="menu-item">
           <a href="<?= base_url('/admin/user_setting'); ?>" class="menu-link">
             <div data-i18n="User Setting">User Setting</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="<?= base_url('/admin/user_password'); ?>" class="menu-link">
+            <div data-i18n="User Password">User Password</div>
           </a>
         </li>
       </ul>
@@ -791,14 +801,17 @@
 <script src="../../assets/vendor/libs/%40form-validation/auto-focus.js"></script>
 <script src="../../assets/vendor/libs/cleavejs/cleave.js"></script>
 <script src="../../assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+<script src="../../assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
+<script src="../../assets/vendor/libs/tagify/tagify.js"></script>
 
 <!-- Main JS -->
-<script src="../../assets/js/main.js"></script>
 <script src="../../assets/js/main.js"></script>
 
 <!-- Page JS -->
 <script src="../../assets/js/dashboards-crm.js"></script>
 <script src="../../assets/js/app-user-list.js"></script>
+<script src="../../assets/js/pages-account-settings-account.js"></script>
+<script src="../../assets/js/pages-profile-user.js"></script>
 
 </body>
 

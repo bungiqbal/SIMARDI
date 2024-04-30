@@ -2,6 +2,8 @@
 
 <?= $this->section('content'); ?>
 
+<!-- Content -->
+
 <!-- Content wrapper -->
 <div class="content-wrapper">
 
@@ -171,6 +173,8 @@
 
 
     </div>
+    <!-- / Content -->
+
     <!-- / Content -->
 
     <?= $this->endSection(); ?>
