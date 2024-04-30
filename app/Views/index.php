@@ -120,7 +120,7 @@
   </svg>
 </span>
 </span>
-        <span class="app-brand-text demo menu-text fw-semibold ms-2 ps-1">Materio</span>
+        <span class="app-brand-text demo menu-text fw-semibold ms-2 ps-1">SIMARDI</span>
       </a>
     </div>
     <!-- Menu logo wrapper: End -->

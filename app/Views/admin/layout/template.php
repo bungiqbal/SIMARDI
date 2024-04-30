@@ -154,12 +154,12 @@
       <ul class="menu-sub">
         <li class="menu-item">
           <a href="dashboards-crm.html" class="menu-link">
-            <div data-i18n="CRM">CRM</div>
+            <div data-i18n="Incoming Mail List">Incoming Mail List</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="index-2.html" class="menu-link">
-            <div data-i18n="Analytics">Analytics</div>
+            <div data-i18n="Incoming Mail Write">Incoming Mail Write</div>
           </a>
         </li>
       </ul>
@@ -174,12 +174,12 @@
       <ul class="menu-sub">
         <li class="menu-item">
           <a href="dashboards-crm.html" class="menu-link">
-            <div data-i18n="CRM">CRM</div>
+            <div data-i18n="Outgoing Mail List">Outgoing Mail List</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="index-2.html" class="menu-link">
-            <div data-i18n="Analytics">Analytics</div>
+            <div data-i18n="Outgoing Mail Write">Outgoing Mail Write</div>
           </a>
         </li>
       </ul>
