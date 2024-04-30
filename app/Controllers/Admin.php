@@ -12,6 +12,38 @@ class Admin extends BaseController
         return view('admin/index', $data);
     }
 
+    public function incoming_mail_list()
+    {
+        $data = [
+            'title' => 'Incoming Mail List | SIMARDI'
+        ];
+        return view('admin/incoming_mail_list', $data);
+    }
+
+    public function incoming_mail_write()
+    {
+        $data = [
+            'title' => 'Incoming Mail Write | SIMARDI'
+        ];
+        return view('admin/incoming_mail_write', $data);
+    }
+
+    public function outgoing_mail_list()
+    {
+        $data = [
+            'title' => 'Incoming Mail List | SIMARDI'
+        ];
+        return view('admin/incoming_mail_list', $data);
+    }
+
+    public function outgoing_mail_write()
+    {
+        $data = [
+            'title' => 'Incoming Mail Write | SIMARDI'
+        ];
+        return view('admin/incoming_mail_write', $data);
+    }
+
     public function profile()
     {
         $data = [
