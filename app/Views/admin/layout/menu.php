@@ -45,14 +45,14 @@
         <div class="badge bg-danger rounded-pill ms-auto">4</div>
       </a>
       <ul class="menu-sub">
-        <li class="menu-item <?= $submenu == 'incoming_mail_list' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/incoming_mail_list'); ?>" class="menu-link">
-            <div data-i18n="Incoming Mail List">Incoming Mail List</div>
+        <li class="menu-item <?= $submenu == 'list_incoming_mail' ? 'active' : '' ?>">
+          <a href="<?= base_url('/admin/list_incoming_mail'); ?>" class="menu-link">
+            <div data-i18n="List Incoming Mail">List Incoming Mail</div>
           </a>
         </li>
-        <li class="menu-item <?= $submenu == 'incoming_mail_write' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/incoming_mail_write'); ?>" class="menu-link">
-            <div data-i18n="Incoming Mail Write">Incoming Mail Write</div>
+        <li class="menu-item <?= $submenu == 'create_incoming_mail' ? 'active' : '' ?>">
+          <a href="<?= base_url('/admin/create_incoming_mail'); ?>" class="menu-link">
+            <div data-i18n="Create Incoming Mail">Create Incoming Mail</div>
           </a>
         </li>
       </ul>
@@ -65,14 +65,14 @@
         <div class="badge bg-danger rounded-pill ms-auto">7</div>
       </a>
       <ul class="menu-sub">
-        <li class="menu-item <?= $submenu == 'outgoing_mail_list' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/outgoing_mail_list'); ?>" class="menu-link">
-            <div data-i18n="Outgoing Mail List">Outgoing Mail List</div>
+        <li class="menu-item <?= $submenu == 'list_outgoing_mail' ? 'active' : '' ?>">
+          <a href="<?= base_url('/admin/list_outgoing_mail'); ?>" class="menu-link">
+            <div data-i18n="List Outgoing Mail">List Outgoing Mail</div>
           </a>
         </li>
-        <li class="menu-item <?= $submenu == 'outgoing_mail_write' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/outgoing_mail_write'); ?>" class="menu-link">
-            <div data-i18n="Outgoing Mail Write">Outgoing Mail Write</div>
+        <li class="menu-item <?= $submenu == 'create_outgoing_mail' ? 'active' : '' ?>">
+          <a href="<?= base_url('/admin/create_outgoing_mail'); ?>" class="menu-link">
+            <div data-i18n="Create Outgoing Mail">Create Outgoing Mail</div>
           </a>
         </li>
       </ul>

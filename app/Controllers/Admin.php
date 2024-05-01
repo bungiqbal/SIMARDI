@@ -14,44 +14,44 @@ class Admin extends BaseController
         return view('admin/index', $data);
     }
 
-    public function incoming_mail_list()
+    public function list_incoming_mail()
     {
         $data = [
-            'title' => 'Incoming Mail List | SIMARDI',
+            'title' => 'List Incoming Mail | SIMARDI',
             'menu' => 'incoming_mail',
-            'submenu' => 'incoming_mail_list'
+            'submenu' => 'list_incoming_mail'
         ];
-        return view('admin/incoming_mail_list', $data);
+        return view('admin/list_incoming_mail', $data);
     }
 
-    public function incoming_mail_write()
+    public function create_incoming_mail()
     {
         $data = [
-            'title' => 'Incoming Mail Write | SIMARDI',
+            'title' => 'Create Incoming Mail | SIMARDI',
             'menu' => 'incoming_mail',
-            'submenu' => 'incoming_mail_write'
+            'submenu' => 'create_incoming_mail'
         ];
-        return view('admin/incoming_mail_write', $data);
+        return view('admin/create_incoming_mail', $data);
     }
 
-    public function outgoing_mail_list()
+    public function list_outgoing_mail()
     {
         $data = [
-            'title' => 'Outgoing Mail List | SIMARDI',
+            'title' => 'List Outgoing Mail | SIMARDI',
             'menu' => 'outgoing_mail',
-            'submenu' => 'outgoing_mail_list'
+            'submenu' => 'list_outgoing_mail'
         ];
-        return view('admin/outgoing_mail_list', $data);
+        return view('admin/list_outgoing_mail', $data);
     }
 
-    public function outgoing_mail_write()
+    public function create_outgoing_mail()
     {
         $data = [
-            'title' => 'Outgoing Mail Write | SIMARDI',
+            'title' => 'Create Outgoing Mail | SIMARDI',
             'menu' => 'outgoing_mail',
-            'submenu' => 'outgoing_mail_write'
+            'submenu' => 'create_outgoing_mail'
         ];
-        return view('admin/outgoing_mail_write', $data);
+        return view('admin/create_outgoing_mail', $data);
     }
 
     public function profile()
