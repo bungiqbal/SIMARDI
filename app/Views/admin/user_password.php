@@ -113,10 +113,10 @@
                         </ul>
                         <div class="d-flex justify-content-between align-items-center mb-1">
                             <span class="h6 mb-0">Days</span>
-                            <span class="h6 mb-0">26 of 30 Days</span>
+                            <span class="h6 mb-0">80% Completed</span>
                         </div>
                         <div class="progress mb-1 rounded" style="height: 6px;">
-                            <div class="progress-bar rounded" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar rounded" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <small>4 days remaining</small>
                         <div class="d-grid w-100 mt-6">
@@ -134,8 +134,8 @@
                 <!-- User Tabs -->
                 <div class="nav-align-top">
                     <ul class="nav nav-pills flex-column flex-md-row flex-wrap mb-6 row-gap-2">
-                        <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i class="ri-group-line me-1_5"></i>Account</a></li>
-                        <li class="nav-item"><a class="nav-link" href="app-user-view-security.html"><i class="ri-lock-2-line me-1_5"></i>Security</a></li>
+                        <li class="nav-item"><a class="nav-link" href="app-user-view-account.html"><i class="ri-group-line me-1_5"></i>Account</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i class="ri-lock-2-line me-1_5"></i>Security</a></li>
                         <li class="nav-item"><a class="nav-link" href="app-user-view-billing.html"><i class="ri-bookmark-line me-1_5"></i>Billing & Plans</a></li>
                         <li class="nav-item"><a class="nav-link" href="app-user-view-notifications.html"><i class="ri-notification-4-line me-1_5"></i>Notifications</a></li>
                         <li class="nav-item"><a class="nav-link" href="app-user-view-connections.html"><i class="ri-link-m me-1_5"></i>Connections</a></li>
@@ -143,130 +143,114 @@
                 </div>
                 <!--/ User Tabs -->
 
-                <!-- Project table -->
+                <!-- Change Password -->
                 <div class="card mb-6">
-                    <div class="card-datatable table-responsive mb-n8">
-                        <table class="table datatable-project table-border-bottom-0">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Project</th>
-                                    <th class="text-nowrap">Total Task</th>
-                                    <th>Progress</th>
-                                    <th>Hours</th>
-                                </tr>
-                            </thead>
-                        </table>
+                    <h5 class="card-header">Change Password</h5>
+                    <div class="card-body">
+                        <form id="formChangePassword" method="GET" onsubmit="return false">
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                <h5 class="alert-heading mb-1">Ensure that these requirements are met</h5>
+                                <span>Minimum 8 characters long, uppercase & symbol</span>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <div class="row gx-5">
+                                <div class="mb-4 col-12 col-sm-6 form-password-toggle">
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <input class="form-control" type="password" id="newPassword" name="newPassword" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" />
+                                            <label for="newPassword">New Password</label>
+                                        </div>
+                                        <span class="input-group-text cursor-pointer"><i class="ri-eye-off-line ri-20px"></i></span>
+                                    </div>
+                                </div>
+                                <div class="mb-4 col-12 col-sm-6 form-password-toggle">
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <input class="form-control" type="password" name="confirmPassword" id="confirmPassword" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" />
+                                            <label for="confirmPassword">Confirm New Password</label>
+                                        </div>
+                                        <span class="input-group-text cursor-pointer"><i class="ri-eye-off-line ri-20px"></i></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary me-2">Change Password</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <!-- /Project table -->
+                <!--/ Change Password -->
 
-                <!-- Activity Timeline -->
+                <!-- Two-steps verification -->
                 <div class="card mb-6">
-                    <h5 class="card-header">User Activity Timeline</h5>
+                    <div class="card-header">
+                        <h5 class="mb-0">Two-steps verification</h5>
+                        <span class="card-subtitle mt-0">Keep your account secure with authentication step.</span>
+                    </div>
                     <div class="card-body pt-0">
-                        <ul class="timeline mb-0">
-                            <li class="timeline-item timeline-item-transparent">
-                                <span class="timeline-point timeline-point-primary"></span>
-                                <div class="timeline-event">
-                                    <div class="timeline-header mb-3">
-                                        <h6 class="mb-0">12 Invoices have been paid</h6>
-                                        <small class="text-muted">12 min ago</small>
-                                    </div>
-                                    <p class="mb-2">
-                                        Invoices have been paid to the company
-                                    </p>
-                                    <div class="d-flex align-items-center mb-1">
-                                        <div class="badge bg-lightest">
-                                            <img src="../../assets/img/icons/misc/pdf.png" alt="img" width="15" class="me-2">
-                                            <span class="h6 mb-0">invoices.pdf</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-item timeline-item-transparent">
-                                <span class="timeline-point timeline-point-success"></span>
-                                <div class="timeline-event">
-                                    <div class="timeline-header mb-3">
-                                        <h6 class="mb-0">Client Meeting</h6>
-                                        <small class="text-muted">45 min ago</small>
-                                    </div>
-                                    <p class="mb-2">
-                                        Project meeting with john @10:15am
-                                    </p>
-                                    <div class="d-flex justify-content-between flex-wrap gap-2">
-                                        <div class="d-flex flex-wrap align-items-center">
-                                            <div class="avatar avatar-sm me-2">
-                                                <img src="../../assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
-                                            </div>
-                                            <div>
-                                                <p class="mb-0 small fw-medium">Lester McCarthy (Client)</p>
-                                                <small>CEO of ThemeSelection</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-item timeline-item-transparent">
-                                <span class="timeline-point timeline-point-info"></span>
-                                <div class="timeline-event">
-                                    <div class="timeline-header mb-3">
-                                        <h6 class="mb-0">Create a new project for client</h6>
-                                        <small class="text-muted">2 Day Ago</small>
-                                    </div>
-                                    <p class="mb-2">
-                                        6 team members in a project
-                                    </p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap p-0">
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                <ul class="list-unstyled users-list d-flex align-items-center avatar-group m-0 me-2">
-                                                    <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Vinnie Mostowy" class="avatar pull-up">
-                                                        <img class="rounded-circle" src="../../assets/img/avatars/5.png" alt="Avatar" />
-                                                    </li>
-                                                    <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Allen Rieske" class="avatar pull-up">
-                                                        <img class="rounded-circle" src="../../assets/img/avatars/12.png" alt="Avatar" />
-                                                    </li>
-                                                    <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Julee Rossignol" class="avatar pull-up">
-                                                        <img class="rounded-circle" src="../../assets/img/avatars/6.png" alt="Avatar" />
-                                                    </li>
-                                                    <li class="avatar">
-                                                        <span class="avatar-initial rounded-circle pull-up text-heading" data-bs-toggle="tooltip" data-bs-placement="bottom" title="3 more">+3</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
+                        <h6 class="mb-1">SMS</h6>
+                        <div class="mb-4">
+                            <div class="d-flex w-100 action-icons">
+                                <input id="defaultInput" class="form-control form-control-sm me-5" type="text" placeholder="+1(968) 945-8832">
+                                <a href="javascript:;" class="btn btn-icon btn-outline-secondary me-2" data-bs-target="#enableOTP" data-bs-toggle="modal"><i class="ri-edit-box-line ri-22px"></i></a>
+                                <a href="javascript:;" class="btn btn-icon btn-outline-secondary"><i class="ri-user-add-line"></i></a>
+                            </div>
+                        </div>
+                        <p class="mb-0">Two-factor authentication adds an additional layer of security to your account by requiring more than just a password to log in.
+                            <a href="javascript:void(0);" class="text-primary">Learn more.</a>
+                        </p>
                     </div>
                 </div>
-                <!-- /Activity Timeline -->
+                <!--/ Two-steps verification -->
 
-                <!-- Invoice table -->
-                <div class="card mb-4">
-                    <div class="card-datatable table-responsive">
-                        <table class="table datatable-invoice">
+                <!-- Recent Devices -->
+                <div class="card mb-6">
+                    <h5 class="card-header">Recent Devices</h5>
+                    <div class="table-responsive table-border-bottom-0">
+                        <table class="table">
                             <thead>
                                 <tr>
-                                    <th></th>
-                                    <th>#</th>
-                                    <th>Status</th>
-                                    <th>Total</th>
-                                    <th>Issued Date</th>
-                                    <th>Action</th>
+                                    <th class="text-truncate">Browser</th>
+                                    <th class="text-truncate">Device</th>
+                                    <th class="text-truncate">Location</th>
+                                    <th class="text-truncate">Recent Activities</th>
                                 </tr>
                             </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-truncate"><img src="../../assets/img/icons/brands/chrome.png" alt="Chrome" class="me-4" width="22" height="22"><span class="text-heading">Chrome on Windows</span></td>
+                                    <td class="text-truncate">HP Spectre 360</td>
+                                    <td class="text-truncate">Switzerland</td>
+                                    <td class="text-truncate">10, July 2021 20:07</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-truncate"><img src="../../assets/img/icons/brands/chrome.png" alt="Chrome" class="me-4" width="22" height="22"><span class="text-heading">Chrome on iPhone</span></td>
+                                    <td class="text-truncate">iPhone 12x</td>
+                                    <td class="text-truncate">Australia</td>
+                                    <td class="text-truncate">13, July 2021 10:10</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-truncate"><img src="../../assets/img/icons/brands/chrome.png" alt="Chrome" class="me-4" width="22" height="22"><span class="text-heading">Chrome on Android</span></td>
+                                    <td class="text-truncate">Oneplus 9 Pro</td>
+                                    <td class="text-truncate">Dubai</td>
+                                    <td class="text-truncate">14, July 2021 15:15</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-truncate"><img src="../../assets/img/icons/brands/chrome.png" alt="Chrome" class="me-4" width="22" height="22"><span class="text-heading">Chrome on MacOS</span></td>
+                                    <td class="text-truncate">Apple iMac</td>
+                                    <td class="text-truncate">India</td>
+                                    <td class="text-truncate">16, July 2021 16:17</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
-                <!-- /Invoice table -->
+                <!--/ Recent Devices -->
             </div>
             <!--/ User Content -->
         </div>
 
-        <!-- Modal -->
+        <!-- Modals -->
         <!-- Edit User Modal -->
         <div class="modal fade" id="editUser" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-simple modal-edit-user">
@@ -392,6 +376,39 @@
         </div>
         <!--/ Edit User Modal -->
 
+        <!-- Enable OTP Modal -->
+        <div class="modal fade" id="enableOTP" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-simple modal-enable-otp modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body p-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="text-center mb-6">
+                            <h4 class="mb-2">Enable One Time Password</h4>
+                            <p>Verify Your Mobile Number for SMS</p>
+                        </div>
+                        <p class="fw-medium">Verify Your Mobile Number for SMS</p>
+                        <p>Enter your mobile phone number with country code and we will send you a verification code.</p>
+                        <form id="enableOTPForm" class="row g-5" onsubmit="return false">
+                            <div class="col-12">
+                                <div class="input-group input-group-merge">
+                                    <span class="input-group-text">US (+1)</span>
+                                    <div class="form-floating form-floating-outline">
+                                        <input type="text" id="modalEnableOTPPhone" name="modalEnableOTPPhone" class="form-control phone-number-otp-mask" placeholder="202 555 0111" />
+                                        <label for="modalEnableOTPPhone">Phone Number</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary me-3">Submit</button>
+                                <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ Enable OTP Modal -->
+
         <!-- Add New Credit Card Modal -->
         <div class="modal fade" id="upgradePlanModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-simple modal-upgrade-plan">
@@ -433,7 +450,7 @@
         </div>
         <!--/ Add New Credit Card Modal -->
 
-        <!-- /Modal -->
+        <!-- /Modals -->
     </div>
     <!-- / Content -->
 
