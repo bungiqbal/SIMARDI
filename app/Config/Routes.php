@@ -5,19 +5,33 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-$routes->get('/auth/login', 'Home::login');
-$routes->get('/auth/register', 'Home::register');
-$routes->get('/admin', 'Admin::index');
-$routes->get('/admin/incoming_mail_list', 'Admin::incoming_mail_list');
-$routes->get('/admin/incoming_mail_write', 'Admin::incoming_mail_write');
-$routes->get('/admin/outgoing_mail_list', 'Admin::incoming_mail_list');
-$routes->get('/admin/outgoing_mail_write', 'Admin::outgoing_mail_write');
-$routes->get('/admin/profile', 'Admin::profile');
-$routes->get('/admin/account', 'Admin::account');
-$routes->get('/admin/password', 'Admin::password');
-$routes->get('/admin/user_manager', 'Admin::user_manager');
-$routes->get('/admin/user_account', 'Admin::user_account');
-$routes->get('/admin/user_profile', 'Admin::user_profile');
-$routes->get('/admin/user_setting', 'Admin::user_setting');
-$routes->get('/admin/user_password', 'Admin::user_password');
+
+// HomePage
+$routes->get('/', 'HomePage::index');
+
+// Auth
+$routes->get('/auth/login', 'Auth::login');
+$routes->get('/auth/register', 'Auth::register');
+
+// Dashboard
+$routes->get('/admin', 'Admin\Dashboard::index');
+
+// Incoming Mail
+$routes->get('/admin/list_incoming_mail', 'Admin\IncomingMail::list_incoming_mail');
+$routes->get('/admin/create_incoming_mail', 'Admin\IncomingMail::create_incoming_mail');
+
+// Outgoing
+$routes->get('/admin/list_outgoing_mail', 'Admin\OutgoingMail::list_outgoing_mail');
+$routes->get('/admin/create_outgoing_mail', 'Admin\OutgoingMail::create_outgoing_mail');
+
+// My Profiles
+$routes->get('/admin/profile', 'Admin\MyProfiles::profile');
+$routes->get('/admin/account', 'Admin\MyProfiles::account');
+$routes->get('/admin/password', 'Admin\MyProfiles::password');
+
+// Users
+$routes->get('/admin/user_manager', 'Admin\Users::user_manager');
+$routes->get('/admin/user_account', 'Admin\Users::user_account');
+$routes->get('/admin/user_profile', 'Admin\Users::user_profile');
+$routes->get('/admin/user_setting', 'Admin\Users::user_setting');
+$routes->get('/admin/user_password', 'Admin\Users::user_password');

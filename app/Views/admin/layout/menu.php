@@ -31,70 +31,70 @@
   <div class="menu-inner-shadow"></div>
   <ul class="menu-inner py-1">
     <!-- Dashboards -->
-    <li class="menu-item active">
+    <li class="menu-item <?= $menu == 'index' ? 'active' : '' ?>">
       <a href="<?= base_url('/admin'); ?>" class="menu-link">
         <i class="menu-icon tf-icons ri-home-8-line"></i>
         <div data-i18n="Dashboard">Dashboard</div>
       </a>
     </li>
     <!-- Incoming Mail -->
-    <li class="menu-item">
+    <li class="menu-item <?= $menu == 'incoming_mail' ? 'open' : '' ?>">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons ri-mail-open-line"></i>
         <div data-i18n="Incoming Mail">Incoming Mail</div>
         <div class="badge bg-danger rounded-pill ms-auto">4</div>
       </a>
       <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="<?= base_url('/admin/incoming_mail_list'); ?>" class="menu-link">
-            <div data-i18n="Incoming Mail List">Incoming Mail List</div>
+        <li class="menu-item <?= $submenu == 'list_incoming_mail' ? 'active' : '' ?>">
+          <a href="<?= base_url('/admin/list_incoming_mail'); ?>" class="menu-link">
+            <div data-i18n="List Incoming Mail">List Incoming Mail</div>
           </a>
         </li>
-        <li class="menu-item">
-          <a href="<?= base_url('/admin/incoming_mail_write'); ?>" class="menu-link">
-            <div data-i18n="Incoming Mail Write">Incoming Mail Write</div>
+        <li class="menu-item <?= $submenu == 'create_incoming_mail' ? 'active' : '' ?>">
+          <a href="<?= base_url('/admin/create_incoming_mail'); ?>" class="menu-link">
+            <div data-i18n="Create Incoming Mail">Create Incoming Mail</div>
           </a>
         </li>
       </ul>
     </li>
     <!-- Outgoing Mail -->
-    <li class="menu-item">
+    <li class="menu-item <?= $menu == 'outgoing_mail' ? 'open' : '' ?>">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons ri-mail-line"></i>
         <div data-i18n="Outgoing Mail">Outgoing Mail</div>
         <div class="badge bg-danger rounded-pill ms-auto">7</div>
       </a>
       <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="<?= base_url('/admin/outgoing_mail_list'); ?>" class="menu-link">
-            <div data-i18n="Outgoing Mail List">Outgoing Mail List</div>
+        <li class="menu-item <?= $submenu == 'list_outgoing_mail' ? 'active' : '' ?>">
+          <a href="<?= base_url('/admin/list_outgoing_mail'); ?>" class="menu-link">
+            <div data-i18n="List Outgoing Mail">List Outgoing Mail</div>
           </a>
         </li>
-        <li class="menu-item">
-          <a href="<?= base_url('/admin/outgoing_mail_write'); ?>" class="menu-link">
-            <div data-i18n="Outgoing Mail Write">Outgoing Mail Write</div>
+        <li class="menu-item <?= $submenu == 'create_outgoing_mail' ? 'active' : '' ?>">
+          <a href="<?= base_url('/admin/create_outgoing_mail'); ?>" class="menu-link">
+            <div data-i18n="Create Outgoing Mail">Create Outgoing Mail</div>
           </a>
         </li>
       </ul>
     </li>
-    <!-- Account -->
-    <li class="menu-item">
+    <!-- My Profiles -->
+    <li class="menu-item <?= $menu == 'my_profiles' ? 'open' : '' ?>">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons ri-user-line"></i>
         <div data-i18n="My Profiles">My Profiles</div>
       </a>
       <ul class="menu-sub">
-        <li class="menu-item">
+        <li class="menu-item <?= $submenu == 'profile' ? 'active' : '' ?>">
           <a href="<?= base_url('/admin/profile'); ?>" class="menu-link">
             <div data-i18n="Profile">Profile</div>
           </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item <?= $submenu == 'account' ? 'active' : '' ?>">
           <a href="<?= base_url('/admin/account'); ?>" class="menu-link">
             <div data-i18n="Account">Account</div>
           </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item <?= $submenu == 'password' ? 'active' : '' ?>">
           <a href="<?= base_url('/admin/password'); ?>" class="menu-link">
             <div data-i18n="Password">Password</div>
           </a>
@@ -102,33 +102,33 @@
       </ul>
     </li>
     <!-- Users -->
-    <li class="menu-item">
+    <li class="menu-item <?= $menu == 'users' ? 'open' : '' ?>">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons ri-user-settings-line"></i>
         <div data-i18n="Users">Users</div>
       </a>
       <ul class="menu-sub">
-        <li class="menu-item">
+        <li class="menu-item <?= $submenu == 'user_manager' ? 'active' : '' ?>">
           <a href="<?= base_url('/admin/user_manager'); ?>" class="menu-link">
             <div data-i18n="User Manager">User Manager</div>
           </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item <?= $submenu == 'user_account' ? 'active' : '' ?>">
           <a href="<?= base_url('/admin/user_account'); ?>" class="menu-link">
             <div data-i18n="User Account">User Account</div>
           </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item <?= $submenu == 'user_profile' ? 'active' : '' ?>">
           <a href="<?= base_url('/admin/user_profile'); ?>" class="menu-link">
             <div data-i18n="User Profile">User Profile</div>
           </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item <?= $submenu == 'user_setting' ? 'active' : '' ?>">
           <a href="<?= base_url('/admin/user_setting'); ?>" class="menu-link">
             <div data-i18n="User Setting">User Setting</div>
           </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item <?= $submenu == 'user_password' ? 'active' : '' ?>">
           <a href="<?= base_url('/admin/user_password'); ?>" class="menu-link">
             <div data-i18n="User Password">User Password</div>
           </a>
