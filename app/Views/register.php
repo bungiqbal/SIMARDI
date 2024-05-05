@@ -14,7 +14,7 @@
 <!-- beautify ignore:start -->
 
 
-<html lang="en" class="light-style layout-wide  customizer-hide" dir="ltr" data-theme="theme-default" data-assets-path="../../assets/" data-template="vertical-menu-template" data-style="light">
+<html lang="en" class="light-style layout-wide  customizer-hide" dir="ltr" data-theme="theme-default" data-assets-path="<?php echo base_url('') ?>assets/" data-template="vertical-menu-template" data-style="light">
 
   
 <!-- Mirrored from demos.themeselection.com/materio-bootstrap-html-admin-template/html/vertical-menu-template/auth-register-cover.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Apr 2024 02:35:55 GMT -->
@@ -35,7 +35,7 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      '../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+      '<?php echo base_url('') ?><?php echo base_url('') ?>www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-5DDHKGP');</script>
     <!-- End Google Tag Manager -->
     
@@ -48,34 +48,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;ampdisplay=swap" rel="stylesheet">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="../../assets/vendor/fonts/remixicon/remixicon.css" />
-    <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icons.css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/fonts/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/fonts/flag-icons.css" />
     
     <!-- Menu waves for no-customizer fix -->
-    <link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/libs/node-waves/node-waves.css" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="../../assets/css/demo.css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/css/demo.css" />
     
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" /> 
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/libs/typeahead-js/typeahead.css" /> 
     <!-- Vendor -->
-<link rel="stylesheet" href="../../assets/vendor/libs/%40form-validation/form-validation.css" />
+<link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/libs/%40form-validation/form-validation.css" />
 
     <!-- Page CSS -->
     <!-- Page -->
-<link rel="stylesheet" href="../../assets/vendor/css/pages/page-auth.css">
+<link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/css/pages/page-auth.css">
 
     <!-- Helpers -->
-    <script src="../../assets/vendor/js/helpers.js"></script>
+    <script src="<?php echo base_url('') ?>assets/vendor/js/helpers.js"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="../../assets/vendor/js/template-customizer.js"></script>
+    <script src="<?php echo base_url('') ?>assets/vendor/js/template-customizer.js"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../../assets/js/config.js"></script>
+    <script src="<?php echo base_url('') ?>assets/js/config.js"></script>
     
 </head>
 
@@ -115,10 +115,10 @@
     <!-- /Left Text -->
     <div class="d-none d-lg-flex col-lg-7 col-xl-8 align-items-center justify-content-center p-12 pb-2">
       <div>
-        <img src="../../assets/img/illustrations/auth-cover-register-illustration-light.png" class="authentication-image-model d-none d-lg-block" alt="auth-model" data-app-light-img="illustrations/auth-cover-register-illustration-light.png" data-app-dark-img="illustrations/auth-cover-register-illustration-dark.html">
+        <img src="<?php echo base_url('') ?>assets/img/illustrations/auth-cover-register-illustration-light.png" class="authentication-image-model d-none d-lg-block" alt="auth-model" data-app-light-img="illustrations/auth-cover-register-illustration-light.png" data-app-dark-img="illustrations/auth-cover-register-illustration-dark.html">
       </div>
-      <img src="../../assets/img/illustrations/tree-2.png" alt="tree" class="authentication-image-tree z-n1">
-      <img src="../../assets/img/illustrations/auth-cover-mask-light.png" class="scaleX-n1-rtl authentication-image d-none d-lg-block w-75" height="362" alt="triangle-bg" data-app-light-img="illustrations/auth-cover-mask-light.png" data-app-dark-img="illustrations/auth-cover-mask-dark.html">
+      <img src="<?php echo base_url('') ?>assets/img/illustrations/tree-2.png" alt="tree" class="authentication-image-tree z-n1">
+      <img src="<?php echo base_url('') ?>assets/img/illustrations/auth-cover-mask-light.png" class="scaleX-n1-rtl authentication-image d-none d-lg-block w-75" height="362" alt="triangle-bg" data-app-light-img="illustrations/auth-cover-mask-light.png" data-app-dark-img="illustrations/auth-cover-mask-dark.html">
     </div>
     <!-- /Left Text -->
 
@@ -216,29 +216,29 @@
 
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
-  <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="../../assets/vendor/libs/popper/popper.js"></script>
-  <script src="../../assets/vendor/js/bootstrap.js"></script>
-  <script src="../../assets/vendor/libs/node-waves/node-waves.js"></script>
-  <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-  <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
-  <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
-  <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
-  <script src="../../assets/vendor/js/menu.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/libs/popper/popper.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/js/bootstrap.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/libs/node-waves/node-waves.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/libs/typeahead-js/typeahead.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/js/menu.js"></script>
   
   <!-- endbuild -->
 
   <!-- Vendors JS -->
-  <script src="../../assets/vendor/libs/%40form-validation/popular.js"></script>
-<script src="../../assets/vendor/libs/%40form-validation/bootstrap5.js"></script>
-<script src="../../assets/vendor/libs/%40form-validation/auto-focus.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/libs/%40form-validation/popular.js"></script>
+<script src="<?php echo base_url('') ?>assets/vendor/libs/%40form-validation/bootstrap5.js"></script>
+<script src="<?php echo base_url('') ?>assets/vendor/libs/%40form-validation/auto-focus.js"></script>
 
   <!-- Main JS -->
-  <script src="../../assets/js/main.js"></script>
+  <script src="<?php echo base_url('') ?>assets/js/main.js"></script>
   
 
   <!-- Page JS -->
-  <script src="../../assets/js/pages-auth.js"></script>
+  <script src="<?php echo base_url('') ?>assets/js/pages-auth.js"></script>
   
 </body>
 

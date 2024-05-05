@@ -14,7 +14,7 @@
 <!-- beautify ignore:start -->
 
 
-<html lang="en" class="light-style layout-navbar-fixed layout-wide " dir="ltr" data-theme="theme-default" data-assets-path="../../assets/" data-template="front-pages" data-style="light">
+<html lang="en" class="light-style layout-navbar-fixed layout-wide " dir="ltr" data-theme="theme-default" data-assets-path="<?php echo base_url('') ?>assets/" data-template="front-pages" data-style="light">
 
   
 <!-- Mirrored from demos.themeselection.com/materio-bootstrap-html-admin-template/html/front-pages/landing-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Apr 2024 02:34:48 GMT -->
@@ -35,7 +35,7 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      '../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+      '<?php echo base_url('') ?><?php echo base_url('') ?>www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-5DDHKGP');</script>
     <!-- End Google Tag Manager -->
     
@@ -48,32 +48,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;ampdisplay=swap" rel="stylesheet">
 
     
-    <link rel="stylesheet" href="../../assets/vendor/fonts/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/fonts/remixicon/remixicon.css" />
     
     <!-- Menu waves for no-customizer fix -->
-    <link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/libs/node-waves/node-waves.css" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="../../assets/css/demo.css" />
-    <link rel="stylesheet" href="../../assets/vendor/css/pages/front-page.css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/css/demo.css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/css/pages/front-page.css" />
     <!-- Vendors CSS -->
     
-    <link rel="stylesheet" href="../../assets/vendor/libs/nouislider/nouislider.css" />
-<link rel="stylesheet" href="../../assets/vendor/libs/swiper/swiper.css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/libs/nouislider/nouislider.css" />
+<link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/libs/swiper/swiper.css" />
 
     <!-- Page CSS -->
     
-<link rel="stylesheet" href="../../assets/vendor/css/pages/front-page-landing.css" />
+<link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/css/pages/front-page-landing.css" />
 
     <!-- Helpers -->
-    <script src="../../assets/vendor/js/helpers.js"></script>
+    <script src="<?php echo base_url('') ?>assets/vendor/js/helpers.js"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="../../assets/vendor/js/template-customizer.js"></script>
+    <script src="<?php echo base_url('') ?>assets/vendor/js/template-customizer.js"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../../assets/js/front-config.js"></script>
+    <script src="<?php echo base_url('') ?>assets/js/front-config.js"></script>
     
 </head>
 
@@ -90,8 +90,8 @@
 
 
 
-<script src="../../assets/vendor/js/dropdown-hover.js"></script>
-<script src="../../assets/vendor/js/mega-dropdown.js"></script>
+<script src="<?php echo base_url('') ?>assets/vendor/js/dropdown-hover.js"></script>
+<script src="<?php echo base_url('') ?>assets/vendor/js/mega-dropdown.js"></script>
 
 <!-- Navbar: Start -->
 <nav class="layout-navbar container shadow-none py-0">
@@ -310,7 +310,7 @@
               </div>
               <div class="col-lg-4 d-none d-lg-block">
                 <div class="bg-body nav-img-col p-2">
-                  <img src="../../assets/img/front-pages/misc/nav-item-col-img-light.png" class="img-fluid scaleX-n1-rtl w-100" alt="nav item col image" data-app-light-img="front-pages/misc/nav-item-col-img-light.png" data-app-dark-img="front-pages/misc/nav-item-col-img-dark.html" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/misc/nav-item-col-img-light.png" class="img-fluid scaleX-n1-rtl w-100" alt="nav item col image" data-app-light-img="front-pages/misc/nav-item-col-img-light.png" data-app-dark-img="front-pages/misc/nav-item-col-img-dark.html" />
                 </div>
               </div>
             </div>
@@ -370,7 +370,7 @@
 <div data-bs-spy="scroll" class="scrollspy-example">
   <!-- Hero: Start -->
   <section id="landingHero" class="section-py landing-hero position-relative">
-    <img src="../../assets/img/front-pages/backgrounds/hero-bg-light.png" alt="hero background" class="position-absolute top-0 start-0 w-100 h-100 z-n1" data-speed="1" data-app-light-img="front-pages/backgrounds/hero-bg-light.png" data-app-dark-img="front-pages/backgrounds/hero-bg-dark.html" />
+    <img src="<?php echo base_url('') ?>assets/img/front-pages/backgrounds/hero-bg-light.png" alt="hero background" class="position-absolute top-0 start-0 w-100 h-100 z-n1" data-speed="1" data-app-light-img="front-pages/backgrounds/hero-bg-light.png" data-app-dark-img="front-pages/backgrounds/hero-bg-dark.html" />
     <div class="container">
       <div class="hero-text-box text-center">
         <h2 class="text-primary hero-title mb-4">All in one sass application for your business</h2>
@@ -382,10 +382,10 @@
       <div class="position-relative hero-animation-img">
         <a href="../vertical-menu-template/dashboards-crm.html" target="_blank">
           <div class="hero-dashboard-img text-center">
-            <img src="../../assets/img/front-pages/landing-page/hero-dashboard-light.png" alt="hero dashboard" class="animation-img" data-speed="2" data-app-light-img="front-pages/landing-page/hero-dashboard-light.png" data-app-dark-img="front-pages/landing-page/hero-dashboard-dark.html" />
+            <img src="<?php echo base_url('') ?>assets/img/front-pages/landing-page/hero-dashboard-light.png" alt="hero dashboard" class="animation-img" data-speed="2" data-app-light-img="front-pages/landing-page/hero-dashboard-light.png" data-app-dark-img="front-pages/landing-page/hero-dashboard-dark.html" />
           </div>
           <div class="position-absolute hero-elements-img">
-            <img src="../../assets/img/front-pages/landing-page/hero-elements-light.png" alt="hero elements" class="animation-img" data-speed="4" data-app-light-img="front-pages/landing-page/hero-elements-light.png" data-app-dark-img="front-pages/landing-page/hero-elements-dark.html" />
+            <img src="<?php echo base_url('') ?>assets/img/front-pages/landing-page/hero-elements-light.png" alt="hero elements" class="animation-img" data-speed="4" data-app-light-img="front-pages/landing-page/hero-elements-light.png" data-app-dark-img="front-pages/landing-page/hero-elements-dark.html" />
           </div>
         </a>
       </div>
@@ -397,7 +397,7 @@
   <section id="landingFeatures" class="section-py landing-features">
     <div class="container">
       <h6 class="text-center d-flex justify-content-center align-items-center mb-6">
-        <img src="../../assets/img/front-pages/icons/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
+        <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
         <span class="text-uppercase">Useful features</span>
       </h6>
       <h5 class="text-center mb-2"><span class="h4 fw-bold">Everything you need</span> to start your next project</h5>
@@ -407,7 +407,7 @@
       <div class="features-icon-wrapper row gx-0 gy-12 gx-sm-6">
         <div class="col-lg-4 col-sm-6 text-center features-icon-box">
           <div class="features-icon mb-4">
-            <img src="../../assets/img/front-pages/icons/laptop-charging.png" alt="laptop charging" />
+            <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/laptop-charging.png" alt="laptop charging" />
           </div>
           <h5 class="mb-2">Quality Code</h5>
           <p class="features-icon-description">
@@ -416,7 +416,7 @@
         </div>
         <div class="col-lg-4 col-sm-6 text-center features-icon-box">
           <div class="features-icon mb-4">
-            <img src="../../assets/img/front-pages/icons/transition-up.png" alt="transition up" />
+            <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/transition-up.png" alt="transition up" />
           </div>
           <h5 class="mb-2">Continuous Updates</h5>
           <p class="features-icon-description">
@@ -425,7 +425,7 @@
         </div>
         <div class="col-lg-4 col-sm-6 text-center features-icon-box">
           <div class="features-icon mb-4">
-            <img src="../../assets/img/front-pages/icons/edit.png" alt="edit" />
+            <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/edit.png" alt="edit" />
           </div>
           <h5 class="mb-2">Stater-Kit</h5>
           <p class="features-icon-description">
@@ -434,7 +434,7 @@
         </div>
         <div class="col-lg-4 col-sm-6 text-center features-icon-box">
           <div class="features-icon mb-4">
-            <img src="../../assets/img/front-pages/icons/3d-select-solid.png" alt="3d select solid" />
+            <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/3d-select-solid.png" alt="3d select solid" />
           </div>
           <h5 class="mb-2">API Ready</h5>
           <p class="features-icon-description">
@@ -443,14 +443,14 @@
         </div>
         <div class="col-lg-4 col-sm-6 text-center features-icon-box">
           <div class="features-icon mb-4">
-            <img src="../../assets/img/front-pages/icons/lifebelt.png" alt="lifebelt" />
+            <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/lifebelt.png" alt="lifebelt" />
           </div>
           <h5 class="mb-2">Excellent Support</h5>
           <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
         </div>
         <div class="col-lg-4 col-sm-6 text-center features-icon-box">
           <div class="features-icon mb-4">
-            <img src="../../assets/img/front-pages/icons/google-docs.png" alt="google docs" />
+            <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/google-docs.png" alt="google docs" />
           </div>
           <h5 class="mb-2">Well Documented</h5>
           <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
@@ -464,7 +464,7 @@
   <section id="landingReviews" class="section-py bg-body landing-reviews">
     <div class="container">
       <h6 class="text-center d-flex justify-content-center align-items-center mb-6">
-        <img src="../../assets/img/front-pages/icons/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
+        <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
         <span class="text-uppercase">real customers reviews</span>
       </h6>
       <h5 class="text-center mb-2"><span class="h4 fw-bold">Success stories</span> from clients</h5>
@@ -477,7 +477,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-4.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-4.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">
                   “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard
@@ -501,7 +501,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-1.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-1.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">Materio is awesome, and I particularly enjoy knowing that if I get stuck on something.</p>
                 <div class="text-warning mb-4">
@@ -522,7 +522,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-3.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-3.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">
                   This template is superior in so many ways. The code, the design, the regular updates, the
@@ -546,7 +546,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-2.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-2.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">
                   All the requirements for developers have been taken into consideration, so I’m able to build any
@@ -570,7 +570,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-5.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-5.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">
                   “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard
@@ -594,7 +594,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center h-100">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-4.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-4.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">
                   “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard
@@ -618,7 +618,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center h-100">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-1.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-1.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">Materio is awesome, and I particularly enjoy knowing that if I get stuck on something.</p>
                 <div class="text-warning mb-4">
@@ -639,7 +639,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center h-100">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-3.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-3.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">
                   This template is superior in so many ways. The code, the design, the regular updates, the
@@ -663,7 +663,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center h-100">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-2.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-2.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">
                   All the requirements for developers have been taken into consideration, so I’m able to build any
@@ -687,7 +687,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center h-100">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-5.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-5.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">
                   “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard
@@ -711,7 +711,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-4.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-4.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">
                   “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard
@@ -735,7 +735,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-1.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-1.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">Materio is awesome, and I particularly enjoy knowing that if I get stuck on something.</p>
                 <div class="text-warning mb-4">
@@ -756,7 +756,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-3.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-3.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">
                   This template is superior in so many ways. The code, the design, the regular updates, the
@@ -780,7 +780,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-2.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-2.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">
                   All the requirements for developers have been taken into consideration, so I’m able to build any
@@ -804,7 +804,7 @@
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8">
                 <div class="mb-4">
-                  <img src="../../assets/img/front-pages/branding/logo-5.png" alt="client logo" class="client-logo img-fluid" />
+                  <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-5.png" alt="client logo" class="client-logo img-fluid" />
                 </div>
                 <p class="text-heading">
                   “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard
@@ -833,19 +833,19 @@
         <div class="swiper" id="swiper-clients-logos">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="../../assets/img/front-pages/branding/logo-1-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo-1-light.png" data-app-dark-img="front-pages/branding/logo-1-dark.html" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-1-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo-1-light.png" data-app-dark-img="front-pages/branding/logo-1-dark.html" />
             </div>
             <div class="swiper-slide">
-              <img src="../../assets/img/front-pages/branding/logo-2-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo-2-light.png" data-app-dark-img="front-pages/branding/logo-2-dark.html" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-2-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo-2-light.png" data-app-dark-img="front-pages/branding/logo-2-dark.html" />
             </div>
             <div class="swiper-slide">
-              <img src="../../assets/img/front-pages/branding/logo-3-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo-3-light.png" data-app-dark-img="front-pages/branding/logo-3-dark.html" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-3-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo-3-light.png" data-app-dark-img="front-pages/branding/logo-3-dark.html" />
             </div>
             <div class="swiper-slide">
-              <img src="../../assets/img/front-pages/branding/logo-4-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo-4-light.png" data-app-dark-img="front-pages/branding/logo-4-dark.html" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-4-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo-4-light.png" data-app-dark-img="front-pages/branding/logo-4-dark.html" />
             </div>
             <div class="swiper-slide">
-              <img src="../../assets/img/front-pages/branding/logo-5-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo-5-light.png" data-app-dark-img="front-pages/branding/logo-5-dark.html" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/branding/logo-5-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo-5-light.png" data-app-dark-img="front-pages/branding/logo-5-dark.html" />
             </div>
           </div>
         </div>
@@ -857,9 +857,9 @@
   <!-- Our great team: Start -->
   <section id="landingTeam" class="section-py landing-team">
     <div class="container bg-icon-right position-relative">
-      <img src="../../assets/img/front-pages/icons/bg-right-icon-light.png" alt="section icon" class="position-absolute top-0 end-0" data-speed="1" data-app-light-img="front-pages/icons/bg-right-icon-light.png" data-app-dark-img="front-pages/icons/bg-right-icon-dark.html" />
+      <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/bg-right-icon-light.png" alt="section icon" class="position-absolute top-0 end-0" data-speed="1" data-app-light-img="front-pages/icons/bg-right-icon-light.png" data-app-dark-img="front-pages/icons/bg-right-icon-dark.html" />
       <h6 class="text-center d-flex justify-content-center align-items-center mb-6">
-        <img src="../../assets/img/front-pages/icons/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
+        <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
         <span class="text-uppercase">our great team</span>
       </h6>
       <h5 class="text-center mb-2"><span class="h4 fw-bold">Supported</span> by Real People</h5>
@@ -868,7 +868,7 @@
         <div class="col-lg-3 col-sm-6">
           <div class="card card-hover-border-primary mt-4 mt-lg-0 shadow-none">
             <div class="bg-label-primary position-relative team-image-box">
-              <img src="../../assets/img/front-pages/landing-page/team-member-1.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/landing-page/team-member-1.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
             </div>
             <div class="card-body text-center">
               <h5 class="card-title mb-0">Sophie Gilbert</h5>
@@ -890,7 +890,7 @@
         <div class="col-lg-3 col-sm-6">
           <div class="card card-hover-border-danger mt-4 mt-lg-0 shadow-none">
             <div class="bg-label-danger position-relative team-image-box">
-              <img src="../../assets/img/front-pages/landing-page/team-member-2.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/landing-page/team-member-2.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
             </div>
             <div class="card-body text-center">
               <h5 class="card-title mb-0">Nannie Ford</h5>
@@ -912,7 +912,7 @@
         <div class="col-lg-3 col-sm-6">
           <div class="card card-hover-border-success mt-4 mt-lg-0 shadow-none">
             <div class="bg-label-success position-relative team-image-box">
-              <img src="../../assets/img/front-pages/landing-page/team-member-3.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/landing-page/team-member-3.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
             </div>
             <div class="card-body text-center">
               <h5 class="card-title mb-0">Chris Watkins</h5>
@@ -934,7 +934,7 @@
         <div class="col-lg-3 col-sm-6">
           <div class="card card-hover-border-info mt-4 mt-lg-0 shadow-none">
             <div class="bg-label-info position-relative team-image-box">
-              <img src="../../assets/img/front-pages/landing-page/team-member-4.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/landing-page/team-member-4.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
             </div>
             <div class="card-body text-center">
               <h5 class="card-title mb-0">Paul Miles</h5>
@@ -961,9 +961,9 @@
   <!-- Pricing plans: Start -->
   <section id="landingPricing" class="section-py bg-body landing-pricing">
     <div class="container bg-icon-left position-relative">
-      <img src="../../assets/img/front-pages/icons/bg-left-icon-light.png" alt="section icon" class="position-absolute top-0 start-0" data-speed="1" data-app-light-img="front-pages/icons/bg-left-icon-light.png" data-app-dark-img="front-pages/icons/bg-left-icon-dark.html" />
+      <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/bg-left-icon-light.png" alt="section icon" class="position-absolute top-0 start-0" data-speed="1" data-app-light-img="front-pages/icons/bg-left-icon-light.png" data-app-dark-img="front-pages/icons/bg-left-icon-dark.html" />
       <h6 class="text-center d-flex justify-content-center align-items-center mb-6">
-        <img src="../../assets/img/front-pages/icons/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
+        <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
         <span class="text-uppercase">pricing plans</span>
       </h6>
       <h5 class="text-center mb-2"><span class="h4 fw-bold">Tailored pricing plans</span> designed for you</h5>
@@ -985,43 +985,43 @@
                   <p class="small mb-0 text-body">10% off for yearly subscription</p>
                 </div>
               </div>
-              <img src="../../assets/img/front-pages/icons/smiling-icon.png" alt="smiling icon" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/smiling-icon.png" alt="smiling icon" />
             </div>
             <div class="card-body">
               <ul class="list-unstyled">
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Timeline
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Basic search
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Live chat widget
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Email marketing
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Custom Forms
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Traffic analytics
                   </h5>
                 </li>
@@ -1054,43 +1054,43 @@
                   <p class="small mb-0 text-body">10% off for yearly subscription</p>
                 </div>
               </div>
-              <img src="../../assets/img/front-pages/icons/smiling-icon.png" alt="smiling icon" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/smiling-icon.png" alt="smiling icon" />
             </div>
             <div class="card-body">
               <ul class="list-unstyled">
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Everything in basic
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Timeline with database
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Advanced search
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Marketing automation
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Advanced chatbot
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Campaign management
                   </h5>
                 </li>
@@ -1123,43 +1123,43 @@
                   <p class="small mb-0 text-body">10% off for yearly subscription</p>
                 </div>
               </div>
-              <img src="../../assets/img/front-pages/icons/smiling-icon.png" alt="smiling icon" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/smiling-icon.png" alt="smiling icon" />
             </div>
             <div class="card-body">
               <ul class="list-unstyled">
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Everything in premium
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Timeline with database
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Fuzzy search
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     A/B testing sanbox
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Custom permissions
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src="../../assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/list-arrow-icon.png" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Social media automation
                   </h5>
                 </li>
@@ -1216,9 +1216,9 @@
   <!-- FAQ: Start -->
   <section id="landingFAQ" class="section-py bg-body landing-faq">
     <div class="container bg-icon-right">
-      <img src="../../assets/img/front-pages/icons/bg-right-icon-light.png" alt="section icon" class="position-absolute top-0 end-0" data-speed="1" data-app-light-img="front-pages/icons/bg-right-icon-light.png" data-app-dark-img="front-pages/icons/bg-right-icon-dark.html" />
+      <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/bg-right-icon-light.png" alt="section icon" class="position-absolute top-0 end-0" data-speed="1" data-app-light-img="front-pages/icons/bg-right-icon-light.png" data-app-dark-img="front-pages/icons/bg-right-icon-dark.html" />
       <h6 class="text-center d-flex justify-content-center align-items-center mb-6">
-        <img src="../../assets/img/front-pages/icons/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
+        <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
         <span class="text-uppercase">faq</span>
       </h6>
       <h5 class="text-center mb-2">Frequently asked<span class="h4 fw-bold"> questions</span></h5>
@@ -1228,7 +1228,7 @@
       <div class="row gy-5">
         <div class="col-lg-5">
           <div class="text-center">
-            <img src="../../assets/img/front-pages/landing-page/sitting-girl-with-laptop.png" alt="sitting girl with laptop" class="faq-image scaleX-n1-rtl" />
+            <img src="<?php echo base_url('') ?>assets/img/front-pages/landing-page/sitting-girl-with-laptop.png" alt="sitting girl with laptop" class="faq-image scaleX-n1-rtl" />
           </div>
         </div>
         <div class="col-lg-7">
@@ -1316,7 +1316,7 @@
 
   <!-- CTA: Start -->
   <section id="landingCTA" class="section-py landing-cta p-lg-0 pb-0 position-relative">
-    <img src="../../assets/img/front-pages/backgrounds/cta-bg.png" class="position-absolute bottom-0 end-0 scaleX-n1-rtl h-100 w-100 z-n1" alt="cta image" />
+    <img src="<?php echo base_url('') ?>assets/img/front-pages/backgrounds/cta-bg.png" class="position-absolute bottom-0 end-0 scaleX-n1-rtl h-100 w-100 z-n1" alt="cta image" />
     <div class="container">
       <div class="row align-items-center gy-5 gy-lg-0">
         <div class="col-lg-6 text-center text-lg-start">
@@ -1325,7 +1325,7 @@
           <a href="payment-page.html" class="btn btn-primary">Get Started<i class="ri-arrow-right-line ri-16px ms-2 scaleX-n1-rtl"></i></a>
         </div>
         <div class="col-lg-6 pt-lg-12">
-          <img src="../../assets/img/front-pages/landing-page/cta-dashboard.png" alt="cta dashboard" class="img-fluid" />
+          <img src="<?php echo base_url('') ?>assets/img/front-pages/landing-page/cta-dashboard.png" alt="cta dashboard" class="img-fluid" />
         </div>
       </div>
     </div>
@@ -1335,9 +1335,9 @@
   <!-- Contact Us: Start -->
   <section id="landingContact" class="section-py bg-body landing-contact">
     <div class="container bg-icon-left position-relative">
-      <img src="../../assets/img/front-pages/icons/bg-left-icon-light.png" alt="section icon" class="position-absolute top-0 start-0" data-speed="1" data-app-light-img="front-pages/icons/bg-left-icon-light.png" data-app-dark-img="front-pages/icons/bg-left-icon-dark.html" />
+      <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/bg-left-icon-light.png" alt="section icon" class="position-absolute top-0 start-0" data-speed="1" data-app-light-img="front-pages/icons/bg-left-icon-light.png" data-app-dark-img="front-pages/icons/bg-left-icon-dark.html" />
       <h6 class="text-center d-flex justify-content-center align-items-center mb-6">
-        <img src="../../assets/img/front-pages/icons/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
+        <img src="<?php echo base_url('') ?>assets/img/front-pages/icons/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
         <span class="text-uppercase">contact us</span>
       </h6>
       <h5 class="text-center mb-2"><span class="h4 fw-bold">Lets work</span> together</h5>
@@ -1348,7 +1348,7 @@
             <div class="bg-primary rounded text-white card-body p-lg-8">
               <p class="fw-medium mb-2 tagline">Let’s contact with us</p>
               <p class="display-6 mb-5 title">Share your ideas or requirement with our experts.</p>
-              <img src="../../assets/img/front-pages/landing-page/let%c3%a2%c2%80%c2%99s-contact.html" alt="let’s contact" class="w-100 mb-4 pb-1" />
+              <img src="<?php echo base_url('') ?>assets/img/front-pages/landing-page/let%c3%a2%c2%80%c2%99s-contact.html" alt="let’s contact" class="w-100 mb-4 pb-1" />
               <p class="mb-0 description">
                 Looking for more customisation, more features, and more anything? Don’t worry, We’ve provide you with
                 an entire team of experienced professionals.
@@ -1402,7 +1402,7 @@
 <!-- Footer: Start -->
 <footer class="landing-footer">
   <div class="footer-top position-relative overflow-hidden">
-    <img src="../../assets/img/front-pages/backgrounds/footer-bg.png" alt="footer bg" class="footer-bg banner-bg-img" />
+    <img src="<?php echo base_url('') ?>assets/img/front-pages/backgrounds/footer-bg.png" alt="footer bg" class="footer-bg banner-bg-img" />
     <div class="container position-relative">
       <div class="row gx-0 gy-7 gx-sm-6 gx-lg-12">
         <div class="col-lg-5">
@@ -1481,8 +1481,8 @@
         </div>
         <div class="col-lg-3 col-md-4">
           <h6 class="footer-title mb-4 mb-lg-6">Download our app</h6>
-          <a href="javascript:void(0);" class="d-block footer-link mb-4"><img src="../../assets/img/front-pages/landing-page/apple-icon.png" alt="apple icon" /></a>
-          <a href="javascript:void(0);" class="d-block footer-link"><img src="../../assets/img/front-pages/landing-page/google-play-icon.png" alt="google play icon" /></a>
+          <a href="javascript:void(0);" class="d-block footer-link mb-4"><img src="<?php echo base_url('') ?>assets/img/front-pages/landing-page/apple-icon.png" alt="apple icon" /></a>
+          <a href="javascript:void(0);" class="d-block footer-link"><img src="<?php echo base_url('') ?>assets/img/front-pages/landing-page/google-play-icon.png" alt="google play icon" /></a>
         </div>
       </div>
     </div>
@@ -1520,22 +1520,22 @@
 
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
-  <script src="../../assets/vendor/libs/popper/popper.js"></script>
-  <script src="../../assets/vendor/js/bootstrap.js"></script>
-  <script src="../../assets/vendor/libs/node-waves/node-waves.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/libs/popper/popper.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/js/bootstrap.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/libs/node-waves/node-waves.js"></script>
   
   <!-- endbuild -->
 
   <!-- Vendors JS -->
-  <script src="../../assets/vendor/libs/nouislider/nouislider.js"></script>
-<script src="../../assets/vendor/libs/swiper/swiper.js"></script>
+  <script src="<?php echo base_url('') ?>assets/vendor/libs/nouislider/nouislider.js"></script>
+<script src="<?php echo base_url('') ?>assets/vendor/libs/swiper/swiper.js"></script>
 
   <!-- Main JS -->
-  <script src="../../assets/js/front-main.js"></script>
+  <script src="<?php echo base_url('') ?>assets/js/front-main.js"></script>
   
 
   <!-- Page JS -->
-  <script src="../../assets/js/front-page-landing.js"></script>
+  <script src="<?php echo base_url('') ?>assets/js/front-page-landing.js"></script>
   
 </body>
 
