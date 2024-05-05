@@ -125,13 +125,17 @@
     <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg position-relative py-sm-5 px-12 py-4">
       <div class="w-px-400 mx-auto pt-5 pt-lg-0">
         <h4 class="mb-1">Welcome to SIMARDI 👋🏻</h4>
+        <!-- <h2 class="card-header"><?= lang('Auth.loginTitle') ?></h2> -->
+        <?= view('Myth\Auth\Views\_message_block') ?>
         <br>
         <!-- <p class="mb-5">Please sign-in to  your account and start the adventure</p> -->
 
-        <form id="formAuthentication" class="mb-5" action="https://demos.themeselection.com/materio-bootstrap-html-admin-template/html/vertical-menu-template/index.html" method="GET">
+        <form id="formAuthentication" class="mb-5" action="<?= url_to('login') ?>" method="post">
+						<?= csrf_field() ?>>
+          <?php if ($config->validFields === ['email']): ?>
           <div class="form-floating form-floating-outline mb-5">
-            <input type="text" class="form-control" id="email" name="email-username" placeholder="Enter your username" autofocus>
-            <label for="email">Username</label>
+            <input type="email" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" id="email" name="login" placeholder="<?=lang('Auth.email')?>" autofocus>
+            <label for="login"><?=lang('Auth.email')?></label>
           </div>
           <div class="mb-5">
             <div class="form-password-toggle">
