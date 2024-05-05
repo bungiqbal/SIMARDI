@@ -11,11 +11,8 @@
     },
     "require": {
         "php": "^8.1",
-        "codeigniter4/framework": "^4.0",
-        "myth/auth": "^1.2"
+        "codeigniter4/framework": "^4.0"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require-dev": {
         "fakerphp/faker": "^1.9",
         "mikey179/vfsstream": "^1.6",
