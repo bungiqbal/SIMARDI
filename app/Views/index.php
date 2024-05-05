@@ -131,7 +131,7 @@
       </button>
       <ul class="navbar-nav me-auto p-4 p-lg-0">
         <li class="nav-item">
-          <a class="nav-link fw-medium" aria-current="page" href="landing-page.html#landingHero">Home</a>
+          <a class="nav-link fw-medium" aria-current="page" href="landing-page.html#landingHero">Home TES</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-medium" href="landing-page.html#landingFeatures">Features</a>
