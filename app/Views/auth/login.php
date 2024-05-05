@@ -124,51 +124,72 @@
     <!-- Login -->
     <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg position-relative py-sm-5 px-12 py-4">
       <div class="w-px-400 mx-auto pt-5 pt-lg-0">
-        <h4 class="mb-1">Welcome to SIMARDI 👋🏻</h4>
-        <!-- <h2 class="card-header"><?= lang('Auth.loginTitle') ?></h2> -->
+        <!-- <h4 class="mb-1">Welcome to SIMARDI 👋🏻</h4> -->
+        <h4 class="card-header"><?= lang('Auth.loginTitle') ?></h4>
         <?= view('Myth\Auth\Views\_message_block') ?>
         <br>
         <!-- <p class="mb-5">Please sign-in to  your account and start the adventure</p> -->
 
-        <form id="formAuthentication" class="mb-5" action="<?= url_to('login') ?>" method="post">
-						<?= csrf_field() ?>>
-          <?php if ($config->validFields === ['email']): ?>
+        <form class="mb-5" action="<?= url_to('login') ?>" method="post">
+						<?= csrf_field() ?>
+        <?php if ($config->validFields === ['email']) : ?>
           <div class="form-floating form-floating-outline mb-5">
-            <input type="email" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" id="email" name="login" placeholder="<?=lang('Auth.email')?>" autofocus>
-            <label for="login"><?=lang('Auth.email')?></label>
+            <input type="email" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.email') ?>" autofocus>
+            <label for="login"><?= lang('Auth.email') ?></label>
+            <div class="invalid-feedback">
+							<?= session('errors.login') ?>
+						</div>
           </div>
+        <?php else : ?>
+          <div class="form-floating form-floating-outline mb-5">
+            <input type="text" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.emailOrUsername') ?>" autofocus>
+            <label for="login"><?= lang('Auth.emailOrUsername') ?></label>
+            <div class="invalid-feedback">
+							<?= session('errors.login') ?>
+						</div>
+          </div>
+        <?php endif; ?>
           <div class="mb-5">
             <div class="form-password-toggle">
               <div class="input-group input-group-merge">
                 <div class="form-floating form-floating-outline">
-                  <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
-                  <label for="password">Password</label>
+                  <input type="password" name="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>" aria-describedby="password" />
+                  <label for="password"><?= lang('Auth.password') ?></label>
                 </div>
+                <div class="invalid-feedback">
+								  <?= session('errors.password') ?>
+							  </div>
                 <span class="input-group-text cursor-pointer"><i class="ri-eye-off-line ri-20px"></i></span>
               </div>
             </div>
           </div>
           <div class="mb-5 d-flex justify-content-between flex-wrap py-2">
+          <?php if ($config->allowRemembering) : ?>
             <div class="form-check mb-0">
-              <input class="form-check-input" type="checkbox" id="remember-me">
+              <input type="checkbox" name="remember" class="form-check-input" id="remember-me" <?php if (old('remember')) : ?> checked <?php endif ?>>
               <label class="form-check-label me-2" for="remember-me">
-                Remember Me
+                <?= lang('Auth.rememberMe') ?>
               </label>
             </div>
-            <a href="auth-forgot-password-cover.html" class="float-end mb-1">
-              <span>Forgot Password?</span>
+          <?php endif; ?>
+          <?php if ($config->activeResetter) : ?>
+            <a href="<?= url_to('forgot') ?>" class="float-end mb-1">
+              <span><?= lang('Auth.forgotYourPassword') ?></span>
             </a>
+          <?php endif; ?>
           </div>
           <button class="btn btn-primary d-grid w-100">
-            Login
+            <?= lang('Auth.loginAction') ?>
           </button>
         </form>
 
         <p class="text-center">
           <span>Don't have an account yet?</span>
-          <a href="<?php echo base_url('') ?>/register">
-            <span>Create an account</span>
+          <?php if ($config->allowRegistration) : ?>
+          <a href="<?= url_to('register') ?>">
+            <span><?= lang('Auth.needAnAccount') ?></span>
           </a>
+          <?php endif; ?>
         </p>
 
         <!-- <div class="divider my-5">
