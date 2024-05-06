@@ -78,7 +78,8 @@ class Auth extends BaseConfig
         // 'register'        => 'Myth\Auth\Views\register',
         'login'           => '\App/Views\Auth\login',
         'register'        => '\App/Views\Auth\register',
-        'forgot'          => 'Myth\Auth\Views\forgot',
+        // 'forgot'          => 'Myth\Auth\Views\forgot',
+        'forgot'          => '\App/Views\Auth\forgot',
         'reset'           => 'Myth\Auth\Views\reset',
         'emailForgot'     => 'Myth\Auth\Views\emails\forgot',
         'emailActivation' => 'Myth\Auth\Views\emails\activation',
@@ -215,7 +216,7 @@ class Auth extends BaseConfig
      *
      * @var bool
      */
-    public $allowRemembering = false;
+    public $allowRemembering = true;
 
     /**
      * --------------------------------------------------------------------
@@ -227,7 +228,7 @@ class Auth extends BaseConfig
      *
      * @var int
      */
-    public $rememberLength = 30 * DAY;
+    public $rememberLength = 1 * DAY;
 
     /**
      * --------------------------------------------------------------------
