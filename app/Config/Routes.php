@@ -9,10 +9,6 @@ use CodeIgniter\Router\RouteCollection;
 // HomePage
 $routes->get('/', 'HomePage::index');
 
-// Auth
-// $routes->get('/auth/login', 'Auth::login');
-// $routes->get('/auth/register', 'Auth::register');
-
 // Dashboard
 $routes->get('/admin', 'Admin\Dashboard::index');
 

@@ -348,7 +348,9 @@
 
       <!-- navbar button: Start -->
       <li>
-        <a href="auth/login" class="btn btn-primary px-2 px-sm-4 px-lg-2 px-xl-4"><span class="tf-icons ri-user-line me-md-1"></span><span class="d-none d-md-block">Login</span></a>
+        <a href="<?= base_url('/admin'); ?>" class="btn btn-primary px-2 px-sm-4 px-lg-2 px-xl-4">
+        <span class="tf-icons ri-user-line me-md-1"></span>
+        <span class="d-none d-md-block">ADMIN</span></a>
       </li>
       <!-- navbar button: End -->
     </ul>
