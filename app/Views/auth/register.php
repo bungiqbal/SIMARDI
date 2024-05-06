@@ -48,12 +48,12 @@
         <form class="mb-5" action="<?= url_to('register') ?>" method="post">
           <?= csrf_field() ?>
           <div class="form-floating form-floating-outline mb-5">
-            <input type="text" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?= lang('Auth.username') ?>" value="<?= old('username') ?>" autofocus>
-            <label for="username"><?= lang('Auth.username') ?></label>
-          </div>
-          <div class="form-floating form-floating-outline mb-5">
             <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>" name="email" ria-describedby="emailHelp" placeholder="<?= lang('Auth.email') ?>" value="<?= old('email') ?>">
             <label for="email"><?= lang('Auth.email') ?></label>
+          </div>
+          <div class="form-floating form-floating-outline mb-5">
+            <input type="text" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?= lang('Auth.username') ?>" value="<?= old('username') ?>" autofocus>
+            <label for="username"><?= lang('Auth.username') ?></label>
           </div>
           <div class="mb-5 form-password-toggle">
             <div class="input-group input-group-merge">

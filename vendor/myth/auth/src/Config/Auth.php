@@ -336,7 +336,7 @@ class Auth extends BaseConfig
         'Myth\Auth\Authentication\Passwords\CompositionValidator',
         'Myth\Auth\Authentication\Passwords\NothingPersonalValidator',
         'Myth\Auth\Authentication\Passwords\DictionaryValidator',
-        // 'Myth\Auth\Authentication\Passwords\PwnedValidator',
+        'Myth\Auth\Authentication\Passwords\PwnedValidator',
     ];
 
     /**
@@ -350,8 +350,8 @@ class Auth extends BaseConfig
      */
     public $userActivators = [
         'Myth\Auth\Authentication\Activators\EmailActivator' => [
-            'fromEmail' => null,
-            'fromName'  => null,
+            'fromEmail' => 'perpus@negeri.or.id',
+            'fromName'  => 'SIMARDI',
         ],
     ];
 
@@ -366,8 +366,8 @@ class Auth extends BaseConfig
      */
     public $userResetters = [
         'Myth\Auth\Authentication\Resetters\EmailResetter' => [
-            'fromEmail' => null,
-            'fromName'  => null,
+            'fromEmail' => 'perpus@negeri.or.id',
+            'fromName'  => 'SIMARDI',
         ],
     ];
 
