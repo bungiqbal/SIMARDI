@@ -27,7 +27,6 @@ class AuthController extends Controller
         // Most services in this controller require
         // the session to be started - so fire it up!
         $this->session = service('session');
-
         $this->config = config('Auth');
         $this->auth   = service('authentication');
     }
@@ -189,7 +188,7 @@ class AuthController extends Controller
             }
 
             // Success!
-            return redirect()->route('login')->with('message', lang('Auth.activationSuccess'));
+            return redirect()->route('verify')->with('message', lang('Auth.activationSuccess'));
         }
 
         // Success!
@@ -410,5 +409,10 @@ class AuthController extends Controller
     protected function _render(string $view, array $data = [])
     {
         return view($view, $data);
+    }
+
+    public function verify()
+    {
+        return view('\App/Views\Auth\verify');
     }
 }

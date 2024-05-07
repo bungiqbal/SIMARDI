@@ -31,4 +31,7 @@ $routes->group('', ['namespace' => 'Myth\Auth\Controllers'], static function ($r
     $routes->post($reservedRoutes['forgot'], 'AuthController::attemptForgot');
     $routes->get($reservedRoutes['reset-password'], 'AuthController::resetPassword', ['as' => $reservedRoutes['reset-password']]);
     $routes->post($reservedRoutes['reset-password'], 'AuthController::attemptReset');
+
+    // Verify Email
+    $routes->get('/verify', 'AuthController::verify');
 });

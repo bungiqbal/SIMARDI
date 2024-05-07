@@ -76,10 +76,11 @@ class Auth extends BaseConfig
     public $views = [
         // 'login'           => 'Myth\Auth\Views\login',
         // 'register'        => 'Myth\Auth\Views\register',
+        // 'forgot'          => 'Myth\Auth\Views\forgot',
         'login'           => '\App/Views\Auth\login',
         'register'        => '\App/Views\Auth\register',
-        // 'forgot'          => 'Myth\Auth\Views\forgot',
         'forgot'          => '\App/Views\Auth\forgot',
+        'verify'          => '\App/Views\Auth\verify',
         'reset'           => 'Myth\Auth\Views\reset',
         'emailForgot'     => 'Myth\Auth\Views\emails\forgot',
         'emailActivation' => 'Myth\Auth\Views\emails\activation',
