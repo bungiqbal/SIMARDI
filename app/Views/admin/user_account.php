@@ -10,8 +10,6 @@
     <!-- Content -->
 
     <div class="container-xxl flex-grow-1 container-p-y">
-
-
         <div class="row">
             <!-- User Sidebar -->
             <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-md-0">
@@ -20,14 +18,29 @@
                     <div class="card-body pt-12">
                         <div class="user-avatar-section">
                             <div class=" d-flex align-items-center flex-column">
-                                <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/10.png" height="120" width="120" alt="User avatar" />
+                                <img class="img-fluid rounded mb-4" src="<?= base_url(''); ?>assets/img/avatars/<?= $user->user_image; ?>" height="120" width="120" alt="User avatar" />
                                 <div class="user-info text-center">
-                                    <h5>Violet Mendoza</h5>
-                                    <span class="badge bg-label-danger rounded-pill">Author</span>
+
+                                    <?php
+                                    if ($user->fullname == 0) { ?>
+                                        <h5 class="no-name">*************</h5>
+                                    <?php } else { ?>
+                                        <h5><?= $user->fullname; ?></h5>
+                                    <?php } ?>
+
+                                    <?php
+                                    if ($user->name == 'admin') { ?>
+                                        <span class="badge bg-label-danger rounded-pill">Administrator</span>
+                                    <?php } else if ($user->name == 'operator') { ?>
+                                        <span class="badge bg-label-warning rounded-pill">Operator</span>
+                                    <?php } else if ($user->name == 'user') { ?>
+                                        <span class="badge bg-label-success rounded-pill">User</span>
+                                    <?php } ?>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-around flex-wrap my-6 gap-0 gap-md-3 gap-lg-4">
+                        <!-- <div class="d-flex justify-content-around flex-wrap my-6 gap-0 gap-md-3 gap-lg-4">
                             <div class="d-flex align-items-center me-5 gap-4">
                                 <div class="avatar">
                                     <div class="avatar-initial bg-label-primary rounded">
@@ -50,46 +63,61 @@
                                     <span>Project Done</span>
                                 </div>
                             </div>
-                        </div>
-                        <h5 class="pb-4 border-bottom mb-4">Details</h5>
+                        </div> -->
+                        <h5 class="pb-4 border-bottom mb-4"></h5>
+                        <!-- <h5 class="pb-4 border-bottom mb-4">Details</h5> -->
                         <div class="info-container">
                             <ul class="list-unstyled mb-6">
                                 <li class="mb-2">
-                                    <span class="h6">Username:</span>
-                                    <span>@violet.dev</span>
+                                    <span class="h6">Full Name :</span>
+                                    <span><?= $user->fullname; ?></span>
                                 </li>
                                 <li class="mb-2">
-                                    <span class="h6">Email:</span>
-                                    <span>vafgot@vultukir.org</span>
+                                    <span class="h6">Email :</span>
+                                    <span><?= $user->email; ?></span>
+                                </li>
+                                <li class="mb-2">
+                                    <span class="h6">Username :</span>
+                                    <span><?= $user->username; ?></span>
+                                </li>
+                                <li class="mb-2">
+                                    <span class="h6">Password :</span>
+                                    <span>********</span>
+                                </li>
+                                <li class="mb-2">
+                                    <span class="h6">Role :</span>
+                                    <?php
+                                    if ($user->name == 'admin') { ?>
+                                        <span style="color: red;">Administrator</span>
+                                    <?php } else if ($user->name == 'operator') { ?>
+                                        <span style="color: yellow;">Operator</span>
+                                    <?php } else if ($user->name == 'user') { ?>
+                                        <span style="color: green;">User</span>
+                                    <?php } ?>
                                 </li>
                                 <li class="mb-2">
                                     <span class="h6">Status:</span>
-                                    <span class="badge bg-label-success rounded-pill">Active</span>
+                                    <?php
+                                    if ($user->active == 0) { ?>
+                                        <span style="color: red;">Inactive</span>
+                                    <?php } else if ($user->active == 1) { ?>
+                                        <span style="color: green;">Active</span>
+                                    <?php } ?>
                                 </li>
                                 <li class="mb-2">
-                                    <span class="h6">Role:</span>
-                                    <span>Author</span>
+                                    <span class="h6">Contact :</span>
+                                    <a href="https://wa.me/62<?= $user->phone; ?>" target="_blank"><?= $user->phone; ?></a>
                                 </li>
                                 <li class="mb-2">
-                                    <span class="h6">Tax id:</span>
-                                    <span>Tax-8965</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span class="h6">Contact:</span>
-                                    <span>(123) 456-7890</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span class="h6">Languages:</span>
-                                    <span>French</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span class="h6">Country:</span>
-                                    <span>England</span>
+                                    <span class="h6">Address :</span>
+                                    <span><?= $user->address; ?></span>
                                 </li>
                             </ul>
                             <div class="d-flex justify-content-center">
-                                <a href="javascript:;" class="btn btn-primary me-4" data-bs-target="#editUser" data-bs-toggle="modal">Edit</a>
-                                <a href="javascript:;" class="btn btn-outline-danger suspend-user">Suspend</a>
+                                <a href="<?= base_url('/admin/user-manager'); ?>" class="btn btn-outline-danger suspend-user me-4">Back</a>
+                                <?php if (in_groups('admin')) : ?>
+                                    <a href="javascript:;" class="btn btn-primary me-4" data-bs-target="#editUser" data-bs-toggle="modal">Edit</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>

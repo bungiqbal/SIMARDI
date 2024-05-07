@@ -353,21 +353,21 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                     <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
                         <div class="avatar avatar-online">
-                            <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                            <img src="<?= base_url(''); ?>assets/img/avatars/<?= user()->user_image; ?>" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end mt-3 py-2">
                         <li>
-                            <a class="dropdown-item pb-3" href="pages-account-settings-account.html">
+                            <a class="dropdown-item pb-3" href="<?= base_url('/admin/profile'); ?>">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0 me-3">
                                         <div class="avatar avatar-online">
-                                            <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                                            <img src="<?= base_url(''); ?>assets/img/avatars/<?= user()->user_image; ?>" alt class="w-px-40 h-auto rounded-circle">
                                         </div>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <h6 class="mb-0 small">John Doe</h6>
-                                        <small class="text-muted">Admin</small>
+                                        <h6 class="mb-0 small"><?= user()->username; ?></h6>
+                                        <small class="text-muted text-online">Online</small>
                                     </div>
                                 </div>
                             </a>
@@ -419,8 +419,9 @@
                         </li> -->
                         <li>
                             <div class="d-grid px-4 pt-2 pb-1">
-                                <a class="btn btn-danger d-flex" href="<?= base_url('logout'); ?>">
-                                    <small class="align-middle">Logout</small>
+                                <!-- <a class="btn btn-danger d-flex" href=""> -->
+                                <a class="btn btn-danger d-flex" data-bs-toggle="modal" data-bs-target="#logoutmodal">
+                                    <small class="align-middle text-button-white">Logout</small>
                                     <!-- <i class="ri-logout-box-r-line ms-2 ri-16px"></i> -->
                                 </a>
                             </div>

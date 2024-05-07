@@ -46,12 +46,12 @@
       </a>
       <ul class="menu-sub">
         <li class="menu-item <?= $submenu == 'list_incoming_mail' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/list_incoming_mail'); ?>" class="menu-link">
+          <a href="<?= base_url('/admin/list-incoming-mail'); ?>" class="menu-link">
             <div data-i18n="List Incoming Mail">List Incoming Mail</div>
           </a>
         </li>
         <li class="menu-item <?= $submenu == 'create_incoming_mail' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/create_incoming_mail'); ?>" class="menu-link">
+          <a href="<?= base_url('/admin/create-incoming-mail'); ?>" class="menu-link">
             <div data-i18n="Create Incoming Mail">Create Incoming Mail</div>
           </a>
         </li>
@@ -66,12 +66,12 @@
       </a>
       <ul class="menu-sub">
         <li class="menu-item <?= $submenu == 'list_outgoing_mail' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/list_outgoing_mail'); ?>" class="menu-link">
+          <a href="<?= base_url('/admin/list-outgoing-mail'); ?>" class="menu-link">
             <div data-i18n="List Outgoing Mail">List Outgoing Mail</div>
           </a>
         </li>
         <li class="menu-item <?= $submenu == 'create_outgoing_mail' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/create_outgoing_mail'); ?>" class="menu-link">
+          <a href="<?= base_url('/admin/create-outgoing-mail'); ?>" class="menu-link">
             <div data-i18n="Create Outgoing Mail">Create Outgoing Mail</div>
           </a>
         </li>
@@ -101,46 +101,89 @@
         </li>
       </ul>
     </li>
+
     <!-- Users -->
-    <li class="menu-item <?= $menu == 'users' ? 'open' : '' ?>">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ri-user-settings-line"></i>
-        <div data-i18n="Users">Users</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item <?= $submenu == 'user_manager' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/user_manager'); ?>" class="menu-link">
-            <div data-i18n="User Manager">User Manager</div>
-          </a>
-        </li>
-        <li class="menu-item <?= $submenu == 'user_account' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/user_account'); ?>" class="menu-link">
-            <div data-i18n="User Account">User Account</div>
-          </a>
-        </li>
-        <li class="menu-item <?= $submenu == 'user_profile' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/user_profile'); ?>" class="menu-link">
-            <div data-i18n="User Profile">User Profile</div>
-          </a>
-        </li>
-        <li class="menu-item <?= $submenu == 'user_setting' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/user_setting'); ?>" class="menu-link">
-            <div data-i18n="User Setting">User Setting</div>
-          </a>
-        </li>
-        <li class="menu-item <?= $submenu == 'user_password' ? 'active' : '' ?>">
-          <a href="<?= base_url('/admin/user_password'); ?>" class="menu-link">
-            <div data-i18n="User Password">User Password</div>
-          </a>
-        </li>
-      </ul>
-    </li>
+    <?php if (in_groups('admin')) : ?>
+      <li class="menu-item <?= $menu == 'users' ? 'open' : '' ?>">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class="menu-icon tf-icons ri-user-settings-line"></i>
+          <div data-i18n="Users">Users</div>
+        </a>
+        <ul class="menu-sub">
+          <li class="menu-item <?= $submenu == 'user_manager' ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/user-manager'); ?>" class="menu-link">
+              <div data-i18n="User Manager">User Manager</div>
+            </a>
+          </li>
+          <li class="menu-item <?= $submenu == 'user_account' ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/user-account'); ?>" class="menu-link">
+              <div data-i18n="User Account">User Account</div>
+            </a>
+          </li>
+          <li class="menu-item <?= $submenu == 'user_profile' ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/user-profile'); ?>" class="menu-link">
+              <div data-i18n="User Profile">User Profile</div>
+            </a>
+          </li>
+          <li class="menu-item <?= $submenu == 'user_setting' ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/user-setting'); ?>" class="menu-link">
+              <div data-i18n="User Setting">User Setting</div>
+            </a>
+          </li>
+          <li class="menu-item <?= $submenu == 'user_password' ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/user-password'); ?>" class="menu-link">
+              <div data-i18n="User Password">User Password</div>
+            </a>
+          </li>
+        </ul>
+      </li>
+    <?php endif; ?>
+    <?php if (in_groups('operator')) : ?>
+      <li class="menu-item <?= $menu == 'users' ? 'open' : '' ?>">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class="menu-icon tf-icons ri-user-settings-line"></i>
+          <div data-i18n="Users">Users</div>
+        </a>
+        <ul class="menu-sub">
+          <li class="menu-item <?= $submenu == 'user_manager' ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/user-manager'); ?>" class="menu-link">
+              <div data-i18n="User Manager">User Manager</div>
+            </a>
+          </li>
+          <li class="menu-item <?= $submenu == 'user_account' ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/user-account'); ?>" class="menu-link">
+              <div data-i18n="User Account">User Account</div>
+            </a>
+          </li>
+          <li class="menu-item <?= $submenu == 'user_profile' ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/user-profile'); ?>" class="menu-link">
+              <div data-i18n="User Profile">User Profile</div>
+            </a>
+          </li>
+          <li class="menu-item <?= $submenu == 'user_setting' ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/user-setting'); ?>" class="menu-link">
+              <div data-i18n="User Setting">User Setting</div>
+            </a>
+          </li>
+          <li class="menu-item <?= $submenu == 'user_password' ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/user-password'); ?>" class="menu-link">
+              <div data-i18n="User Password">User Password</div>
+            </a>
+          </li>
+        </ul>
+      </li>
+    <?php endif; ?>
+    <!-- / Users -->
 </aside>
 <!-- / Menu -->
 
 <!-- Navbar -->
 <?= $this->include('admin/layout/navbar'); ?>
 <!-- / Navbar -->
+
+<!-- Modal -->
+<?= $this->include('admin/layout/modal'); ?>
+<!-- / Modal -->
 
 <!-- Content -->
 <?= $this->renderSection('content'); ?>

@@ -21,12 +21,12 @@
                     </div> -->
                     <div class="user-profile-header d-flex flex-column flex-lg-row text-sm-start text-center mb-4">
                         <div class="flex-shrink-0 mt-n2 mx-sm-0 mx-auto">
-                            <img src="../../assets/img/avatars/1.png" alt="user image" class="d-block h-auto ms-0 ms-sm-5 rounded user-profile-img">
+                            <img src="<?= base_url(''); ?>assets/img/avatars/<?= user()->user_image; ?>" alt="user image" class="d-block h-auto ms-0 ms-sm-5 rounded user-profile-img">
                         </div>
                         <div class="flex-grow-1 mt-3 mt-lg-5">
                             <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-5 flex-md-row flex-column gap-4">
                                 <div class="user-profile-info">
-                                    <h4 class="mb-2 mt-lg-6">John Doe</h4>
+                                    <h4 class="mb-2 mt-lg-6"><?= user()->fullname; ?></h4>
                                     <ul class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-4">
                                         <li class="list-inline-item">
                                             <i class='ri-palette-line me-2 ri-24px'></i><span class="fw-medium">UX Designer</span>
@@ -40,7 +40,7 @@
                                     </ul>
                                 </div>
                                 <a href="javascript:void(0)" class="btn btn-primary">
-                                    <i class='ri-user-follow-line ri-16px me-1_5'></i>Connected
+                                    <i class='ri-user-follow-line ri-16px me-1_5'></i>Online
                                 </a>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
         <!--/ Header -->
 
         <!-- Navbar pills -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-12">
                 <div class="nav-align-top">
                     <ul class="nav nav-pills flex-column flex-sm-row mb-6 gap-2 gap-lg-0">
@@ -62,7 +62,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--/ Navbar pills -->
 
         <!-- User Profile Content -->
@@ -73,7 +73,7 @@
                     <div class="card-body">
                         <small class="card-text text-uppercase text-muted small">About</small>
                         <ul class="list-unstyled my-3 py-1">
-                            <li class="d-flex align-items-center mb-4"><i class="ri-user-3-line ri-24px"></i><span class="fw-medium mx-2">Full Name:</span> <span>John Doe</span></li>
+                            <li class="d-flex align-items-center mb-4"><i class="ri-user-3-line ri-24px"></i><span class="fw-medium mx-2">Full Name:</span> <span><?= user()->fullname; ?></span></li>
                             <li class="d-flex align-items-center mb-4"><i class="ri-check-line ri-24px"></i><span class="fw-medium mx-2">Status:</span> <span>Active</span></li>
                             <li class="d-flex align-items-center mb-4"><i class="ri-star-smile-line ri-24px"></i><span class="fw-medium mx-2">Role:</span> <span>Developer</span></li>
                             <li class="d-flex align-items-center mb-4"><i class="ri-flag-2-line ri-24px"></i><span class="fw-medium mx-2">Country:</span> <span>USA</span></li>
@@ -416,7 +416,7 @@
                 </div>
 
                 <!-- Project table -->
-                <div class="card mb-4">
+                <!-- <div class="card mb-4">
                     <h5 class="card-header">Project List</h5>
                     <div class="card-datatable table-responsive pb-0 mb-n4">
                         <table class="table datatable-project table-border-bottom-0">
@@ -433,7 +433,7 @@
                             </thead>
                         </table>
                     </div>
-                </div>
+                </div> -->
                 <!-- /Project table -->
             </div>
         </div>

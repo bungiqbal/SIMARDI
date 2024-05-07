@@ -113,3 +113,15 @@
   text-align: center;
   margin-top: 1.25rem;
 }
+.text-button-white{
+  color: white;
+}
+.user-manager-profile{
+  width: 30px;
+}
+.no-name{
+  color: blank;
+}
+.text-online{
+  color: lawngreen;
+}

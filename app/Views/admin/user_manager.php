@@ -93,10 +93,10 @@
           </div>
         </div>
       </div>
-
     </div>
-    <!-- Users List Table -->
-    <div class="card">
+
+    <!-- Normal Tables -->
+    <!-- <div class="card">
       <div class="card-header border-bottom">
         <h6 class="card-title mb-0">Filters</h6>
         <div class="d-flex justify-content-between align-items-center row pt-4 pb-2 gap-4 gap-md-0 gx-5">
@@ -111,17 +111,16 @@
             <tr>
               <th></th>
               <th></th>
-              <th>User</th>
               <th>Email</th>
+              <th>Username</th>
+              <th>FullName</th>
               <th>Role</th>
-              <th>Plan</th>
               <th>Status</th>
-              <th>Actions</th>
+              <th>Action</th>
             </tr>
           </thead>
         </table>
       </div>
-      <!-- Offcanvas to add new user -->
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasAddUser" aria-labelledby="offcanvasAddUserLabel">
         <div class="offcanvas-header border-bottom">
           <h5 id="offcanvasAddUserLabel" class="offcanvas-title">Add User</h5>
@@ -199,8 +198,73 @@
           </form>
         </div>
       </div>
-    </div>
+    </div> -->
+    <!-- /Normal Tables -->
 
+    <!-- Striped Rows -->
+    <div class="card">
+      <h5 class="card-header">Striped rows</h5>
+      <div class="table-responsive text-nowrap">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th><b>No</b></th>
+              <th><b>Profile</b></th>
+              <th><b>Full Name</b></th>
+              <th><b>Username</b></th>
+              <th><b>Email</b></th>
+              <th><b>Role</b></th>
+              <th><b>Status</b></th>
+              <th><b>Action</b></th>
+            </tr>
+          </thead>
+          <tbody class="table-border-bottom-0">
+            <?php $i = 1; ?>
+            <?php foreach ($users as $user) : ?>
+              <tr>
+                <td><?= $i++; ?></td>
+                <td>
+                  <img src="<?= base_url(''); ?>assets/img/avatars/<?= $user->user_image; ?>" alt="Avatar" class="rounded-circle user-manager-profile">
+                </td>
+                <td><?= $user->fullname; ?></td>
+                <td><?= $user->username; ?></td>
+                <td><?= $user->email; ?></td>
+
+                <?php
+                if ($user->name == 'admin') { ?>
+                  <td><span class="badge rounded-pill bg-label-danger me-1">Administrator</span></td>
+                <?php } else if ($user->name == 'operator') { ?>
+                  <td><span class="badge rounded-pill bg-label-warning me-1">Operator</span></td>
+                <?php } else if ($user->name == 'user') { ?>
+                  <td><span class="badge rounded-pill bg-label-success me-1">User</span></td>
+                <?php } ?>
+
+                <?php
+                if ($user->active == 0) { ?>
+                  <td><span class="badge rounded-pill bg-label-danger me-1">Inctive</span></td>
+                <?php } else if ($user->active == 1) { ?>
+                  <td><span class="badge rounded-pill bg-label-success me-1">Active</span></td>
+                <?php } ?>
+
+                <td>
+                  <div class="dropdown">
+                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ri-more-2-line"></i></button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="<?= base_url('admin/user-account/' . $user->userid); ?>"><i class="ri-information-line me-1"></i> Detail</a>
+                      <?php if (in_groups('admin')) : ?>
+                        <a class="dropdown-item" href="javascript:void(0);"><i class="ri-pencil-line me-1"></i> Edit</a>
+                        <a class="dropdown-item" href="javascript:void(0);"><i class="ri-delete-bin-6-line me-1"></i> Delete</a>
+                      <?php endif; ?>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--/ Striped Rows -->
 
   </div>
   <!-- / Content -->

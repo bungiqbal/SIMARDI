@@ -13,12 +13,12 @@ $routes->get('/', 'HomePage::index');
 $routes->get('/admin', 'Admin\Dashboard::index');
 
 // Incoming Mail
-$routes->get('/admin/list_incoming_mail', 'Admin\IncomingMail::list_incoming_mail');
-$routes->get('/admin/create_incoming_mail', 'Admin\IncomingMail::create_incoming_mail');
+$routes->get('/admin/list-incoming-mail', 'Admin\IncomingMail::list_incoming_mail');
+$routes->get('/admin/create-incoming-mail', 'Admin\IncomingMail::create_incoming_mail');
 
 // Outgoing
-$routes->get('/admin/list_outgoing_mail', 'Admin\OutgoingMail::list_outgoing_mail');
-$routes->get('/admin/create_outgoing_mail', 'Admin\OutgoingMail::create_outgoing_mail');
+$routes->get('/admin/list-outgoing-mail', 'Admin\OutgoingMail::list_outgoing_mail');
+$routes->get('/admin/create-outgoing-mail', 'Admin\OutgoingMail::create_outgoing_mail');
 
 // My Profiles
 $routes->get('/admin/profile', 'Admin\MyProfiles::profile');
@@ -26,8 +26,14 @@ $routes->get('/admin/account', 'Admin\MyProfiles::account');
 $routes->get('/admin/password', 'Admin\MyProfiles::password');
 
 // Users
-$routes->get('/admin/user_manager', 'Admin\Users::user_manager');
-$routes->get('/admin/user_account', 'Admin\Users::user_account');
-$routes->get('/admin/user_profile', 'Admin\Users::user_profile');
-$routes->get('/admin/user_setting', 'Admin\Users::user_setting');
-$routes->get('/admin/user_password', 'Admin\Users::user_password');
+$routes->get('/admin/user-manager', 'Admin\Users::user_manager', ['filter' => 'role:admin,operator']);
+$routes->get('/admin/user-account', 'Admin\Users::user_account', ['filter' => 'role:admin,operator']);
+$routes->get('/admin/user-account/(:any)', 'Admin\Users::user_account/$1', ['filter' => 'role:admin,operator']);
+$routes->get('/admin/user-profile', 'Admin\Users::user_profile', ['filter' => 'role:admin,operator']);
+$routes->get('/admin/user-setting', 'Admin\Users::user_setting', ['filter' => 'role:admin,operator']);
+$routes->get('/admin/user-password', 'Admin\Users::user_password', ['filter' => 'role:admin,operator']);
+
+// Error
+$routes->get('/not-found', 'Error::not_found');
+$routes->get('/server-error', 'Error::server_error');
+$routes->get('/not-authorized', 'Error::not_authorized');

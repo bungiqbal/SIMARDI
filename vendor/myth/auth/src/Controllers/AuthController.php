@@ -403,7 +403,7 @@ class AuthController extends Controller
         }
 
         // Success!
-        return redirect()->route('login')->with('message', lang('Auth.activationSuccess'));
+        return redirect()->route('verify')->with('message', lang('Auth.activationSuccess'));
     }
 
     protected function _render(string $view, array $data = [])
