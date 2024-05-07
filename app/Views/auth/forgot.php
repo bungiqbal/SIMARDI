@@ -53,12 +53,12 @@
           </div>
           <button type="submit" class="btn btn-primary d-grid w-100 mb-5"><?= lang('Auth.sendInstructions') ?></button>
         </form>
-        <div class="text-center">
-          <a href="<?= url_to('login') ?>" class="d-flex align-items-center justify-content-center">
-            <i class="ri-arrow-left-s-line scaleX-n1-rtl ri-20px me-1_5"></i>
-            <?= lang('Auth.backtoLogin') ?>
+        <p class="text-center mb-5">
+          <span><?= lang('Auth.rememberPassword') ?></span>
+          <a href="<?= url_to('login') ?>">
+            <span><?= lang('Auth.backtoLogin') ?></span>
           </a>
-        </div>
+        </p>
       </div>
     </div>
     <!-- /Forgot Password -->

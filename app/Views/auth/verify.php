@@ -40,7 +40,7 @@
     <!--  Verify email -->
     <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg position-relative py-sm-5 px-12 py-4">
       <div class="w-px-400 mx-auto pt-5 pt-lg-0">
-        <h4 class="mb-1">Verify your email ✉️</h4>
+        <h4 class="mb-1"><?= lang('Auth.verifyEmail') ?></h4>
         <?= view('Myth\Auth\Views\_message_block') ?>
         <!-- <p class="text-start mb-0">
           Account activation link sent to your email address: 
@@ -48,7 +48,7 @@
           Please follow the link inside to continue.
         </p> -->
         <a class="btn btn-primary w-100 my-5" href="<?= url_to('login') ?>">
-          Back to Login
+          <?= lang('Auth.loginAction') ?>
         </a>
         <!-- <p class="text-center">Back to
           <a href="<?= url_to('login') ?>">
@@ -59,9 +59,11 @@
           <div class="divider-text">or</div>
         </div>
 
-        <!-- <center>
-          <p>Open Email From</p>
-        </center> -->
+        <center>
+          <b>
+            <p><?= lang('Auth.openEmail') ?></p>
+          </b>
+        </center>
 
         <div class="d-flex justify-content-center gap-2">
           <a href="https://mail.google.com/" target="_blank" class="btn btn-icon btn-lg rounded-pill btn-text-google-plus">
