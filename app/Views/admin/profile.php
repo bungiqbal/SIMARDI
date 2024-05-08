@@ -26,7 +26,8 @@
                         <div class="flex-grow-1 mt-3 mt-lg-5">
                             <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-5 flex-md-row flex-column gap-4">
                                 <div class="user-profile-info">
-                                    <h4 class="mb-2 mt-lg-6"><?= user()->fullname; ?></h4>
+                                    <h3 class="mb-2 mt-lg-6"><b><?= user()->fullname; ?></b></h3>
+                                    <br>
                                     <ul class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-4">
                                         <li class="list-inline-item">
                                             <i class='ri-palette-line me-2 ri-24px'></i><span class="fw-medium">UX Designer</span>
@@ -73,17 +74,55 @@
                     <div class="card-body">
                         <small class="card-text text-uppercase text-muted small">About</small>
                         <ul class="list-unstyled my-3 py-1">
-                            <li class="d-flex align-items-center mb-4"><i class="ri-user-3-line ri-24px"></i><span class="fw-medium mx-2">Full Name:</span> <span><?= user()->fullname; ?></span></li>
-                            <li class="d-flex align-items-center mb-4"><i class="ri-check-line ri-24px"></i><span class="fw-medium mx-2">Status:</span> <span>Active</span></li>
-                            <li class="d-flex align-items-center mb-4"><i class="ri-star-smile-line ri-24px"></i><span class="fw-medium mx-2">Role:</span> <span>Developer</span></li>
-                            <li class="d-flex align-items-center mb-4"><i class="ri-flag-2-line ri-24px"></i><span class="fw-medium mx-2">Country:</span> <span>USA</span></li>
-                            <li class="d-flex align-items-center mb-2"><i class="ri-translate-2 ri-24px"></i><span class="fw-medium mx-2">Languages:</span> <span>English</span></li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-user-3-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Full Name:</span>
+                                <span><?= user()->fullname; ?></span>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-check-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Status:</span>
+                                <span style="color: green;">Active</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-star-smile-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Role:</span>
+                                <span>User</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-flag-2-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Country:</span>
+                                <span>Indonesia</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="ri-translate-2 ri-24px"></i>
+                                <span class="fw-medium mx-2">Languages:</span>
+                                <span>Bahasa</span>
+                            </li>
                         </ul>
                         <small class="card-text text-uppercase text-muted small">Contacts</small>
                         <ul class="list-unstyled my-3 py-1">
-                            <li class="d-flex align-items-center mb-4"><i class="ri-phone-line ri-24px"></i><span class="fw-medium mx-2">Contact:</span> <span>(123) 456-7890</span></li>
-                            <li class="d-flex align-items-center mb-4"><i class="ri-wechat-line ri-24px"></i><span class="fw-medium mx-2">Skype:</span> <span>john.doe</span></li>
-                            <li class="d-flex align-items-center mb-2"><i class="ri-mail-open-line ri-24px"></i><span class="fw-medium mx-2">Email:</span> <span>john.doe@example.com</span></li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-mail-open-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Email:</span>
+                                <a href="mailto:<?= user()->email; ?>" target="_blank" style="color: red;">
+                                    <?= user()->email; ?>
+                                    <i class="ri-mail-line ri-13px"></i>
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-phone-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Contact:</span>
+                                <a href="https://wa.me/62<?= user()->phone; ?>" target="_blank" style="color: green;">
+                                    <?= user()->phone; ?>
+                                    <i class="ri-whatsapp-line ri-13px"></i>
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="ri-wechat-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Skype:</span>
+                                <span></span>
+                            </li>
                         </ul>
                         <small class="card-text text-uppercase text-muted small">Teams</small>
                         <ul class="list-unstyled mb-0 mt-3 pt-1">

@@ -69,23 +69,26 @@
                         <div class="info-container">
                             <ul class="list-unstyled mb-6">
                                 <li class="mb-2">
-                                    <span class="h6">Full Name :</span>
+                                    <span class="h6">Full Name:</span>
                                     <span><?= $user->fullname; ?></span>
                                 </li>
                                 <li class="mb-2">
-                                    <span class="h6">Email :</span>
-                                    <span><?= $user->email; ?></span>
+                                    <span class="h6">Email:</span>
+                                    <a href="mailto:<?= $user->email; ?>" target="_blank" style="color: red;">
+                                        <?= $user->email; ?>
+                                        <i class="ri-mail-line ri-12px"></i>
+                                    </a>
                                 </li>
                                 <li class="mb-2">
-                                    <span class="h6">Username :</span>
+                                    <span class="h6">Username:</span>
                                     <span><?= $user->username; ?></span>
                                 </li>
                                 <li class="mb-2">
-                                    <span class="h6">Password :</span>
+                                    <span class="h6">Password:</span>
                                     <span>********</span>
                                 </li>
                                 <li class="mb-2">
-                                    <span class="h6">Role :</span>
+                                    <span class="h6">Role:</span>
                                     <?php
                                     if ($user->name == 'admin') { ?>
                                         <span style="color: red;">Administrator</span>
@@ -105,18 +108,22 @@
                                     <?php } ?>
                                 </li>
                                 <li class="mb-2">
-                                    <span class="h6">Contact :</span>
-                                    <a href="https://wa.me/62<?= $user->phone; ?>" target="_blank"><?= $user->phone; ?></a>
+                                    <span class="h6">Contact:</span>
+                                    <a href="https://wa.me/62<?= $user->phone; ?>" target="_blank" style="color: green;">
+                                        <?= $user->phone; ?>&nbsp;
+                                        <i class="ri-whatsapp-line ri-12px"></i>
+                                    </a>
                                 </li>
                                 <li class="mb-2">
-                                    <span class="h6">Address :</span>
+                                    <span class="h6">Address:</span>
                                     <span><?= $user->address; ?></span>
                                 </li>
                             </ul>
                             <div class="d-flex justify-content-center">
-                                <a href="<?= base_url('/admin/user-manager'); ?>" class="btn btn-outline-danger suspend-user me-4">Back</a>
+                                <a href="<?= base_url('/admin/user-manager'); ?>" class="btn btn-outline-danger suspend-user me-4">&nbsp;Back&nbsp;&nbsp;</a>
+                                <a href="javascript:;" class="btn btn-primary me-4" data-bs-target="#editUser" data-bs-toggle="modal">&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp;</a>
                                 <?php if (in_groups('admin')) : ?>
-                                    <a href="javascript:;" class="btn btn-primary me-4" data-bs-target="#editUser" data-bs-toggle="modal">Edit</a>
+                                    <a href="javascript:;" class="btn btn-danger me-4" data-bs-target="#editUser" data-bs-toggle="modal">Delete</a>
                                 <?php endif; ?>
                             </div>
                         </div>
