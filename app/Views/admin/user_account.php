@@ -74,7 +74,7 @@
                                 </li>
                                 <li class="mb-2">
                                     <span class="h6">Email:</span>
-                                    <a href="mailto:<?= $user->email; ?>" target="_blank" style="color: red;">
+                                    <a href="mailto:<?= $user->email; ?>" target="_blank" style="color: orange;">
                                         <?= $user->email; ?>
                                         <i class="ri-mail-line ri-12px"></i>
                                     </a>

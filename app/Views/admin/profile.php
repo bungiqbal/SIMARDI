@@ -16,9 +16,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="card mb-6">
-                    <!-- <div class="user-profile-header-banner">
-                        <img src="../../assets/img/pages/profile-banner.png" alt="Banner image" class="rounded-top">
-                    </div> -->
+                    <div class="user-profile-header-banner">
+                        <img src="<?= base_url(''); ?>assets/img/pages/<?= user()->user_banner; ?>" alt="Banner image" class="rounded-top" \">
+                    </div>
                     <div class="user-profile-header d-flex flex-column flex-lg-row text-sm-start text-center mb-4">
                         <div class="flex-shrink-0 mt-n2 mx-sm-0 mx-auto">
                             <img src="<?= base_url(''); ?>assets/img/avatars/<?= user()->user_image; ?>" alt="user image" class="d-block h-auto ms-0 ms-sm-5 rounded user-profile-img">
@@ -26,8 +26,7 @@
                         <div class="flex-grow-1 mt-3 mt-lg-5">
                             <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-5 flex-md-row flex-column gap-4">
                                 <div class="user-profile-info">
-                                    <h3 class="mb-2 mt-lg-6"><b><?= user()->fullname; ?></b></h3>
-                                    <br>
+                                    <h4 class="mb-2 mt-lg-6"><b><?= user()->fullname; ?></b></h4>
                                     <ul class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-4">
                                         <li class="list-inline-item">
                                             <i class='ri-palette-line me-2 ri-24px'></i><span class="fw-medium">UX Designer</span>
@@ -87,17 +86,12 @@
                             <li class="d-flex align-items-center mb-4">
                                 <i class="ri-star-smile-line ri-24px"></i>
                                 <span class="fw-medium mx-2">Role:</span>
-                                <span>User</span>
-                            </li>
-                            <li class="d-flex align-items-center mb-4">
-                                <i class="ri-flag-2-line ri-24px"></i>
-                                <span class="fw-medium mx-2">Country:</span>
-                                <span>Indonesia</span>
+                                <span style="color: blue;"><?= user()->role; ?></span>
                             </li>
                             <li class="d-flex align-items-center mb-2">
                                 <i class="ri-translate-2 ri-24px"></i>
                                 <span class="fw-medium mx-2">Languages:</span>
-                                <span>Bahasa</span>
+                                <span><?= user()->language; ?></span>
                             </li>
                         </ul>
                         <small class="card-text text-uppercase text-muted small">Contacts</small>
@@ -105,32 +99,67 @@
                             <li class="d-flex align-items-center mb-4">
                                 <i class="ri-mail-open-line ri-24px"></i>
                                 <span class="fw-medium mx-2">Email:</span>
-                                <a href="mailto:<?= user()->email; ?>" target="_blank" style="color: red;">
+                                <a href="mailto:<?= user()->email; ?>" target="_blank" style="color: orange;">
                                     <?= user()->email; ?>
                                     <i class="ri-mail-line ri-13px"></i>
                                 </a>
                             </li>
                             <li class="d-flex align-items-center mb-4">
-                                <i class="ri-phone-line ri-24px"></i>
+                                <i class="ri-whatsapp-line ri-24px"></i>
                                 <span class="fw-medium mx-2">Contact:</span>
                                 <a href="https://wa.me/62<?= user()->phone; ?>" target="_blank" style="color: green;">
                                     <?= user()->phone; ?>
                                     <i class="ri-whatsapp-line ri-13px"></i>
                                 </a>
                             </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-facebook-fill ri-24px"></i>
+                                <span class="fw-medium mx-2">Facebook:</span>
+                                <a href="https://www.facebook.com/<?= user()->facebook; ?>" target="_blank" style="color: blue;">
+                                    <?= user()->facebook; ?>
+                                    <i class="ri-facebook-line ri-13px"></i>
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-instagram-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Instagram:</span>
+                                <a href="https://www.instagram.com/<?= user()->instagram; ?>" target="_blank" style="color: red;">
+                                    <?= user()->instagram; ?>
+                                    <i class="ri-instagram-line ri-13px"></i>
+                                </a>
+                            </li>
                             <li class="d-flex align-items-center mb-2">
-                                <i class="ri-wechat-line ri-24px"></i>
-                                <span class="fw-medium mx-2">Skype:</span>
-                                <span></span>
+                                <i class="ri-tiktok-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Tiktok:</span>
+                                <a href="https://www.tiktok.com/<?= user()->tiktok; ?>" target="_blank" style="color: black;">
+                                    <?= user()->tiktok; ?>
+                                    <i class="ri-tiktok-line ri-13px"></i>
+                                </a>
                             </li>
                         </ul>
-                        <small class="card-text text-uppercase text-muted small">Teams</small>
+                        <small class="card-text text-uppercase text-muted small">Residence</small>
                         <ul class="list-unstyled mb-0 mt-3 pt-1">
-                            <li class="d-flex align-items-center mb-4"><i class="ri-github-line ri-24px text-body me-2"></i>
-                                <div class="d-flex flex-wrap"><span class="fw-medium me-2">Backend Developer</span><span>(126 Members)</span></div>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-flag-line ri-24px text-body me-2"></i>
+                                <div class="d-flex flex-wrap">
+                                    <span class="fw-medium me-2">
+                                        Backend Developer
+                                    </span>
+                                    <span>
+                                        (126 Members)
+                                    </span>
+                                </div>
                             </li>
-                            <li class="d-flex align-items-center"><i class="ri-reactjs-line ri-24px text-body me-2"></i>
-                                <div class="d-flex flex-wrap"><span class="fw-medium me-2">React Developer</span><span>(98 Members)</span></div>
+                            <li class="d-flex align-items-center">
+                                <i class="ri-reactjs-line ri-24px text-body me-2"></i>
+                                <div class="d-flex flex-wrap">
+                                    <span class="fw-medium me-2">
+                                        React Developer
+                                    </span>
+                                    <span>
+                                        (98 Members)
+                                    </span>
+                                </div>
                             </li>
                         </ul>
                     </div>
