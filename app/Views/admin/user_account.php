@@ -18,7 +18,9 @@
                     <div class="card-body pt-12">
                         <div class="user-avatar-section">
                             <div class=" d-flex align-items-center flex-column">
-                                <img class="img-fluid rounded mb-4" src="<?= base_url(''); ?>assets/img/avatars/<?= $user->user_image; ?>" height="120" width="120" alt="User avatar" />
+                                <a href="" data-bs-toggle="modal" data-bs-target="#user-account-modal">
+                                    <img class="img-fluid rounded mb-4" src="<?= base_url(''); ?>assets/img/avatars/<?= $user->user_image; ?>" height="120" width="120" alt="User avatar" />
+                                </a>
                                 <div class="user-info text-center">
 
                                     <?php
@@ -470,6 +472,27 @@
 
         <!-- /Modal -->
     </div>
+
+    <!-- User Account Modal-->
+    <div class="modal fade" id="user-account-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-simple modal-enable-otp modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center mb-6">
+                        <h4 class="mb-2"><b><?= $user->fullname; ?></b></h4>
+                        <img src="<?= base_url(''); ?>assets/img/avatars/<?= $user->user_image; ?>" alt="user image" class="d-block h-auto ms-0 ms-sm-5 rounded user-profile-img" style="width: 90%; height: 90%;">
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /User Account Modal-->
+
     <!-- / Content -->
 
     <!-- / Content -->

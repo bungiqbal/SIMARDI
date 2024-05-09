@@ -420,7 +420,7 @@
                         <li>
                             <div class="d-grid px-4 pt-2 pb-1">
                                 <!-- <a class="btn btn-danger d-flex" href=""> -->
-                                <a class="btn btn-danger d-flex" data-bs-toggle="modal" data-bs-target="#logoutmodal">
+                                <a class="btn btn-danger d-flex" data-bs-toggle="modal" data-bs-target="#logout-modal">
                                     <small class="align-middle text-button-white">Logout</small>
                                     <!-- <i class="ri-logout-box-r-line ms-2 ri-16px"></i> -->
                                 </a>

@@ -224,7 +224,9 @@
               <tr>
                 <td><?= $i++; ?></td>
                 <td>
-                  <img src="<?= base_url(''); ?>assets/img/avatars/<?= $user->user_image; ?>" alt="Avatar" class="rounded-circle user-manager-profile">
+                  <a href="<?= base_url('admin/user-profile/' . $user->userid); ?>">
+                    <img src="<?= base_url(''); ?>assets/img/avatars/<?= $user->user_image; ?>" alt="Avatar" class="rounded-circle user-manager-profile">
+                  </a>
                 </td>
                 <td><?= $user->fullname; ?></td>
                 <td><?= $user->username; ?></td>
@@ -250,10 +252,23 @@
                   <div class="dropdown">
                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ri-more-2-line"></i></button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="<?= base_url('admin/user-account/' . $user->userid); ?>"><i class="ri-information-line me-1"></i> Detail</a>
-                      <a class="dropdown-item" href="javascript:void(0);"><i class="ri-pencil-line me-1"></i> Edit</a>
+                      <a class="dropdown-item" href="<?= base_url('admin/user-account/' . $user->userid); ?>">
+                        <i class="ri-information-line me-1"></i>
+                        Detail
+                      </a>
+                      <a class="dropdown-item" href="<?= base_url('admin/user-profile/' . $user->userid); ?>">
+                        <i class="ri-user-line me-1"></i>
+                        Profile
+                      </a>
+                      <a class="dropdown-item" href="javascript:void(0);">
+                        <i class="ri-pencil-line me-1"></i>
+                        Edit
+                      </a>
                       <?php if (in_groups('admin')) : ?>
-                        <a class="dropdown-item" href="javascript:void(0);"><i class="ri-delete-bin-6-line me-1"></i> Delete</a>
+                        <a class="dropdown-item" href="javascript:void(0);">
+                          <i class="ri-delete-bin-6-line me-1"></i>
+                          Delete
+                        </a>
                       <?php endif; ?>
                     </div>
                   </div>
@@ -267,6 +282,7 @@
     <!--/ Striped Rows -->
 
   </div>
+
   <!-- / Content -->
 
   <?= $this->endSection(); ?>

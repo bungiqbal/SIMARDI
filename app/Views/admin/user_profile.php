@@ -2,6 +2,8 @@
 
 <?= $this->section('content'); ?>
 
+<!-- Content -->
+
 <!-- Content wrapper -->
 <div class="content-wrapper">
 
@@ -13,17 +15,23 @@
         <div class="row">
             <div class="col-12">
                 <div class="card mb-6">
-                    <!-- <div class="user-profile-header-banner">
-                        <img src="../../assets/img/pages/profile-banner.png" alt="Banner image" class="rounded-top">
-                    </div> -->
+                    <div class="user-profile-header-banner">
+                        <img src="<?= base_url(''); ?>assets/img/pages/<?= $user->user_banner; ?>" alt="Banner image" class="rounded-top" \">
+                    </div>
                     <div class="user-profile-header d-flex flex-column flex-lg-row text-sm-start text-center mb-4">
                         <div class="flex-shrink-0 mt-n2 mx-sm-0 mx-auto">
-                            <img src="../../assets/img/avatars/1.png" alt="user image" class="d-block h-auto ms-0 ms-sm-5 rounded user-profile-img">
+                            <a href="" data-bs-toggle="modal" data-bs-target="#user-profile-modal">
+                                <img src="<?= base_url(''); ?>assets/img/avatars/<?= $user->user_image; ?>" alt="user image" class="d-block h-auto ms-0 ms-sm-5 rounded user-profile-img">
+                            </a>
                         </div>
                         <div class="flex-grow-1 mt-3 mt-lg-5">
                             <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-5 flex-md-row flex-column gap-4">
                                 <div class="user-profile-info">
-                                    <h4 class="mb-2 mt-lg-6">John Doe</h4>
+                                    <h4 class="mb-2 mt-lg-6">
+                                        <b>
+                                            <?= $user->fullname; ?> &nbsp;
+                                        </b>
+                                    </h4>
                                     <ul class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-4">
                                         <li class="list-inline-item">
                                             <i class='ri-palette-line me-2 ri-24px'></i><span class="fw-medium">UX Designer</span>
@@ -36,8 +44,11 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="javascript:void(0)" class="btn btn-primary">
-                                    <i class='ri-user-follow-line ri-16px me-1_5'></i>Connected
+                                <!-- <a href="javascript:void(0)" class="btn btn-primary">
+                                    <i class='ri-user-follow-line ri-16px me-1_5'></i>Online
+                                </a> -->
+                                <a href="<?= base_url('/admin/user-manager'); ?>" class="btn btn-outline-danger suspend-user me-4">
+                                    &nbsp;&nbsp;Back&nbsp;&nbsp;
                                 </a>
                             </div>
                         </div>
@@ -48,7 +59,7 @@
         <!--/ Header -->
 
         <!-- Navbar pills -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-12">
                 <div class="nav-align-top">
                     <ul class="nav nav-pills flex-column flex-sm-row mb-6 gap-2 gap-lg-0">
@@ -59,7 +70,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--/ Navbar pills -->
 
         <!-- User Profile Content -->
@@ -70,25 +81,113 @@
                     <div class="card-body">
                         <small class="card-text text-uppercase text-muted small">About</small>
                         <ul class="list-unstyled my-3 py-1">
-                            <li class="d-flex align-items-center mb-4"><i class="ri-user-3-line ri-24px"></i><span class="fw-medium mx-2">Full Name:</span> <span>John Doe</span></li>
-                            <li class="d-flex align-items-center mb-4"><i class="ri-check-line ri-24px"></i><span class="fw-medium mx-2">Status:</span> <span>Active</span></li>
-                            <li class="d-flex align-items-center mb-4"><i class="ri-star-smile-line ri-24px"></i><span class="fw-medium mx-2">Role:</span> <span>Developer</span></li>
-                            <li class="d-flex align-items-center mb-4"><i class="ri-flag-2-line ri-24px"></i><span class="fw-medium mx-2">Country:</span> <span>USA</span></li>
-                            <li class="d-flex align-items-center mb-2"><i class="ri-translate-2 ri-24px"></i><span class="fw-medium mx-2">Languages:</span> <span>English</span></li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-user-3-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Full Name:</span>
+                                <span><?= $user->fullname; ?></span>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-check-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Status:</span>
+                                <span style="color: green;">Active</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-star-smile-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Role:</span>
+                                <span style="color: blue;"><?= $user->role; ?></span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="ri-translate-2 ri-24px"></i>
+                                <span class="fw-medium mx-2">Languages:</span>
+                                <span><?= $user->language; ?></span>
+                            </li>
                         </ul>
                         <small class="card-text text-uppercase text-muted small">Contacts</small>
                         <ul class="list-unstyled my-3 py-1">
-                            <li class="d-flex align-items-center mb-4"><i class="ri-phone-line ri-24px"></i><span class="fw-medium mx-2">Contact:</span> <span>(123) 456-7890</span></li>
-                            <li class="d-flex align-items-center mb-4"><i class="ri-wechat-line ri-24px"></i><span class="fw-medium mx-2">Skype:</span> <span>john.doe</span></li>
-                            <li class="d-flex align-items-center mb-2"><i class="ri-mail-open-line ri-24px"></i><span class="fw-medium mx-2">Email:</span> <span>john.doe@example.com</span></li>
-                        </ul>
-                        <small class="card-text text-uppercase text-muted small">Teams</small>
-                        <ul class="list-unstyled mb-0 mt-3 pt-1">
-                            <li class="d-flex align-items-center mb-4"><i class="ri-github-line ri-24px text-body me-2"></i>
-                                <div class="d-flex flex-wrap"><span class="fw-medium me-2">Backend Developer</span><span>(126 Members)</span></div>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-mail-open-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Email:</span>
+                                <a href="mailto:<?= $user->email; ?>" target="_blank" style="color: orange;">
+                                    <?= $user->email; ?>
+                                    <i class="ri-mail-line ri-13px"></i>
+                                </a>
                             </li>
-                            <li class="d-flex align-items-center"><i class="ri-reactjs-line ri-24px text-body me-2"></i>
-                                <div class="d-flex flex-wrap"><span class="fw-medium me-2">React Developer</span><span>(98 Members)</span></div>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-whatsapp-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Contact:</span>
+                                <a href="https://wa.me/62<?= $user->phone; ?>" target="_blank" style="color: green;">
+                                    <?= $user->phone; ?>
+                                    <i class="ri-whatsapp-line ri-13px"></i>
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-facebook-fill ri-24px"></i>
+                                <span class="fw-medium mx-2">Facebook:</span>
+                                <a href="https://www.facebook.com/<?= $user->facebook; ?>" target="_blank" style="color: blue;">
+                                    <?= $user->facebook; ?>
+                                    <i class="ri-facebook-line ri-13px"></i>
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-instagram-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Instagram:</span>
+                                <a href="https://www.instagram.com/<?= $user->instagram; ?>" target="_blank" style="color: red;">
+                                    <?= $user->instagram; ?>
+                                    <i class="ri-instagram-line ri-13px"></i>
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="ri-tiktok-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Tiktok:</span>
+                                <a href="https://www.tiktok.com/<?= $user->tiktok; ?>" target="_blank" style="color: black;">
+                                    <?= $user->tiktok; ?>
+                                    <i class="ri-tiktok-line ri-13px"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <small class="card-text text-uppercase text-muted small">Residence</small>
+                        <ul class="list-unstyled mb-0 mt-3 pt-1">
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-flag-line ri-24px text-body me-2"></i>
+                                <div class="d-flex flex-wrap">
+                                    <span class="fw-medium me-2">Country:</span>
+                                    <span><?= $user->country; ?></span>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-government-line ri-24px text-body me-2"></i>
+                                <div class="d-flex flex-wrap">
+                                    <span class="fw-medium me-2">Province:</span>
+                                    <span><?= $user->province; ?></span>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-bank-line ri-24px text-body me-2"></i>
+                                <div class="d-flex flex-wrap">
+                                    <span class="fw-medium me-2">Regency:</span>
+                                    <span><?= $user->regency; ?></span>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-school-line ri-24px text-body me-2"></i>
+                                <div class="d-flex flex-wrap">
+                                    <span class="fw-medium me-2">Subdistrict:</span>
+                                    <span><?= $user->subdistrict; ?></span>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-community-line ri-24px text-body me-2"></i>
+                                <div class="d-flex flex-wrap">
+                                    <span class="fw-medium me-2">Village:</span>
+                                    <span><?= $user->village; ?></span>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="ri-map-pin-line ri-24px text-body me-2"></i>
+                                <div class="d-flex flex-wrap">
+                                    <span class="fw-medium me-2">Address:</span>
+                                </div>
+                                <span><?= $user->address; ?></span>
                             </li>
                         </ul>
                     </div>
@@ -413,7 +512,7 @@
                 </div>
 
                 <!-- Project table -->
-                <div class="card mb-4">
+                <!-- <div class="card mb-4">
                     <h5 class="card-header">Project List</h5>
                     <div class="card-datatable table-responsive pb-0 mb-n4">
                         <table class="table datatable-project table-border-bottom-0">
@@ -430,13 +529,37 @@
                             </thead>
                         </table>
                     </div>
-                </div>
+                </div> -->
                 <!-- /Project table -->
             </div>
         </div>
         <!--/ User Profile Content -->
 
     </div>
+
+    <!-- Profile Modal -->
+    <div class="modal fade" id="user-profile-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-simple modal-enable-otp modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center mb-6">
+                        <h4 class="mb-2"><b><?= $user->fullname; ?></b></h4>
+                        <img src="<?= base_url(''); ?>assets/img/avatars/<?= $user->user_image; ?>" alt="user image" class="d-block h-auto ms-0 ms-sm-5 rounded user-profile-img" style="width: 90%; height: 90%;">
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / Profile Modal -->
+
+    <!-- / Content -->
+
+
     <!-- / Content -->
 
     <?= $this->endSection(); ?>

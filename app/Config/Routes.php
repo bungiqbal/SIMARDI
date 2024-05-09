@@ -30,6 +30,7 @@ $routes->get('/admin/user-manager', 'Admin\Users::user_manager', ['filter' => 'r
 $routes->get('/admin/user-account', 'Admin\Users::user_account', ['filter' => 'role:admin,operator']);
 $routes->get('/admin/user-account/(:any)', 'Admin\Users::user_account/$1', ['filter' => 'role:admin,operator']);
 $routes->get('/admin/user-profile', 'Admin\Users::user_profile', ['filter' => 'role:admin,operator']);
+$routes->get('/admin/user-profile/(:any)', 'Admin\Users::user_profile/$1', ['filter' => 'role:admin,operator']);
 $routes->get('/admin/user-setting', 'Admin\Users::user_setting', ['filter' => 'role:admin,operator']);
 $routes->get('/admin/user-password', 'Admin\Users::user_password', ['filter' => 'role:admin,operator']);
 

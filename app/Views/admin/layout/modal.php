@@ -1,5 +1,6 @@
 <!-- Modal -->
-<div class="modal fade" id="logoutmodal" tabindex="-1" aria-hidden="true">
+<!-- Logout Modal -->
+<div class="modal fade" id="logout-modal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered1 modal-simple modal-add-new-cc">
         <div class="modal-content">
             <div class="modal-body p-0">
