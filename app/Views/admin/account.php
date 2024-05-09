@@ -138,7 +138,7 @@
                                     </div>
                                     &nbsp;&nbsp;&nbsp;
                                     <a href="https://www.tiktok.com/<?= user()->tiktok; ?>" target="_blank">
-                                        <small style="color: black;">
+                                        <small style="color: brown;">
                                             https://www.tiktok.com/<?= user()->tiktok; ?>
                                         </small>
                                     </a>

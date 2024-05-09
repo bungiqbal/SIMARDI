@@ -143,7 +143,7 @@
                             </li>
                             <li class="d-flex align-items-center mb-2">
                                 <i class="ri-twitter-line ri-24px"></i>
-                                <span class="fw-medium mx-2">Tiktok:</span>
+                                <span class="fw-medium mx-2">Twitter:</span>
                                 <a href="https://twitter.com/<?= user()->twitter; ?>" target="_blank" style="color: deepskyblue;">
                                     <?= user()->twitter; ?>
                                     <i class="ri-twitter-line ri-13px"></i>
