@@ -110,7 +110,7 @@
                                     <?php } ?>
                                 </li>
                                 <li class="mb-2">
-                                    <span class="h6">Contact:</span>
+                                    <span class="h6">Phone:</span>
                                     <a href="https://wa.me/62<?= $user->phone; ?>" target="_blank" style="color: green;">
                                         <?= $user->phone; ?>&nbsp;
                                         <i class="ri-whatsapp-line ri-12px"></i>

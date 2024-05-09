@@ -114,7 +114,7 @@
                             </li>
                             <li class="d-flex align-items-center mb-4">
                                 <i class="ri-whatsapp-line ri-24px"></i>
-                                <span class="fw-medium mx-2">Contact:</span>
+                                <span class="fw-medium mx-2">Phone:</span>
                                 <a href="https://wa.me/62<?= $user->phone; ?>" target="_blank" style="color: green;">
                                     <?= $user->phone; ?>
                                     <i class="ri-whatsapp-line ri-13px"></i>
@@ -136,12 +136,20 @@
                                     <i class="ri-instagram-line ri-13px"></i>
                                 </a>
                             </li>
-                            <li class="d-flex align-items-center mb-2">
+                            <li class="d-flex align-items-center mb-4">
                                 <i class="ri-tiktok-line ri-24px"></i>
                                 <span class="fw-medium mx-2">Tiktok:</span>
                                 <a href="https://www.tiktok.com/<?= $user->tiktok; ?>" target="_blank" style="color: black;">
                                     <?= $user->tiktok; ?>
                                     <i class="ri-tiktok-line ri-13px"></i>
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="ri-twitter-line ri-24px"></i>
+                                <span class="fw-medium mx-2">Tiktok:</span>
+                                <a href="https://twitter.com/<?= $user->twitter; ?>" target="_blank" style="color: deepskyblue;">
+                                    <?= $user->twitter; ?>
+                                    <i class="ri-twitter-line ri-13px"></i>
                                 </a>
                             </li>
                         </ul>
