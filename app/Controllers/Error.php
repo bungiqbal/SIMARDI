@@ -6,16 +6,25 @@ class Error extends BaseController
 {
     public function not_authorized()
     {
-        return view('error/401');
+        $data = [
+            'title' => 'Not Authorized | SIMARDI'
+        ];
+        return view('error/401', $data);
     }
 
     public function not_found()
     {
-        return view('error/404');
+        $data = [
+            'title' => 'Not Found | SIMARDI'
+        ];
+        return view('error/404', $data);
     }
 
     public function server_error()
     {
-        return view('error/500');
+        $data = [
+            'title' => 'Server Error | SIMARDI',
+        ];
+        return view('error/500', $data);
     }
 }
