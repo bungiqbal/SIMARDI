@@ -123,7 +123,7 @@
                             </ul>
                             <div class="d-flex justify-content-center">
                                 <a href="<?= base_url('/admin/user-manager'); ?>" class="btn btn-outline-danger suspend-user me-4">&nbsp;Back&nbsp;&nbsp;</a>
-                                <a href="javascript:;" class="btn btn-primary me-4" data-bs-target="#editUser" data-bs-toggle="modal">&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp;</a>
+                                <a href="<?= base_url('admin/user-setting/' . $user->userid); ?>" class="btn btn-primary me-4">&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp;</a>
                                 <?php if (in_groups('admin')) : ?>
                                     <a href="javascript:;" class="btn btn-danger me-4" data-bs-target="#editUser" data-bs-toggle="modal">Delete</a>
                                 <?php endif; ?>

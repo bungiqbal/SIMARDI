@@ -165,11 +165,6 @@
               <div data-i18n="User Setting">User Setting</div>
             </a>
           </li>
-          <li class="menu-item <?= $submenu == 'user_password' ? 'active' : '' ?>">
-            <a href="<?= base_url('/admin/user-password'); ?>" class="menu-link">
-              <div data-i18n="User Password">User Password</div>
-            </a>
-          </li>
         </ul>
       </li>
     <?php endif; ?>

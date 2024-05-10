@@ -94,7 +94,7 @@
                             <li class="d-flex align-items-center mb-4">
                                 <i class="ri-star-smile-line ri-24px"></i>
                                 <span class="fw-medium mx-2">Role:</span>
-                                <span style="color: blue;"><?= $user->role; ?></span>
+                                <span style="color: blue;"><?= $user->name; ?></span>
                             </li>
                             <li class="d-flex align-items-center mb-2">
                                 <i class="ri-translate-2 ri-24px"></i>

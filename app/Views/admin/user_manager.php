@@ -260,7 +260,7 @@
                         <i class="ri-user-line me-1"></i>
                         Profile
                       </a>
-                      <a class="dropdown-item" href="javascript:void(0);">
+                      <a class="dropdown-item" href="<?= base_url('admin/user-setting/' . $user->userid); ?>">
                         <i class="ri-pencil-line me-1"></i>
                         Edit
                       </a>
