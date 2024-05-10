@@ -137,7 +137,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <select id="country" class="select2 form-select">
+                                            <select id="country" name="country" class="select2 form-select">
                                                 <option value=""></option>
                                                 <option value="">Indonesia</option>
                                                 <option value="">Malaysia</option>
@@ -155,7 +155,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <select id="province" class="select2 form-select">
+                                            <select id="province" name="province" class="select2 form-select">
                                                 <option value=""></option>
                                                 <option value="">Indonesia</option>
                                                 <option value="">Malaysia</option>
@@ -173,7 +173,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <select id="regency" class="select2 form-select">
+                                            <select id="regency" name="regency" class="select2 form-select">
                                                 <option value=""></option>
                                                 <option value="">Indonesia</option>
                                                 <option value="">Malaysia</option>
@@ -191,7 +191,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <select id="subdistrict" class="select2 form-select">
+                                            <select id="subdistrict" name="subdistrict" class="select2 form-select">
                                                 <option value=""></option>
                                                 <option value="">Indonesia</option>
                                                 <option value="">Malaysia</option>
@@ -209,7 +209,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <select id="village" class="select2 form-select">
+                                            <select id="village" name="village" class="select2 form-select">
                                                 <option value=""></option>
                                                 <option value="">Indonesia</option>
                                                 <option value="">Malaysia</option>
@@ -227,7 +227,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <select id="postalcode" class="select2 form-select">
+                                            <select id="postal_code" name="postal_code" class="select2 form-select">
                                                 <option value=""></option>
                                                 <option value="">Indonesia</option>
                                                 <option value="">Malaysia</option>
@@ -235,7 +235,7 @@
                                                 <option value="">Singapore</option>
                                                 <option value="">Brunei Darussalam</option>
                                             </select>
-                                            <label for="postalcode">Postal Code</label>
+                                            <label for="postal_code">Postal Code</label>
                                         </div>
                                         <span class="input-group-text">
                                             <i class="ri-signpost-fill ri-22px"></i>

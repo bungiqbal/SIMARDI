@@ -203,7 +203,7 @@
 
     <!-- Striped Rows -->
     <div class="card">
-      <h5 class="card-header">Users List</h5>
+      <h5 class="card-header">Users manager</h5>
       <?php if (session()->getFlashdata('success')) : ?>
         <div class="alert alert-success" role="alert">
           <?= session()->getFlashdata('success'); ?>
@@ -285,7 +285,6 @@
       </div>
     </div>
     <!--/ Striped Rows -->
-
   </div>
 
   <!-- / Content -->

@@ -70,6 +70,7 @@
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/css/pages/dashboards-crm.css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/css/pages/page-profile.css" />
 
     <!-- Helpers -->
     <script src="<?php echo base_url('') ?>assets/vendor/js/helpers.js"></script>
