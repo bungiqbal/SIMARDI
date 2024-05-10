@@ -47,16 +47,38 @@
                         <form id="formAccountSettings" method="GET" onsubmit="return false">
                             <div class="row mt-1 g-5">
                                 <div class="col-md-6">
-                                    <div class="form-floating form-floating-outline">
-                                        <input class="form-control" type="text" id="fullName" name="fullName" value="<?= user()->fullname; ?>" placeholder="Full Name" autofocus />
-                                        <label for="fullame">Full Name</label>
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <input class="form-control" type="text" id="fullName" name="fullName" value="<?= user()->fullname; ?>" placeholder="Full Name" autofocus />
+                                            <label for="fullame">Full Name</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-file-user-fill ri-22px"></i>
+                                        </span>
                                     </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="<?= base_url('/admin/profile'); ?>">
+                                        <small style="color: darkmagenta;">
+                                            <?= user()->fullname; ?>
+                                        </small>
+                                    </a>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating form-floating-outline">
-                                        <input class="form-control" type="text" id="username" name="username" value="<?= user()->username; ?>" placeholder="Username" autofocus />
-                                        <label for="username">Username</label>
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <input class="form-control" type="text" id="username" name="username" value="<?= user()->username; ?>" placeholder="Username" autofocus />
+                                            <label for="username">Username</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-user-fill ri-22px"></i>
+                                        </span>
                                     </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="<?= base_url('/admin/profile'); ?>">
+                                        <small style="color: deeppink;">
+                                            <?= user()->username; ?>
+                                        </small>
+                                    </a>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
@@ -161,54 +183,142 @@
                                     </a>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating form-floating-outline">
-                                        <input id="TagifyCountrySuggestion" name="TagifyCountrySuggestion" class="form-control h-auto" placeholder="select country" value="India, Japan, France">
-                                        <label for="TagifyCountrySuggestion">Country</label>
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <select id="country" class="select2 form-select">
+                                                <option value="<?= user()->country; ?>"><?= user()->country; ?></option>
+                                                <option value="">Indonesia</option>
+                                                <option value="">Malaysia</option>
+                                                <option value="">Thailand</option>
+                                                <option value="">Singapore</option>
+                                                <option value="">Brunei Darussalam</option>
+                                            </select>
+                                            <label for="country">Country</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-flag-fill ri-22px"></i>
+                                        </span>
                                     </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.google.com/search?q=<?= user()->country; ?>+country" target="_blank">
+                                        <small style="color:darkgreen;">
+                                            <?= user()->country; ?>
+                                        </small>
+                                    </a>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating form-floating-outline">
-                                        <input id="TagifyLanguageSuggestion" name="TagifyLanguageSuggestion" class="form-control h-auto" placeholder="select language" value="English">
-                                        <label for="TagifyLanguageSuggestion">Language</label>
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <select id="province" class="select2 form-select">
+                                                <option value="<?= user()->province; ?>"><?= user()->province; ?></option>
+                                                <option value="">Indonesia</option>
+                                                <option value="">Malaysia</option>
+                                                <option value="">Thailand</option>
+                                                <option value="">Singapore</option>
+                                                <option value="">Brunei Darussalam</option>
+                                            </select>
+                                            <label for="province">Province</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-government-fill ri-22px"></i>
+                                        </span>
                                     </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.google.com/search?q=<?= user()->province; ?>+province" target="_blank">
+                                        <small style="color: darkgoldenrod;">
+                                            <?= user()->province; ?>
+                                        </small>
+                                    </a>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating form-floating-outline">
-                                        <select id="timeZones" class="select2 form-select">
-                                            <option value="">Select Timezone</option>
-                                            <option value="-12">(GMT-12:00) International Date Line West</option>
-                                            <option value="-11">(GMT-11:00) Midway Island, Samoa</option>
-                                            <option value="-10">(GMT-10:00) Hawaii</option>
-                                            <option value="-9">(GMT-09:00) Alaska</option>
-                                            <option value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
-                                            <option value="-8">(GMT-08:00) Tijuana, Baja California</option>
-                                            <option value="-7">(GMT-07:00) Arizona</option>
-                                            <option value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
-                                            <option value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
-                                            <option value="-6">(GMT-06:00) Central America</option>
-                                            <option value="-6">(GMT-06:00) Central Time (US & Canada)</option>
-                                            <option value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
-                                            <option value="-6">(GMT-06:00) Saskatchewan</option>
-                                            <option value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
-                                            <option value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
-                                            <option value="-5">(GMT-05:00) Indiana (East)</option>
-                                            <option value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
-                                            <option value="-4">(GMT-04:00) Caracas, La Paz</option>
-                                        </select>
-                                        <label for="timeZones">Timezone</label>
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <select id="regency" class="select2 form-select">
+                                                <option value="<?= user()->regency; ?>"><?= user()->regency; ?></option>
+                                                <option value="">Indonesia</option>
+                                                <option value="">Malaysia</option>
+                                                <option value="">Thailand</option>
+                                                <option value="">Singapore</option>
+                                                <option value="">Brunei Darussalam</option>
+                                            </select>
+                                            <label for="regency">Regency</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-bank-fill ri-22px"></i>
+                                        </span>
                                     </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.google.com/search?q=<?= user()->regency; ?>+regency" target="_blank">
+                                        <small style="color: tomato;">
+                                            <?= user()->regency; ?>
+                                        </small>
+                                    </a>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating form-floating-outline">
-                                        <select id="currency" class="select2 form-select">
-                                            <option value="">Select Currency</option>
-                                            <option value="usd">USD</option>
-                                            <option value="euro">Euro</option>
-                                            <option value="pound">Pound</option>
-                                            <option value="bitcoin">Bitcoin</option>
-                                        </select>
-                                        <label for="currency">Currency</label>
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <select id="subdistrict" class="select2 form-select">
+                                                <option value="<?= user()->subdistrict; ?>"><?= user()->subdistrict; ?></option>
+                                                <option value="">Indonesia</option>
+                                                <option value="">Malaysia</option>
+                                                <option value="">Thailand</option>
+                                                <option value="">Singapore</option>
+                                                <option value="">Brunei Darussalam</option>
+                                            </select>
+                                            <label for="subdistrict">Subdistrict</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-school-fill ri-22px"></i>
+                                        </span>
                                     </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.google.com/search?q=<?= user()->subdistrict; ?>+subdistrict" target="_blank">
+                                        <small style="color: hotpink;">
+                                            <?= user()->subdistrict; ?>
+                                        </small>
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <select id="village" class="select2 form-select">
+                                                <option value="<?= user()->village; ?>"><?= user()->village; ?></option>
+                                                <option value="">Indonesia</option>
+                                                <option value="">Malaysia</option>
+                                                <option value="">Thailand</option>
+                                                <option value="">Singapore</option>
+                                                <option value="">Brunei Darussalam</option>
+                                            </select>
+                                            <label for="village">Village</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-community-fill ri-22px"></i>
+                                        </span>
+                                    </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.google.com/search?q=<?= user()->village; ?>+village" target="_blank">
+                                        <small style="color: dodgerblue;">
+                                            <?= user()->village; ?>
+                                        </small>
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <input type="text" class="form-control" id="address" name="address" value="<?= user()->address; ?>" placeholder="Address" autofocus />
+                                            <label for="address">Address</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-map-pin-fill ri-22px"></i>
+                                        </span>
+                                    </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.google.com/maps/search/<?= user()->address; ?>" target="_blank">
+                                        <small style="color:maroon;">
+                                            <!-- <?= user()->address; ?> -->
+                                            <i class="ri-map-pin-fill ri-16px"></i>
+                                        </small>
+                                    </a>
                                 </div>
                             </div>
                             <div class="mt-6">
