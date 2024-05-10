@@ -77,6 +77,7 @@
 <script src="<?php echo base_url('') ?>assets/js/pages-account-settings-account.js"></script>
 <script src="<?php echo base_url('') ?>assets/js/pages-profile-user.js"></script>
 <script src="<?php echo base_url('') ?>assets/js/tables-datatables-basic.js"></script>
+
 </body>
 <!-- Mirrored from demos.themeselection.com/materio-bootstrap-html-admin-template/html/vertical-menu-template/dashboards-crm.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Apr 2024 02:34:07 GMT -->
 
