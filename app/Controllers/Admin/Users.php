@@ -4,27 +4,30 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 
+use App\Models\UsersModel;
+
 class Users extends BaseController
 {
-
-    protected $db, $builder;
+    protected $db, $builder, $UsersModel;
 
     public function __construct()
     {
         $this->db = \Config\Database::connect();
         $this->builder = $this->db->table('users');
+        $this->UsersModel = new UsersModel();
+        $data['users'] = $this->UsersModel->findAll();
     }
 
     public function user_manager()
     {
+        $users = $this->UsersModel->findAll();
+
         $data = [
             'title' => 'User Manager | SIMARDI',
             'menu' => 'users',
-            'submenu' => 'user_manager'
+            'submenu' => 'user_manager',
+            'users' => $users,
         ];
-
-        // $users = new \Myth\Auth\Models\UserModel();
-        // $data['users'] = $users->findAll();
 
         $this->builder->select('users.id as userid, username, email, user_image, fullname, active, name');
         $this->builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
@@ -34,6 +37,17 @@ class Users extends BaseController
         $data['users'] = $query->getResult();
 
         return view('admin/user_manager', $data);
+    }
+
+    public function user_create()
+    {
+        $data = [
+            'title' => 'User Create | SIMARDI',
+            'menu' => 'users',
+            'submenu' => 'user_create'
+        ];
+
+        return view('admin/user_create', $data);
     }
 
     public function user_account($id = 0)
@@ -90,7 +104,7 @@ class Users extends BaseController
             'submenu' => 'user_setting'
         ];
 
-        $this->builder->select('users.id as userid, username, email, user_image, fullname, active, created_at, updated_at, password_hash, phone, address, user_banner, role, language, facebook, instagram, tiktok, twitter, country, province, regency, subdistrict, village, name');
+        $this->builder->select('users.id as userid, username, email, user_image, fullname, active, created_at, updated_at, password_hash, phone, address, user_banner, role, language, facebook, instagram, tiktok, twitter, country, province, regency, subdistrict, village, postal_code, name');
         $this->builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
         $this->builder->join('auth_groups', 'auth_groups.id = auth_groups_users.group_id');
         $this->builder->where('users.id', $id);
@@ -113,5 +127,17 @@ class Users extends BaseController
             'submenu' => 'user_password'
         ];
         return view('admin/user_password', $data);
+    }
+
+    // Action
+
+    public function create()
+    {
+        $data = $this->request->getPost();
+        $this->UsersModel->insert($data);
+
+        session()->setFlashdata('success', 'New user has been added');
+
+        return redirect()->to(site_url('/admin/user-manager'));
     }
 }

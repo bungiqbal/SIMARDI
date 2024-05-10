@@ -100,7 +100,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="phonenumber" name="phonenumber" value="<?= $user->phone; ?>" placeholder="Phone Number" autofocus />
+                                            <input class="form-control" type="number" id="phonenumber" name="phonenumber" value="<?= $user->phone; ?>" placeholder="Phone Number" autofocus />
                                             <label for="phoneNumber">Phone Number</label>
                                         </div>
                                         <span class="input-group-text">
@@ -305,6 +305,30 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
+                                            <select id="postalcode" class="select2 form-select">
+                                                <option value="<?= $user->postal_code; ?>"><?= $user->postal_code; ?></option>
+                                                <option value="">Indonesia</option>
+                                                <option value="">Malaysia</option>
+                                                <option value="">Thailand</option>
+                                                <option value="">Singapore</option>
+                                                <option value="">Brunei Darussalam</option>
+                                            </select>
+                                            <label for="postalcode">Postal Code</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-signpost-fill ri-22px"></i>
+                                        </span>
+                                    </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="https://kodepos.nomor.net/_kodepos.php?_i=cari-kodepos&jobs=<?= $user->postal_code; ?>" target="_blank">
+                                        <small style="color: darkviolet;">
+                                            <?= $user->postal_code; ?>
+                                        </small>
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
                                             <input type="text" class="form-control" id="address" name="address" value="<?= $user->address; ?>" placeholder="Address" autofocus />
                                             <label for="address">Address</label>
                                         </div>
@@ -333,18 +357,20 @@
                     </div>
                     <!-- /Account -->
                 </div>
-                <div class="card">
-                    <h5 class="card-header">Delete Account</h5>
-                    <div class="card-body">
-                        <form id="formAccountDeactivation" onsubmit="return false">
-                            <div class="form-check mb-6 ms-3">
-                                <input class="form-check-input" type="checkbox" name="accountActivation" id="accountActivation" />
-                                <label class="form-check-label" for="accountActivation">Confirm deletion of this account</label>
-                            </div>
-                            <button type="submit" class="btn btn-danger deactivate-account" disabled="disabled">Delete Account</button>
-                        </form>
+                <?php if (in_groups('admin')) : ?>
+                    <div class="card">
+                        <h5 class="card-header">Delete Account</h5>
+                        <div class="card-body">
+                            <form id="formAccountDeactivation" onsubmit="return false">
+                                <div class="form-check mb-6 ms-3">
+                                    <input class="form-check-input" type="checkbox" name="accountActivation" id="accountActivation" />
+                                    <label class="form-check-label" for="accountActivation">Confirm deletion of this account</label>
+                                </div>
+                                <button type="submit" class="btn btn-danger deactivate-account" disabled="disabled">Delete Account</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
             </div>
         </div>
 

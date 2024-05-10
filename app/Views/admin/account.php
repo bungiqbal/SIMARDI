@@ -100,7 +100,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="phonenumber" name="phonenumber" value="<?= user()->phone; ?>" placeholder="Phone Number" autofocus />
+                                            <input class="form-control" type="number" id="phonenumber" name="phonenumber" value="<?= user()->phone; ?>" placeholder="Phone Number" autofocus />
                                             <label for="phoneNumber">Phone Number</label>
                                         </div>
                                         <span class="input-group-text">
@@ -299,6 +299,30 @@
                                     <a href="https://www.google.com/search?q=<?= user()->village; ?>+village" target="_blank">
                                         <small style="color: dodgerblue;">
                                             <?= user()->village; ?>
+                                        </small>
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <select id="postalcode" class="select2 form-select">
+                                                <option value="<?= user()->postal_code; ?>"><?= user()->postal_code; ?></option>
+                                                <option value="">Indonesia</option>
+                                                <option value="">Malaysia</option>
+                                                <option value="">Thailand</option>
+                                                <option value="">Singapore</option>
+                                                <option value="">Brunei Darussalam</option>
+                                            </select>
+                                            <label for="postalcode">Postal Code</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-signpost-fill ri-22px"></i>
+                                        </span>
+                                    </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="https://kodepos.nomor.net/_kodepos.php?_i=cari-kodepos&jobs=<?= user()->postal_code; ?>" target="_blank">
+                                        <small style="color: darkviolet;">
+                                            <?= user()->postal_code; ?>
                                         </small>
                                     </a>
                                 </div>

@@ -203,7 +203,12 @@
 
     <!-- Striped Rows -->
     <div class="card">
-      <h5 class="card-header">Striped rows</h5>
+      <h5 class="card-header">Users List</h5>
+      <?php if (session()->getFlashdata('success')) : ?>
+        <div class="alert alert-success" role="alert">
+          <?= session()->getFlashdata('success'); ?>
+        </div>
+      <?php endif; ?>
       <div class="table-responsive text-nowrap">
         <table class="table table-striped">
           <thead>

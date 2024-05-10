@@ -115,6 +115,11 @@
               <div data-i18n="User Manager">User Manager</div>
             </a>
           </li>
+          <li class="menu-item <?= $submenu == 'user_create' ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/user-create'); ?>" class="menu-link">
+              <div data-i18n="User Create">User Create</div>
+            </a>
+          </li>
           <li class="menu-item <?= $submenu == 'user_account' ? 'active' : '' ?>">
             <a href="<?= base_url('/admin/user-account/' . user()->id); ?>" class="menu-link">
               <div data-i18n="User Account">User Account</div>
@@ -148,6 +153,11 @@
           <li class="menu-item <?= $submenu == 'user_manager' ? 'active' : '' ?>">
             <a href="<?= base_url('/admin/user-manager'); ?>" class="menu-link">
               <div data-i18n="User Manager">User Manager</div>
+            </a>
+          </li>
+          <li class="menu-item <?= $submenu == 'user_create' ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/user-create'); ?>" class="menu-link">
+              <div data-i18n="User Create">User Create</div>
             </a>
           </li>
           <li class="menu-item <?= $submenu == 'user_account' ? 'active' : '' ?>">
