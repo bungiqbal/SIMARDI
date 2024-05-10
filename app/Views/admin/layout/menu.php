@@ -116,22 +116,22 @@
             </a>
           </li>
           <li class="menu-item <?= $submenu == 'user_account' ? 'active' : '' ?>">
-            <a href="<?= base_url('/admin/user-account'); ?>" class="menu-link">
+            <a href="<?= base_url('/admin/user-account/' . user()->id); ?>" class="menu-link">
               <div data-i18n="User Account">User Account</div>
             </a>
           </li>
           <li class="menu-item <?= $submenu == 'user_profile' ? 'active' : '' ?>">
-            <a href="<?= base_url('/admin/user-profile'); ?>" class="menu-link">
+            <a href="<?= base_url('/admin/user-profile/' . user()->id); ?>" class="menu-link">
               <div data-i18n="User Profile">User Profile</div>
             </a>
           </li>
           <li class="menu-item <?= $submenu == 'user_setting' ? 'active' : '' ?>">
-            <a href="<?= base_url('/admin/user-setting'); ?>" class="menu-link">
+            <a href="<?= base_url('/admin/user-setting/' . user()->id); ?>" class="menu-link">
               <div data-i18n="User Setting">User Setting</div>
             </a>
           </li>
           <li class="menu-item <?= $submenu == 'user_password' ? 'active' : '' ?>">
-            <a href="<?= base_url('/admin/user-password'); ?>" class="menu-link">
+            <a href="<?= base_url('/admin/user-password/' . user()->id); ?>" class="menu-link">
               <div data-i18n="User Password">User Password</div>
             </a>
           </li>
@@ -151,17 +151,17 @@
             </a>
           </li>
           <li class="menu-item <?= $submenu == 'user_account' ? 'active' : '' ?>">
-            <a href="<?= base_url('/admin/user-account'); ?>" class="menu-link">
+            <a href="<?= base_url('/admin/user-account/' . user()->id); ?>" class="menu-link">
               <div data-i18n="User Account">User Account</div>
             </a>
           </li>
           <li class="menu-item <?= $submenu == 'user_profile' ? 'active' : '' ?>">
-            <a href="<?= base_url('/admin/user-profile'); ?>" class="menu-link">
+            <a href="<?= base_url('/admin/user-profile/' . user()->id); ?>" class="menu-link">
               <div data-i18n="User Profile">User Profile</div>
             </a>
           </li>
           <li class="menu-item <?= $submenu == 'user_setting' ? 'active' : '' ?>">
-            <a href="<?= base_url('/admin/user-setting'); ?>" class="menu-link">
+            <a href="<?= base_url('/admin/user-setting/' . user()->id); ?>" class="menu-link">
               <div data-i18n="User Setting">User Setting</div>
             </a>
           </li>
