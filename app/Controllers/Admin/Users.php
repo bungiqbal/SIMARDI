@@ -5,17 +5,19 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 
 use App\Models\UsersModel;
+use App\Models\AreaModel;
 
 class Users extends BaseController
 {
-    protected $db, $builder, $UsersModel;
+    protected $db, $builder, $UsersModel, $AreaModel;
 
     public function __construct()
     {
         $this->db = \Config\Database::connect();
         $this->builder = $this->db->table('users');
         $this->UsersModel = new UsersModel();
-        $data['users'] = $this->UsersModel->findAll();
+        // $data['users'] = $this->UsersModel->findAll();
+        $this->AreaModel = new AreaModel();
     }
 
     public function user_manager()
@@ -39,12 +41,31 @@ class Users extends BaseController
         return view('admin/user_manager', $data);
     }
 
+    public function user_all()
+    {
+        $users = $this->UsersModel->findAll();
+
+        $data = [
+            'title' => 'User All | SIMARDI',
+            'menu' => 'users',
+            'submenu' => 'user_all',
+            'users' => $users,
+        ];
+
+        return view('admin/user_all', $data);
+    }
+
     public function user_create()
     {
         $data = [
             'title' => 'User Create | SIMARDI',
             'menu' => 'users',
-            'submenu' => 'user_create'
+            'submenu' => 'user_create',
+            'province' => $this->AreaModel->AllProvince(),
+            'regency' => $this->AreaModel->AllRegency(),
+            'subdistrict' => $this->AreaModel->AllSubdistrict(),
+            'village' => $this->AreaModel->AllVillage(),
+            'postalcode' => $this->AreaModel->AllPostalcode(),
         ];
 
         return view('admin/user_create', $data);
@@ -130,7 +151,6 @@ class Users extends BaseController
     }
 
     // Action
-
     public function create()
     {
         $data = $this->request->getPost();
@@ -138,6 +158,6 @@ class Users extends BaseController
 
         session()->setFlashdata('success', 'New user has been added');
 
-        return redirect()->to(site_url('/admin/user-manager'));
+        return redirect()->to(site_url('/admin/user-all'));
     }
 }

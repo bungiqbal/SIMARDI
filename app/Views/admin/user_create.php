@@ -49,8 +49,8 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="fullName" name="fullName" placeholder="Full Name" autofocus />
-                                            <label for="fullame">Full Name</label>
+                                            <input class="form-control" type="text" id="fullname" name="fullname" placeholder="Full Name" autofocus />
+                                            <label for="fullname">Full Name</label>
                                         </div>
                                         <span class="input-group-text">
                                             <i class="ri-file-user-fill ri-22px"></i>
@@ -82,8 +82,8 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="number" id="phonenumber" name="phonenumber" placeholder="Phone Number" autofocus />
-                                            <label for="phoneNumber">Phone Number</label>
+                                            <input class="form-control" type="number" id="phone" name="phone" placeholder="Phone Number" autofocus />
+                                            <label for="phone">Phone Number</label>
                                         </div>
                                         <span class="input-group-text">
                                             <i class="ri-whatsapp-fill ri-22px"></i>
@@ -156,12 +156,11 @@
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="province" name="province" class="select2 form-select">
-                                                <option value=""></option>
-                                                <option value="">Indonesia</option>
-                                                <option value="">Malaysia</option>
-                                                <option value="">Thailand</option>
-                                                <option value="">Singapore</option>
-                                                <option value="">Brunei Darussalam</option>
+                                                <!-- <option value=""></option>
+                                                <?php foreach ($province as $key => $value) { ?>
+                                                    <option value="<?= $value['prov_name'] ?>"><?= $value['prov_name'] ?></option>
+                                                <?php } ?> -->
+                                            </select>
                                             </select>
                                             <label for="province">Province</label>
                                         </div>
@@ -174,12 +173,10 @@
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="regency" name="regency" class="select2 form-select">
-                                                <option value=""></option>
-                                                <option value="">Indonesia</option>
-                                                <option value="">Malaysia</option>
-                                                <option value="">Thailand</option>
-                                                <option value="">Singapore</option>
-                                                <option value="">Brunei Darussalam</option>
+                                                <!-- <option value=""></option>
+                                                <?php foreach ($regency as $key => $value) { ?>
+                                                    <option value="<?= $value['city_name'] ?>"><?= $value['city_name'] ?></option>
+                                                <?php } ?> -->
                                             </select>
                                             <label for="regency">Regency</label>
                                         </div>
@@ -192,12 +189,10 @@
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="subdistrict" name="subdistrict" class="select2 form-select">
-                                                <option value=""></option>
-                                                <option value="">Indonesia</option>
-                                                <option value="">Malaysia</option>
-                                                <option value="">Thailand</option>
-                                                <option value="">Singapore</option>
-                                                <option value="">Brunei Darussalam</option>
+                                                <!-- <option value=""></option>
+                                                <?php foreach ($subdistrict as $key => $value) { ?>
+                                                    <option value="<?= $value['dis_name'] ?>"><?= $value['dis_name'] ?></option>
+                                                <?php } ?> -->
                                             </select>
                                             <label for="subdistrict">Subdistrict</label>
                                         </div>
@@ -210,12 +205,10 @@
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="village" name="village" class="select2 form-select">
-                                                <option value=""></option>
-                                                <option value="">Indonesia</option>
-                                                <option value="">Malaysia</option>
-                                                <option value="">Thailand</option>
-                                                <option value="">Singapore</option>
-                                                <option value="">Brunei Darussalam</option>
+                                                <!-- <option value=""></option>
+                                                <?php foreach ($village as $key => $value) { ?>
+                                                    <option value="<?= $value['subdis_name'] ?>"><?= $value['subdis_name'] ?></option>
+                                                <?php } ?> -->
                                             </select>
                                             <label for="village">Village</label>
                                         </div>
@@ -228,12 +221,10 @@
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="postal_code" name="postal_code" class="select2 form-select">
-                                                <option value=""></option>
-                                                <option value="">Indonesia</option>
-                                                <option value="">Malaysia</option>
-                                                <option value="">Thailand</option>
-                                                <option value="">Singapore</option>
-                                                <option value="">Brunei Darussalam</option>
+                                                <!-- <option value=""></option>
+                                                <?php foreach ($postalcode as $key => $value) { ?>
+                                                    <option value="<?= $value['postal_code'] ?>"><?= $value['postal_code'] ?></option>
+                                                <?php } ?> -->
                                             </select>
                                             <label for="postal_code">Postal Code</label>
                                         </div>
@@ -266,6 +257,7 @@
             </div>
         </div>
     </div>
+
     <!-- / Content -->
 
     <!-- / Content -->

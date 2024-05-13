@@ -27,6 +27,7 @@ $routes->get('/admin/password', 'Admin\MyProfiles::password');
 
 // Users
 $routes->get('/admin/user-manager', 'Admin\Users::user_manager', ['filter' => 'role:admin,operator']);
+$routes->get('/admin/user-all', 'Admin\Users::user_all', ['filter' => 'role:admin,operator']);
 $routes->get('/admin/user-create', 'Admin\Users::user_create', ['filter' => 'role:admin,operator']);
 $routes->get('/admin/user-account', 'Admin\Users::user_account', ['filter' => 'role:admin,operator']);
 $routes->get('/admin/user-profile', 'Admin\Users::user_profile', ['filter' => 'role:admin,operator']);
