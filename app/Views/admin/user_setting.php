@@ -168,8 +168,8 @@
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="tiktok" name="tiktok" value="<?= user()->youtube; ?>" placeholder="Tiktok" autofocus />
-                                            <label for="tiktok">Tiktok</label>
+                                            <input class="form-control" type="text" id="youtube" name="youtube" value="<?= user()->youtube; ?>" placeholder="Youtube" autofocus />
+                                            <label for="youtube">Youtube</label>
                                         </div>
                                         <span class="input-group-text">
                                             <i class="ri-youtube-fill ri-22px"></i>
