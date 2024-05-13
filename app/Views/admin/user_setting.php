@@ -46,7 +46,7 @@
                     <div class="card-body pt-0">
                         <form id="formAccountSettings" method="GET" onsubmit="return false">
                             <div class="row mt-1 g-5">
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <input class="form-control" type="text" id="fullName" name="fullName" value="<?= $user->fullname; ?>" placeholder="Full Name" autofocus />
@@ -63,7 +63,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <input class="form-control" type="text" id="username" name="username" value="<?= $user->username; ?>" placeholder="Username" autofocus />
@@ -80,7 +80,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <input class="form-control" type="text" id="email" name="email" value="<?= $user->email; ?>" placeholder="Email" autofocus />
@@ -97,7 +97,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <input class="form-control" type="number" id="phonenumber" name="phonenumber" value="<?= $user->phone; ?>" placeholder="Phone Number" autofocus />
@@ -114,7 +114,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <input type="text" class="form-control" id="facebook" name="facebook" value="<?= $user->facebook; ?>" placeholder="Facebook" autofocus />
@@ -131,7 +131,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <input type="text" class="form-control" id="instagram" name="instagram" value="<?= $user->instagram; ?>" placeholder="Instagram" autofocus />
@@ -143,12 +143,12 @@
                                     </div>
                                     &nbsp;&nbsp;&nbsp;
                                     <a href="https://www.instagram.com/<?= $user->instagram; ?>" target="_blank">
-                                        <small style="color: red;">
+                                        <small style="color: mediumvioletred;">
                                             https://www.instagram.com/<?= $user->instagram; ?>
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <input class="form-control" type="text" id="tiktok" name="tiktok" value="<?= $user->tiktok; ?>" placeholder="Tiktok" autofocus />
@@ -165,7 +165,24 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <input class="form-control" type="text" id="tiktok" name="tiktok" value="<?= user()->youtube; ?>" placeholder="Tiktok" autofocus />
+                                            <label for="tiktok">Tiktok</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-youtube-fill ri-22px"></i>
+                                        </span>
+                                    </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.youtube.com/<?= user()->youtube; ?>" target="_blank">
+                                        <small style="color: red;">
+                                            https://www.youtube.com/<?= user()->youtube; ?>
+                                        </small>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <input type="text" class="form-control" id="twitter" name="twitter" value="<?= $user->twitter; ?>" placeholder="Twitter" autofocus />
@@ -182,7 +199,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="country" name="country" class="select2 form-select">
@@ -206,7 +223,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="province" name="province" class="select2 form-select">
@@ -230,7 +247,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="regency" name="regency" class="select2 form-select">
@@ -254,7 +271,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="subdistrict" name="subdistrict" class="select2 form-select">
@@ -278,7 +295,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="village" name="village" class="select2 form-select">
@@ -302,7 +319,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="postal_code" name="postal_code" class="select2 form-select">
@@ -326,7 +343,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <input type="text" class="form-control" id="address" name="address" value="<?= $user->address; ?>" placeholder="Address" autofocus />
