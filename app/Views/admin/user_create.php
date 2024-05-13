@@ -249,12 +249,12 @@
     <script>
         $(document).ready(function() {
             $('#province').change(function() {
-                var tingkat = $('province').val();
+                var province = $('#province').val();
                 $.ajax({
                     type: "POST",
-                    url: "<?= base_url('Users/province') ?>",
+                    url: "<?= base_url('Users/regency') ?>",
                     data: {
-                        prov_id: province
+                        province: province
                     },
 
                     success: function(response) {
