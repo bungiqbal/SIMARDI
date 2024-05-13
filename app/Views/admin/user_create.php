@@ -156,10 +156,10 @@
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="province" name="province" class="select2 form-select">
-                                                <!-- <option value=""></option>
+                                                <option value=""></option>
                                                 <?php foreach ($province as $key => $value) { ?>
-                                                    <option value="<?= $value['prov_name'] ?>"><?= $value['prov_name'] ?></option>
-                                                <?php } ?> -->
+                                                    <option value="<?= $value['prov_id'] ?>"><?= $value['prov_name'] ?></option>
+                                                <?php } ?>
                                             </select>
                                             </select>
                                             <label for="province">Province</label>
@@ -173,10 +173,7 @@
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="regency" name="regency" class="select2 form-select">
-                                                <!-- <option value=""></option>
-                                                <?php foreach ($regency as $key => $value) { ?>
-                                                    <option value="<?= $value['city_name'] ?>"><?= $value['city_name'] ?></option>
-                                                <?php } ?> -->
+
                                             </select>
                                             <label for="regency">Regency</label>
                                         </div>
@@ -189,10 +186,7 @@
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="subdistrict" name="subdistrict" class="select2 form-select">
-                                                <!-- <option value=""></option>
-                                                <?php foreach ($subdistrict as $key => $value) { ?>
-                                                    <option value="<?= $value['dis_name'] ?>"><?= $value['dis_name'] ?></option>
-                                                <?php } ?> -->
+
                                             </select>
                                             <label for="subdistrict">Subdistrict</label>
                                         </div>
@@ -205,10 +199,7 @@
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="village" name="village" class="select2 form-select">
-                                                <!-- <option value=""></option>
-                                                <?php foreach ($village as $key => $value) { ?>
-                                                    <option value="<?= $value['subdis_name'] ?>"><?= $value['subdis_name'] ?></option>
-                                                <?php } ?> -->
+
                                             </select>
                                             <label for="village">Village</label>
                                         </div>
@@ -221,10 +212,7 @@
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="postal_code" name="postal_code" class="select2 form-select">
-                                                <!-- <option value=""></option>
-                                                <?php foreach ($postalcode as $key => $value) { ?>
-                                                    <option value="<?= $value['postal_code'] ?>"><?= $value['postal_code'] ?></option>
-                                                <?php } ?> -->
+
                                             </select>
                                             <label for="postal_code">Postal Code</label>
                                         </div>
@@ -257,6 +245,25 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#province').change(function() {
+                var tingkat = $('province').val();
+                $.ajax({
+                    type: "POST",
+                    url: "<?= base_url('Users/province') ?>",
+                    data: {
+                        prov_id: province
+                    },
+
+                    success: function(response) {
+                        $("#regency").html(response);
+                    }
+                });
+            });
+        });
+    </script>
 
     <!-- / Content -->
 

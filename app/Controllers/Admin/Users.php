@@ -61,11 +61,7 @@ class Users extends BaseController
             'title' => 'User Create | SIMARDI',
             'menu' => 'users',
             'submenu' => 'user_create',
-            'province' => $this->AreaModel->AllProvince(),
-            'regency' => $this->AreaModel->AllRegency(),
-            'subdistrict' => $this->AreaModel->AllSubdistrict(),
-            'village' => $this->AreaModel->AllVillage(),
-            'postalcode' => $this->AreaModel->AllPostalcode(),
+            'province' => $this->AreaModel->AllProvince()
         ];
 
         return view('admin/user_create', $data);
@@ -125,7 +121,7 @@ class Users extends BaseController
             'submenu' => 'user_setting'
         ];
 
-        $this->builder->select('users.id as userid, username, email, user_image, fullname, active, created_at, updated_at, password_hash, phone, address, user_banner, role, language, facebook, instagram, tiktok, twitter, country, province, regency, subdistrict, village, postal_code, name');
+        $this->builder->select('users.id as userid, username, email, user_image, fullname, active, created_at, updated_at, password_hash, phone, address, user_banner, role, language, youtube, facebook, instagram, tiktok, twitter, country, province, regency, subdistrict, village, postal_code, name');
         $this->builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
         $this->builder->join('auth_groups', 'auth_groups.id = auth_groups_users.group_id');
         $this->builder->where('users.id', $id);
@@ -159,5 +155,17 @@ class Users extends BaseController
         session()->setFlashdata('success', 'New user has been added');
 
         return redirect()->to(site_url('/admin/user-all'));
+    }
+
+    // Area
+    public function province()
+    {
+        $model = new AreaModel;
+        $prov_id = $this->request->getPost('prov_id');
+        $regency = $model->AllRegency($prov_id);
+        echo '<option value=""></option>';
+        foreach ($regency as $key => $value) {
+            echo "<option value=" . $value['city_id'] . ">" . $value['city_name'] . "</option>";
+        }
     }
 }
