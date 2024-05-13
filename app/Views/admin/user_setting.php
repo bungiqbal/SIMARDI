@@ -168,7 +168,7 @@
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="youtube" name="youtube" value="<?= user()->youtube; ?>" placeholder="Youtube" autofocus />
+                                            <input class="form-control" type="text" id="youtube" name="youtube" value="<?= $user->youtube; ?>" placeholder="Youtube" autofocus />
                                             <label for="youtube">Youtube</label>
                                         </div>
                                         <span class="input-group-text">
@@ -176,9 +176,9 @@
                                         </span>
                                     </div>
                                     &nbsp;&nbsp;&nbsp;
-                                    <a href="https://www.youtube.com/<?= user()->youtube; ?>" target="_blank">
+                                    <a href="https://www.youtube.com/<?= $user->youtube; ?>" target="_blank">
                                         <small style="color: red;">
-                                            https://www.youtube.com/<?= user()->youtube; ?>
+                                            https://www.youtube.com/<?= $user->youtube; ?>
                                         </small>
                                     </a>
                                 </div>
