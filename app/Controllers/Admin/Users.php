@@ -84,7 +84,7 @@ class Users extends BaseController
         $data['user'] = $query->getRow();
 
         if (empty($data['user'])) {
-            return redirect()->to('admin/user-manager');
+            return redirect()->to('not-found');
         }
 
         return view('admin/user_account', $data);
@@ -107,7 +107,7 @@ class Users extends BaseController
         $data['user'] = $query->getRow();
 
         if (empty($data['user'])) {
-            return redirect()->to('admin/user-manager');
+            return redirect()->to('not-found');
         }
 
         return view('admin/user_profile', $data);
@@ -130,7 +130,7 @@ class Users extends BaseController
         $data['user'] = $query->getRow();
 
         if (empty($data['user'])) {
-            return redirect()->to('admin/user-manager');
+            return redirect()->to('not-found');
         }
 
         return view('admin/user_setting', $data);

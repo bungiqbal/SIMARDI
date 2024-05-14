@@ -266,10 +266,14 @@
                         Profile
                       </a>
                       <a class="dropdown-item" href="<?= base_url('admin/user-setting/' . $user->userid); ?>">
-                        <i class="ri-pencil-line me-1"></i>
-                        Edit
+                        <i class="ri-settings-2-line me-1"></i>
+                        Setting
                       </a>
                       <?php if (in_groups('admin')) : ?>
+                        <a class="dropdown-item" href="<?= base_url('admin/user-password/' . $user->userid); ?>">
+                          <i class="ri-fingerprint-line me-1"></i>
+                          Password
+                        </a>
                         <a class="dropdown-item" href="javascript:void(0);">
                           <i class="ri-delete-bin-6-line me-1"></i>
                           Delete
