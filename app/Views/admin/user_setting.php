@@ -343,7 +343,7 @@
                                         </small>
                                     </a>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-8">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <input type="text" class="form-control" id="address" name="address" value="<?= $user->address; ?>" placeholder="Address" autofocus />
@@ -358,6 +358,30 @@
                                         <small style="color:maroon;">
                                             <!-- <?= $user->address; ?> -->
                                             <i class="ri-map-pin-fill ri-16px"></i>
+                                        </small>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <select id="role" name="role" class="select2 form-select">
+                                                <option value="<?= $user->village; ?>"><?= $user->role; ?></option>
+                                                <option value="">Indonesia</option>
+                                                <option value="">Malaysia</option>
+                                                <option value="">Thailand</option>
+                                                <option value="">Singapore</option>
+                                                <option value="">Brunei Darussalam</option>
+                                            </select>
+                                            <label for="role">Role</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-community-fill ri-22px"></i>
+                                        </span>
+                                    </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.google.com/search?q=<?= $user->role; ?>" target="_blank">
+                                        <small style="color: black;">
+                                            <?= $user->role; ?>
                                         </small>
                                     </a>
                                 </div>
