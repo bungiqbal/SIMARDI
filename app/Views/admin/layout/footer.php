@@ -81,6 +81,7 @@
 <script src="<?php echo base_url('') ?>assets/js/form-layouts.js"></script>
 <script src="<?php echo base_url('') ?>assets/js/forms-pickers.js"></script>
 <script src="<?php echo base_url('') ?>assets/js/form-basic-inputs.js"></script>
+<script src="<?php echo base_url('') ?>assets/js/form-validation.js"></script>
 
 </body>
 <!-- Mirrored from demos.themeselection.com/materio-bootstrap-html-admin-template/html/vertical-menu-template/dashboards-crm.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Apr 2024 02:34:07 GMT -->
