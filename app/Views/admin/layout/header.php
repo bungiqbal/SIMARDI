@@ -67,6 +67,7 @@
     <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css">
     <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/libs/select2/select2.css" />
     <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/libs/%40form-validation/form-validation.css" />
+    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/libs/flatpickr/flatpickr.css" />
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="<?php echo base_url('') ?>assets/vendor/css/pages/dashboards-crm.css" />
