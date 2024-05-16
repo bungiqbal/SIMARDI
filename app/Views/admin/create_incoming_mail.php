@@ -32,7 +32,7 @@
                                             <label for="from">From</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-inbox-archive-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -49,7 +49,7 @@
                                             <label for="region">Region</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-flag-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -60,7 +60,7 @@
                                             <label for="mail_serial_number">Mail Serial Number</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-hashtag ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                                             <label for="classification">Classification</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-unknow-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
                                             <label for="receipt_date">Receipt Date</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-calendar-check-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@
                                             <label for="mail_number">Mail Number</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-list-ordered-2 ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -104,7 +104,7 @@
                                             <label for="mail_date">Mail Date</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-calendar-event-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@
                                             <label for="regarding_mail">Regarding Mail</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-info-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@
                                             <label for="mail_trait">Mail Trait</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-pushpin-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -147,7 +147,7 @@
                                             <label for="mail_index">Mail Index</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-paper-2-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -158,7 +158,7 @@
                                             <label for="mail_total">Mail Total</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-copy-2-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -173,7 +173,7 @@
                                             <label for="mail_type">Mail Type</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-copy-2-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -184,7 +184,7 @@
                                             <label for="inset_total">Inset Total</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-folders-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -199,7 +199,7 @@
                                             <label for="inset_type">Inset Type</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-folders-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -215,7 +215,7 @@
                                             <label for="mail_group">Mail Group</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-marked-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -230,7 +230,7 @@
                                             <label for="development">Development</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-shield-2-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -241,7 +241,7 @@
                                             <label for="file_name">File Name</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-add-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -252,7 +252,7 @@
                                             <label for="short_content">Short Content</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-edit-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -272,7 +272,7 @@
                                             <label for="provided">Provided</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-user-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -283,7 +283,7 @@
                                             <label for="disposition_date">Disposition Date</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-user-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -299,7 +299,7 @@
                                             <label for="classification">Classification</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-user-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -315,7 +315,7 @@
                                             <label for="forwarded">Forwarded</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-user-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -326,7 +326,7 @@
                                             <label for="forwarded_date">Forwarded Date</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-user-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -341,7 +341,7 @@
                                             <label for="action">Action</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-user-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -352,7 +352,7 @@
                                             <label for="notes">Notes</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-user-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -372,7 +372,7 @@
                                             <label for="classification0">Classification</label>
                                         </div>
                                         <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
+                                            <i class="ri-file-user-line ri-22px"></i>
                                         </span>
                                     </div>
                                 </div>
