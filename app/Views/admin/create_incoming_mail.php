@@ -260,6 +260,22 @@
                             <hr class="my-6 mx-n4" />
                             <h6>2. Disposition</h6>
                             <div class="row g-6">
+                                <div class="col-md-6">
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <select id="provided" name="provided" class="select2 form-select">
+                                                <option value="0"></option>
+                                                <option value="DPK">DPK</option>
+                                                <option value="KOMINFO">KOMINFO</option>
+                                                <option value="DUKCAPIL">DUKCAPIL</option>
+                                            </select>
+                                            <label for="provided">Provided</label>
+                                        </div>
+                                        <span class="input-group-text">
+                                            <i class="ri-file-user-fill ri-22px"></i>
+                                        </span>
+                                    </div>
+                                </div>
                                 <div class="col-md-3">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
@@ -290,13 +306,13 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <select id="provided" name="provided" class="select2 form-select">
+                                            <select id="forwarded" name="forwarded" class="select2 form-select">
                                                 <option value="0"></option>
-                                                <option value="DPK">DPK</option>
-                                                <option value="KOMINFO">KOMINFO</option>
-                                                <option value="DUKCAPIL">DUKCAPIL</option>
+                                                <option value="BID. PERPUSTAKAAN">BID. PERPUSTAKAAN</option>
+                                                <option value="BID. KEARSIPAN">BID. KEARSIPAN</option>
+                                                <option value="SEKRETARIAT">SEKRETARIAT</option>
                                             </select>
-                                            <label for="provided">Provided</label>
+                                            <label for="forwarded">Forwarded</label>
                                         </div>
                                         <span class="input-group-text">
                                             <i class="ri-file-user-fill ri-22px"></i>
@@ -323,22 +339,6 @@
                                                 <option value="NON REPLY">NON REPLY</option>
                                             </select>
                                             <label for="action">Action</label>
-                                        </div>
-                                        <span class="input-group-text">
-                                            <i class="ri-file-user-fill ri-22px"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-group input-group-merge">
-                                        <div class="form-floating form-floating-outline">
-                                            <select id="forwarded" name="forwarded" class="select2 form-select">
-                                                <option value="0"></option>
-                                                <option value="BID. PERPUSTAKAAN">BID. PERPUSTAKAAN</option>
-                                                <option value="BID. KEARSIPAN">BID. KEARSIPAN</option>
-                                                <option value="SEKRETARIAT">SEKRETARIAT</option>
-                                            </select>
-                                            <label for="forwarded">Forwarded</label>
                                         </div>
                                         <span class="input-group-text">
                                             <i class="ri-file-user-fill ri-22px"></i>
