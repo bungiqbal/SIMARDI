@@ -49,7 +49,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="fullname" name="fullname" placeholder="Full Name" autofocus />
+                                            <input class="form-control" type="text" id="fullname" name="fullname" placeholder="Full Name" value="<?= old('fullname'); ?>" autofocus />
                                             <label for="fullname">Full Name</label>
                                         </div>
                                         <span class="input-group-text">
@@ -60,18 +60,19 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="username" name="username" placeholder="Username" autofocus />
+                                            <input class="form-control <?= ($validation->hasError('username')) ? 'is-invalid' : ''; ?>" type="text" id="username" name="username" placeholder="Username" value="<?= old('username'); ?>" autofocus />
                                             <label for="username">Username</label>
                                         </div>
                                         <span class="input-group-text">
                                             <i class="ri-user-fill ri-22px"></i>
                                         </span>
                                     </div>
+                                    <?= $validation->getError('username'); ?>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="email" name="email" placeholder="Email" autofocus />
+                                            <input class="form-control" type="text" id="email" name="email" placeholder="Email" value="<?= old('email'); ?>" autofocus />
                                             <label for="email">Email</label>
                                         </div>
                                         <span class="input-group-text">
@@ -82,7 +83,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="number" id="phone" name="phone" placeholder="Phone Number" autofocus />
+                                            <input class="form-control" type="number" id="phone" name="phone" placeholder="Phone Number" value="<?= old('phone'); ?>" autofocus />
                                             <label for="phone">Phone Number</label>
                                         </div>
                                         <span class="input-group-text">
@@ -93,7 +94,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input type="text" class="form-control" id="facebook" name="facebook" placeholder="Facebook" autofocus />
+                                            <input type="text" class="form-control" id="facebook" name="facebook" placeholder="Facebook" value="<?= old('facebook'); ?>" autofocus />
                                             <label for="Facebook">Facebook</label>
                                         </div>
                                         <span class="input-group-text">
@@ -104,7 +105,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input type="text" class="form-control" id="instagram" name="instagram" placeholder="Instagram" autofocus />
+                                            <input type="text" class="form-control" id="instagram" name="instagram" placeholder="Instagram" value="<?= old('instagram'); ?>" autofocus />
                                             <label for="instagram">Instagram</label>
                                         </div>
                                         <span class="input-group-text">
@@ -115,7 +116,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="tiktok" name="tiktok" placeholder="Tiktok" autofocus />
+                                            <input class="form-control" type="text" id="tiktok" name="tiktok" placeholder="Tiktok" value="<?= old('tiktok'); ?>" autofocus />
                                             <label for="tiktok">Tiktok</label>
                                         </div>
                                         <span class="input-group-text">
@@ -126,7 +127,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input type="text" class="form-control" id="twitter" name="twitter" placeholder="Twitter" autofocus />
+                                            <input type="text" class="form-control" id="twitter" name="twitter" placeholder="Twitter" value="<?= old('twitter'); ?>" autofocus />
                                             <label for="twitter">Twitter</label>
                                         </div>
                                         <span class="input-group-text">
@@ -224,7 +225,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" autofocus />
+                                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="<?= old('address'); ?>" autofocus />
                                             <label for="address">Address</label>
                                         </div>
                                         <span class="input-group-text">

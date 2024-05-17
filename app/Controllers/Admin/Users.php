@@ -57,11 +57,13 @@ class Users extends BaseController
 
     public function user_create()
     {
+        // session();
         $data = [
             'title' => 'User Create | SIMARDI',
             'menu' => 'users',
             'submenu' => 'user_create',
-            'province' => $this->AreaModel->AllProvince()
+            'province' => $this->AreaModel->AllProvince(),
+            'validation' => \Config\Services::validation()
         ];
 
         return view('admin/user_create', $data);
@@ -149,8 +151,47 @@ class Users extends BaseController
     // Action
     public function create()
     {
-        $data = $this->request->getPost();
-        $this->UsersModel->insert($data);
+        // Input Validation
+        if (!$this->validate([
+            'username' => [
+                'rules' => 'required|is_unique[users.username]',
+                'errors' => [
+                    'required' => '{field} cannot be empty',
+                    'is_unique' => '{field} is already in use'
+                ]
+            ],
+            'email' => [
+                'rules' => 'required|is_unique[users.email]',
+                'errors' => [
+                    'required' => '{field} cannot be empty',
+                    'is_unique' => '{field} is already in use'
+                ]
+            ]
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('admin/user-create')->withInput()->with('validation', $validation);
+        }
+
+        // $data = $this->request->getPost();
+        // $this->UsersModel->insert($data);
+
+        $this->UsersModel->insert([
+            'fullname' =>  $this->request->getVar('fullname'),
+            'username' =>  $this->request->getVar('username'),
+            'email' =>  $this->request->getVar('email'),
+            'phone' =>  $this->request->getVar('phone'),
+            'facebook' =>  $this->request->getVar('facebook'),
+            'instagram' =>  $this->request->getVar('instagram'),
+            'tiktok' =>  $this->request->getVar('tiktok'),
+            'twitter' =>  $this->request->getVar('twitter'),
+            'country' =>  $this->request->getVar('country'),
+            'province' =>  $this->request->getVar('province'),
+            'regency' =>  $this->request->getVar('regency'),
+            'subdistrict' =>  $this->request->getVar('subdistrict'),
+            'village' =>  $this->request->getVar('village'),
+            'postal_code' =>  $this->request->getVar('postal_code'),
+            'address' =>  $this->request->getVar('address')
+        ]);
 
         session()->setFlashdata('success', 'New user has been added');
 
