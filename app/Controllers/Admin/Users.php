@@ -77,7 +77,7 @@ class Users extends BaseController
             'submenu' => 'user_account'
         ];
 
-        $this->builder->select('users.id as userid, username, email, user_image, fullname, active, created_at, updated_at, password_hash, phone, address, name');
+        $this->builder->select('users.id as userid, username, email, user_image, fullname, active, created_at, updated_at, password_hash, phone, address, role, name');
         $this->builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
         $this->builder->join('auth_groups', 'auth_groups.id = auth_groups_users.group_id');
         $this->builder->where('users.id', $id);
@@ -120,7 +120,9 @@ class Users extends BaseController
         $data = [
             'title' => 'User Setting | SIMARDI',
             'menu' => 'users',
-            'submenu' => 'user_setting'
+            'submenu' => 'user_setting',
+            'validation' => \Config\Services::validation(),
+            // 'user' => $this->UsersModel->getUsers($id)
         ];
 
         $this->builder->select('users.id as userid, username, email, user_image, fullname, active, created_at, updated_at, password_hash, phone, address, user_banner, role, language, youtube, facebook, instagram, tiktok, twitter, country, province, regency, subdistrict, village, postal_code, name');
@@ -175,7 +177,7 @@ class Users extends BaseController
         // $data = $this->request->getPost();
         // $this->UsersModel->insert($data);
 
-        $this->UsersModel->insert([
+        $this->UsersModel->save([
             'fullname' =>  $this->request->getVar('fullname'),
             'username' =>  $this->request->getVar('username'),
             'email' =>  $this->request->getVar('email'),
@@ -193,9 +195,79 @@ class Users extends BaseController
             'address' =>  $this->request->getVar('address')
         ]);
 
-        session()->setFlashdata('success', 'New user has been added');
+        session()->setFlashdata('create', 'New user has been added');
 
-        return redirect()->to(site_url('/admin/user-all'));
+        return redirect()->to(site_url('admin/user-all'));
+    }
+
+    public function update($id)
+    {
+        // Cek Username
+        $old_username = $this->UsersModel->getUsers($this->request->getVar('id'));
+        if ($old_username['username'] == $this->request->getVar('username')) {
+            $rule_username = 'required';
+        } else {
+            $rule_username = 'required|is_unique[users.username]';
+        }
+
+        // Cek Email
+        $old_email = $this->UsersModel->getUsers($this->request->getVar('id'));
+        if ($old_email['email'] == $this->request->getVar('email')) {
+            $rule_email = 'required';
+        } else {
+            $rule_email = 'required|is_unique[users.email]';
+        }
+
+        // Input Validation
+        if (!$this->validate([
+            'username' => [
+                'rules' => $rule_username,
+                'errors' => [
+                    'required' => '{field} cannot be empty',
+                    'is_unique' => '{field} is already in use'
+                ]
+            ],
+            'email' => [
+                'rules' => $rule_email,
+                'errors' => [
+                    'required' => '{field} cannot be empty',
+                    'is_unique' => '{field} is already in use'
+                ]
+            ]
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('admin/user-setting/' . $this->request->getVar('id'))->withInput()->with('validation', $validation);
+        }
+
+        $this->UsersModel->save([
+            'id' => $id,
+            'fullname' =>  $this->request->getVar('fullname'),
+            'username' =>  $this->request->getVar('username'),
+            'email' =>  $this->request->getVar('email'),
+            'phone' =>  $this->request->getVar('phone'),
+            'facebook' =>  $this->request->getVar('facebook'),
+            'instagram' =>  $this->request->getVar('instagram'),
+            'tiktok' =>  $this->request->getVar('tiktok'),
+            'twitter' =>  $this->request->getVar('twitter'),
+            'country' =>  $this->request->getVar('country'),
+            'province' =>  $this->request->getVar('province'),
+            'regency' =>  $this->request->getVar('regency'),
+            'subdistrict' =>  $this->request->getVar('subdistrict'),
+            'village' =>  $this->request->getVar('village'),
+            'postal_code' =>  $this->request->getVar('postal_code'),
+            'address' =>  $this->request->getVar('address')
+        ]);
+
+        session()->setFlashdata('update', 'User updated successfully');
+
+        return redirect()->to(site_url('admin/user-all'));
+    }
+
+    public function delete($id)
+    {
+        $this->UsersModel->delete($id);
+        session()->setFlashdata('delete', 'User has been successfully deleted');
+        return redirect()->to('/admin/user-all');
     }
 
     // Area

@@ -42,6 +42,8 @@ $routes->get('/admin/user-password/(:any)', 'Admin\Users::user_password/$1', ['f
 
 // Users Action
 $routes->post('/admin/user-create/create', 'Admin\Users::create', ['filter' => 'role:admin,operator']);
+$routes->post('/admin/user-update/(:any)', 'Admin\Users::update/$1', ['filter' => 'role:admin,operator']);
+$routes->get('/admin/user-delete/(:any)', 'Admin\Users::delete/$1', ['filter' => 'role:admin']);
 
 // Error
 $routes->get('/not-found', 'Error::not_found');

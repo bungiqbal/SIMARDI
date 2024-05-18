@@ -10,5 +10,11 @@ class UsersModel extends Model
     protected $primaryKey = 'id';
     protected $returnType = 'object';
     protected $useTimestamps = true;
-    protected $allowedFields = ['fullname', 'username', 'email', 'phone', 'facebook', 'instagram', 'tiktok', 'twitter', 'country', 'province', 'regency', 'subdistrict', 'village', 'postal_code', 'address'];
+    protected $allowedFields = ['id', 'fullname', 'username', 'email', 'phone', 'facebook', 'instagram', 'tiktok', 'twitter', 'country', 'province', 'regency', 'subdistrict', 'village', 'postal_code', 'address'];
+
+    public function getUsers()
+    {
+        return $this->db->table('users')
+            ->Get()->getResultArray();
+    }
 }

@@ -204,9 +204,19 @@
         <!-- Striped Rows -->
         <div class="card">
             <h5 class="card-header">Users All</h5>
-            <?php if (session()->getFlashdata('success')) : ?>
+            <?php if (session()->getFlashdata('create')) : ?>
                 <div class="alert alert-success" role="alert">
-                    <?= session()->getFlashdata('success'); ?>
+                    <?= session()->getFlashdata('create'); ?>
+                </div>
+            <?php endif; ?>
+            <?php if (session()->getFlashdata('update')) : ?>
+                <div class="alert alert-warning" role="alert">
+                    <?= session()->getFlashdata('update'); ?>
+                </div>
+            <?php endif; ?>
+            <?php if (session()->getFlashdata('delete')) : ?>
+                <div class="alert alert-danger" role="alert">
+                    <?= session()->getFlashdata('delete'); ?>
                 </div>
             <?php endif; ?>
             <div class="table-responsive text-nowrap">
@@ -267,7 +277,7 @@
                                                     <i class="ri-fingerprint-line me-1"></i>
                                                     Password
                                                 </a>
-                                                <a class="dropdown-item" href="javascript:void(0);">
+                                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete-user-modal">
                                                     <i class="ri-delete-bin-6-line me-1"></i>
                                                     Delete
                                                 </a>
@@ -282,6 +292,53 @@
             </div>
         </div>
         <!--/ Striped Rows -->
+    </div>
+
+    <!-- Delete User Modal -->
+    <div class="modal fade" id="delete-user-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered1 modal-simple modal-add-new-cc">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center mb-6">
+                        <h4 class="mb-2">Confirm Delete User</h4>
+                    </div>
+                    <div class="text-left mb-6">
+                        <li>
+                            <span class="h6">Full Name:</span>
+                            <span><?= $user->fullname; ?></span>
+                        </li>
+                        <li>
+                            <span class="h6">Username:</span>
+                            <span><?= $user->username; ?></span>
+                        </li>
+                        <li>
+                            <span class="h6">Email:</span>
+                            <span><?= $user->email; ?></span>
+                        </li>
+                        <li>
+                            <span class="h6">Role:</span>
+                            <span><?= $user->role; ?></span>
+                        </li>
+                        <li>
+                            <span class="h6">Status:</span>
+                            <?php
+                            if ($user->active == 0) { ?>
+                                <span style="color: red;">Inactive</span>
+                            <?php } else if ($user->active == 1) { ?>
+                                <span style="color: green;">Active</span>
+                            <?php } ?>
+                        </li>
+                    </div>
+                    <form id="addNewCCForm" class="row g-5" onsubmit="return false">
+                        <div class="col-12 text-center">
+                            <a type="reset" class="btn btn-outline-secondary btn-reset" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                            <a type="submit" class="btn btn-danger me-3" href="<?= base_url('admin/user-delete/' . $user->id); ?>">Delete</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- / Content -->

@@ -123,9 +123,10 @@
                             </ul>
                             <div class="d-flex justify-content-center">
                                 <a href="<?= base_url('/admin/user-manager'); ?>" class="btn btn-outline-danger suspend-user me-4">&nbsp;Back&nbsp;&nbsp;</a>
-                                <a href="<?= base_url('admin/user-setting/' . $user->userid); ?>" class="btn btn-primary me-4">&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp;</a>
+                                <a href="<?= base_url('/admin/user-setting/' . $user->userid); ?>" class="btn btn-primary me-4">&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp;</a>
                                 <?php if (in_groups('admin')) : ?>
-                                    <a href="javascript:;" class="btn btn-danger me-4" data-bs-target="#editUser" data-bs-toggle="modal">Delete</a>
+                                    <a href="<?= base_url('/admin/user-password/' . $user->userid); ?>" class="btn btn-warning me-4">&nbsp;&nbsp;Pass&nbsp;&nbsp;</a>
+                                    <a data-bs-toggle="modal" data-bs-target="#delete-user-modal" class="btn btn-danger me-4" style="color: white;">Delete</a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -473,25 +474,52 @@
         <!-- /Modal -->
     </div>
 
-    <!-- User Account Modal-->
-    <div class="modal fade" id="user-account-modal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-simple modal-enable-otp modal-dialog-centered">
+    <!-- Delete User Modal -->
+    <div class="modal fade" id="delete-user-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered1 modal-simple modal-add-new-cc">
             <div class="modal-content">
                 <div class="modal-body p-0">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="text-center mb-6">
-                        <h4 class="mb-2"><b><?= $user->fullname; ?></b></h4>
-                        <img src="<?= base_url(''); ?>assets/img/avatars/<?= $user->user_image; ?>" alt="user image" class="d-block h-auto ms-0 ms-sm-5 rounded user-profile-img" style="width: 90%; height: 90%;">
+                        <h4 class="mb-2">Confirm Delete User</h4>
                     </div>
-                    <div class="col-12 text-center">
-                        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    <div class="text-left mb-6">
+                        <li>
+                            <span class="h6">Full Name:</span>
+                            <span><?= $user->fullname; ?></span>
+                        </li>
+                        <li>
+                            <span class="h6">Username:</span>
+                            <span><?= $user->username; ?></span>
+                        </li>
+                        <li>
+                            <span class="h6">Email:</span>
+                            <span><?= $user->email; ?></span>
+                        </li>
+                        <li>
+                            <span class="h6">Role:</span>
+                            <span><?= $user->role; ?></span>
+                        </li>
+                        <li>
+                            <span class="h6">Status:</span>
+                            <?php
+                            if ($user->active == 0) { ?>
+                                <span style="color: red;">Inactive</span>
+                            <?php } else if ($user->active == 1) { ?>
+                                <span style="color: green;">Active</span>
+                            <?php } ?>
+                        </li>
                     </div>
+                    <form id="addNewCCForm" class="row g-5" onsubmit="return false">
+                        <div class="col-12 text-center">
+                            <a type="reset" class="btn btn-outline-secondary btn-reset" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                            <a type="submit" class="btn btn-danger me-3" href="<?= base_url('admin/user-delete/' . $user->userid); ?>">Delete</a>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /User Account Modal-->
 
     <!-- / Content -->
 

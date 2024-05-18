@@ -27,7 +27,7 @@
                     <!-- Account -->
                     <div class="card-body">
                         <div class="d-flex align-items-start align-items-sm-center gap-6">
-                            <img src="<?php echo base_url('') ?>assets/img/avatars/<?= $user->user_image; ?>" alt="user-avatar" class="d-block w-px-100 h-px-100 rounded" id="uploadedAvatar" />
+                            <img src="<?php echo base_url('') ?>assets/img/avatars/default.png" alt="user-avatar" class="d-block w-px-100 h-px-100 rounded" id="uploadedAvatar" />
                             <div class="button-wrapper">
                                 <label for="upload" class="btn btn-sm btn-primary me-3 mb-4" tabindex="0">
                                     <span class="d-none d-sm-block">Upload new photo</span>
@@ -44,13 +44,13 @@
                         </div>
                     </div>
                     <div class="card-body pt-0">
-                        <form id="formAccountSettings" method="GET" onsubmit="return false">
+                        <form action="/admin/user-update/<?= $user->userid; ?>" method="post">
                             <div class="row mt-1 g-5">
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="fullName" name="fullName" value="<?= $user->fullname; ?>" placeholder="Full Name" autofocus />
-                                            <label for="fullame">Full Name</label>
+                                            <input class="form-control" type="text" id="fullname" name="fullname" value="<?= (old('fullname')) ? old('fullname') : $user->fullname ?>" placeholder="Full Name" autofocus />
+                                            <label for="fullname">Full Name</label>
                                         </div>
                                         <span class="input-group-text">
                                             <i class="ri-file-user-fill ri-22px"></i>
@@ -66,7 +66,7 @@
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="username" name="username" value="<?= $user->username; ?>" placeholder="Username" autofocus />
+                                            <input class="form-control <?= ($validation->hasError('username')) ? 'is-invalid' : ''; ?>" type="text" id="username" name="username" value="<?= (old('username')) ? old('username') : $user->username ?>" placeholder="Username" autofocus />
                                             <label for="username">Username</label>
                                         </div>
                                         <span class="input-group-text">
@@ -74,6 +74,7 @@
                                         </span>
                                     </div>
                                     &nbsp;&nbsp;&nbsp;
+                                    <?= $validation->getError('username'); ?>
                                     <a href="<?= base_url('/admin/profile'); ?>">
                                         <small style="color: deeppink;">
                                             <?= $user->username; ?>
@@ -83,7 +84,7 @@
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="email" name="email" value="<?= $user->email; ?>" placeholder="Email" autofocus />
+                                            <input class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : ''; ?>" type="text" id="email" name="email" value="<?= (old('email')) ? old('email') : $user->email ?>" placeholder="Email" autofocus />
                                             <label for="email">Email</label>
                                         </div>
                                         <span class="input-group-text">
@@ -91,6 +92,7 @@
                                         </span>
                                     </div>
                                     &nbsp;&nbsp;&nbsp;
+                                    <?= $validation->getError('email'); ?>
                                     <a href="mailto:<?= $user->email; ?>" target="_blank">
                                         <small style="color: orange;">
                                             mailto:<?= $user->email; ?>
@@ -100,7 +102,7 @@
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="number" id="phonenumber" name="phonenumber" value="<?= $user->phone; ?>" placeholder="Phone Number" autofocus />
+                                            <input class="form-control" type="number" id="phonenumber" name="phonenumber" value="<?= (old('phone')) ? old('phone') : $user->phone ?>" placeholder="Phone Number" autofocus />
                                             <label for="phoneNumber">Phone Number</label>
                                         </div>
                                         <span class="input-group-text">
@@ -117,7 +119,7 @@
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input type="text" class="form-control" id="facebook" name="facebook" value="<?= $user->facebook; ?>" placeholder="Facebook" autofocus />
+                                            <input type="text" class="form-control" id="facebook" name="facebook" value="<?= (old('facebook')) ? old('facebook') : $user->facebook ?>" placeholder="Facebook" autofocus />
                                             <label for="Facebook">Facebook</label>
                                         </div>
                                         <span class="input-group-text">
@@ -134,7 +136,7 @@
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input type="text" class="form-control" id="instagram" name="instagram" value="<?= $user->instagram; ?>" placeholder="Instagram" autofocus />
+                                            <input type="text" class="form-control" id="instagram" name="instagram" value="<?= (old('instagram')) ? old('instagram') : $user->instagram ?>" placeholder="Instagram" autofocus />
                                             <label for="instagram">Instagram</label>
                                         </div>
                                         <span class="input-group-text">
@@ -151,7 +153,7 @@
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="tiktok" name="tiktok" value="<?= $user->tiktok; ?>" placeholder="Tiktok" autofocus />
+                                            <input class="form-control" type="text" id="tiktok" name="tiktok" value="<?= (old('tiktok')) ? old('tiktok') : $user->tiktok ?>" placeholder="Tiktok" autofocus />
                                             <label for="tiktok">Tiktok</label>
                                         </div>
                                         <span class="input-group-text">
@@ -168,7 +170,7 @@
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control" type="text" id="youtube" name="youtube" value="<?= $user->youtube; ?>" placeholder="Youtube" autofocus />
+                                            <input class="form-control" type="text" id="youtube" name="youtube" value="<?= (old('youtube')) ? old('youtube') : $user->youtube ?>" placeholder="Youtube" autofocus />
                                             <label for="youtube">Youtube</label>
                                         </div>
                                         <span class="input-group-text">
@@ -185,7 +187,7 @@
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input type="text" class="form-control" id="twitter" name="twitter" value="<?= $user->twitter; ?>" placeholder="Twitter" autofocus />
+                                            <input type="text" class="form-control" id="twitter" name="twitter" value="<?= (old('twitter')) ? old('twitter') : $user->twitter ?>" placeholder="Twitter" autofocus />
                                             <label for="twitter">Twitter</label>
                                         </div>
                                         <span class="input-group-text">
@@ -346,7 +348,7 @@
                                 <div class="col-md-8">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input type="text" class="form-control" id="address" name="address" value="<?= $user->address; ?>" placeholder="Address" autofocus />
+                                            <input type="text" class="form-control" id="address" name="address" value="<?= (old('address')) ? old('address') : $user->address ?>" placeholder="Address" autofocus />
                                             <label for="address">Address</label>
                                         </div>
                                         <span class="input-group-text">
@@ -365,7 +367,7 @@
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
                                             <select id="role" name="role" class="select2 form-select">
-                                                <option value="<?= $user->village; ?>"><?= $user->role; ?></option>
+                                                <option value="<?= $user->name; ?>"><?= $user->name; ?></option>
                                                 <option value="">Indonesia</option>
                                                 <option value="">Malaysia</option>
                                                 <option value="">Thailand</option>
@@ -379,9 +381,9 @@
                                         </span>
                                     </div>
                                     &nbsp;&nbsp;&nbsp;
-                                    <a href="https://www.google.com/search?q=<?= $user->role; ?>" target="_blank">
+                                    <a href="https://www.google.com/search?q=<?= $user->name; ?>" target="_blank">
                                         <small style="color: black;">
-                                            <?= $user->role; ?>
+                                            <?= $user->name; ?>
                                         </small>
                                     </a>
                                 </div>
