@@ -203,41 +203,41 @@ class Users extends BaseController
     public function update($id)
     {
         // Cek Username
-        $old_username = $this->UsersModel->getUsers($this->request->getVar('id'));
-        if ($old_username['username'] == $this->request->getVar('username')) {
-            $rule_username = 'required';
-        } else {
-            $rule_username = 'required|is_unique[users.username]';
-        }
+        // $old_username = $this->UsersModel->getUsers($this->request->getVar('id'));
+        // if ($old_username['username'] == $this->request->getVar('username')) {
+        //     $rule_username = 'required';
+        // } else {
+        //     $rule_username = 'required|is_unique[users.username]';
+        // }
 
         // Cek Email
-        $old_email = $this->UsersModel->getUsers($this->request->getVar('id'));
-        if ($old_email['email'] == $this->request->getVar('email')) {
-            $rule_email = 'required';
-        } else {
-            $rule_email = 'required|is_unique[users.email]';
-        }
+        // $old_email = $this->UsersModel->getUsers($this->request->getVar('id'));
+        // if ($old_email['email'] == $this->request->getVar('email')) {
+        //     $rule_email = 'required';
+        // } else {
+        //     $rule_email = 'required|is_unique[users.email]';
+        // }
 
         // Input Validation
-        if (!$this->validate([
-            'username' => [
-                'rules' => $rule_username,
-                'errors' => [
-                    'required' => '{field} cannot be empty',
-                    'is_unique' => '{field} is already in use'
-                ]
-            ],
-            'email' => [
-                'rules' => $rule_email,
-                'errors' => [
-                    'required' => '{field} cannot be empty',
-                    'is_unique' => '{field} is already in use'
-                ]
-            ]
-        ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('admin/user-setting/' . $this->request->getVar('id'))->withInput()->with('validation', $validation);
-        }
+        // if (!$this->validate([
+        //     'username' => [
+        //         'rules' => $rule_username,
+        //         'errors' => [
+        //             'required' => '{field} cannot be empty',
+        //             'is_unique' => '{field} is already in use'
+        //         ]
+        //     ],
+        //     'email' => [
+        //         'rules' => $rule_email,
+        //         'errors' => [
+        //             'required' => '{field} cannot be empty',
+        //             'is_unique' => '{field} is already in use'
+        //         ]
+        //     ]
+        // ])) {
+        //     $validation = \Config\Services::validation();
+        //     return redirect()->to('admin/user-setting/' . $this->request->getVar('id'))->withInput()->with('validation', $validation);
+        // }
 
         $this->UsersModel->save([
             'id' => $id,
