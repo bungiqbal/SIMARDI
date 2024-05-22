@@ -39,13 +39,7 @@
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <select id="region" name="region" class="select2 form-select">
-                                                <option value="0"></option>
-                                                <option value="SUMENEP">SUMENEP</option>
-                                                <option value="PAMEKASAN">PAMEKASAN</option>
-                                                <option value="SAMPANG">SAMPANG</option>
-                                                <option value="BANGKALAN">BANGKALAN</option>
-                                            </select>
+                                            <input type="text" id="region" name="region" class="form-control" placeholder="Region" />
                                             <label for="region">Region</label>
                                         </div>
                                         <span class="input-group-text">
