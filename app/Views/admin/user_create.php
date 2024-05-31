@@ -35,13 +35,13 @@
                                         <label for="upload" class="btn btn-sm btn-primary me-3 mb-4" tabindex="0">
                                             <span class="d-none d-sm-block">Upload new photo</span>
                                             <i class="ri-upload-2-line d-block d-sm-none"></i>
-                                            <input type="file" id="upload" name="upload" class="account-file-input <?= ($validation->hasError('photo')) ? 'is-invalid' : ''; ?>" hidden accept="image/png, image/jpeg, image/jpg" onchange="previewupload()" />
+                                            <input type="file" id="upload" name="upload" class="account-file-input <?= ($validation->hasError('upload')) ? 'is-invalid' : ''; ?>" hidden accept="image/png, image/jpeg, image/jpg" onchange="previewupload()" />
                                         </label>
                                         <button type="button" class="btn btn-sm btn-outline-danger account-image-reset mb-4">
                                             <i class="ri-refresh-line d-block d-sm-none"></i>
                                             <span class="d-none d-sm-block">Reset</span>
                                         </button>
-                                        <?= $validation->getError('photo'); ?>
+                                        <?= $validation->getError('upload'); ?>
                                         <div>Allowed JPG, GIF or PNG. Max size of 1024k</div>
                                     </div>
                                 </div>
