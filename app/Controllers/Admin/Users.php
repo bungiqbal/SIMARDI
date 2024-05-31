@@ -168,10 +168,12 @@ class Users extends BaseController
                     'required' => '{field} cannot be empty',
                     'is_unique' => '{field} is already in use'
                 ]
-            ]
+            ],
+            'photo' => 'uploaded[photo]'
         ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('admin/user-create')->withInput()->with('validation', $validation);
+            // $validation = \Config\Services::validation();
+            // return redirect()->to('admin/user-create')->withInput()->with('validation', $validation);
+            return redirect()->to('admin/user-create')->withInput();
         }
 
         // $data = $this->request->getPost();
