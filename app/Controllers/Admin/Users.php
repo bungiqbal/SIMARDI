@@ -169,11 +169,32 @@ class Users extends BaseController
                     'is_unique' => '{field} is already in use'
                 ]
             ],
-            'photo' => 'uploaded[photo]'
+            'upload' => [
+                // 'rules' => 'uploaded[photo]|max_size[photo,1024]|is_image[photo]|mime_in[photo,image/jpg,image/jpeg,image/png]',
+                'rules' => 'max_size[upload,1024]|is_image[upload]|mime_in[upload,image/jpg,image/jpeg,image/png]',
+                'errors' => [
+                    // 'uploaded' => 'Select the image first',
+                    'max_size' => 'Image size is too large',
+                    'is_image' => 'This is not a picture',
+                    'mime_in' => 'This is not a picture'
+                ]
+            ]
         ])) {
             // $validation = \Config\Services::validation();
             // return redirect()->to('admin/user-create')->withInput()->with('validation', $validation);
             return redirect()->to('admin/user-create')->withInput();
+        }
+
+        // Get Files
+        $uploadfile = $this->UsersModel->getFile('upload');
+        // Check Selected Files
+        if ($uploadfile->getError() == 4) {
+            $uploadname = 'default.png';
+        } else {
+            // Generate Name
+            $uploadname = $uploadfile->getRandomName();
+            // Move to Public
+            $uploadfile->move('assets/img/avatars', $uploadname);
         }
 
         // $data = $this->request->getPost();
@@ -194,7 +215,8 @@ class Users extends BaseController
             'subdistrict' =>  $this->request->getVar('subdistrict'),
             'village' =>  $this->request->getVar('village'),
             'postal_code' =>  $this->request->getVar('postal_code'),
-            'address' =>  $this->request->getVar('address')
+            'address' =>  $this->request->getVar('address'),
+            'user_image' =>  $uploadname
         ]);
 
         session()->setFlashdata('create', 'New user has been added');
@@ -267,6 +289,15 @@ class Users extends BaseController
 
     public function delete($id)
     {
+        // Find Photo Profile
+        $user = $this->UsersModel->find($id);
+
+        // Check Default Photo Profile
+        if ($user['user_image' != 'defaul.png']) {
+            // Delete Photo Profile
+            unlink('assets/img/avatars/' . $user['user_image']);
+        }
+
         $this->UsersModel->delete($id);
         session()->setFlashdata('delete', 'User has been successfully deleted');
         return redirect()->to('/admin/user-all');
