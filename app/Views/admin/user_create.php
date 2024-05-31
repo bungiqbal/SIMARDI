@@ -37,11 +37,11 @@
                                             <i class="ri-upload-2-line d-block d-sm-none"></i>
                                             <input type="file" id="upload" name="photo" class="account-file-input <?= ($validation->hasError('photo')) ? 'is-invalid' : ''; ?>" hidden accept="image/png, image/jpeg, image/jpg" />
                                         </label>
-                                            <button type="button" class="btn btn-sm btn-outline-danger account-image-reset mb-4">
-                                                <i class="ri-refresh-line d-block d-sm-none"></i>
-                                                <span class="d-none d-sm-block">Reset</span>
-                                            </button>
-                                            <?= $validation->getError('photo'); ?>
+                                        <button type="button" class="btn btn-sm btn-outline-danger account-image-reset mb-4">
+                                            <i class="ri-refresh-line d-block d-sm-none"></i>
+                                            <span class="d-none d-sm-block">Reset</span>
+                                        </button>
+                                        <?= $validation->getError('photo'); ?>
                                         <div>Allowed JPG, GIF or PNG. Max size of 800K</div>
                                     </div>
                                 </div>
