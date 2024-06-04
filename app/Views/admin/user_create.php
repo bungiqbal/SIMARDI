@@ -73,7 +73,7 @@
                                 <div class="col-md-6">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">
-                                            <input class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : ''; ?>" type="text" id="email" name="email" placeholder="Email" value="<?= old('email'); ?>" autofocus />
+                                            <input class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : ''; ?>" type="email" id="email" name="email" placeholder="Email" value="<?= old('email'); ?>" autofocus />
                                             <label for="email">Email</label>
                                         </div>
                                         <span class="input-group-text">

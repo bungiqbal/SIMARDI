@@ -186,7 +186,7 @@ class Users extends BaseController
         }
 
         // Get Files
-        $uploadfile = $this->UsersModel->getFile('upload');
+        $uploadfile = $this->request->getFile('upload');
         // Check Selected Files
         if ($uploadfile->getError() == 4) {
             $uploadname = 'default.png';
@@ -293,10 +293,10 @@ class Users extends BaseController
         $user = $this->UsersModel->find($id);
 
         // Check Default Photo Profile
-        if ($user['user_image' != 'defaul.png']) {
-            // Delete Photo Profile
-            unlink('assets/img/avatars/' . $user['user_image']);
-        }
+        // if ($user['user_image' != 'defaul.png']) {
+        // Delete Photo Profile
+        // unlink('assets/img/avatars/' . $user['user_image']);
+        // }
 
         $this->UsersModel->delete($id);
         session()->setFlashdata('delete', 'User has been successfully deleted');
