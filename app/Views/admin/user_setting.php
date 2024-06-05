@@ -46,6 +46,7 @@
                     <div class="card-body pt-0">
                         <form action="/admin/user-update/<?= $user->userid; ?>" method="post">
                             <div class="row mt-1 g-5">
+                                <input class="form-control" type="hidden" id="id" name="id" value="<?= $user->userid ?>" />
                                 <div class="col-md-4">
                                     <div class="input-group input-group-merge">
                                         <div class="form-floating form-floating-outline">

@@ -187,6 +187,7 @@ class Users extends BaseController
 
         // Get Files
         $uploadfile = $this->request->getFile('upload');
+        // $uploadname = NULL;
         // Check Selected Files
         if ($uploadfile->getError() == 4) {
             $uploadname = 'default.png';
@@ -222,46 +223,56 @@ class Users extends BaseController
         session()->setFlashdata('create', 'New user has been added');
 
         return redirect()->to(site_url('admin/user-all'));
+
+        // echo $uploadname;
     }
 
     public function update($id)
     {
         // Cek Username
-        // $old_username = $this->UsersModel->getUsers($this->request->getVar('id'));
-        // if ($old_username['username'] == $this->request->getVar('username')) {
-        //     $rule_username = 'required';
-        // } else {
-        //     $rule_username = 'required|is_unique[users.username]';
-        // }
+        $old_username = $this->UsersModel->getUsername($this->request->getVar('id'));
+        $username = NULL;
+        foreach ($old_username as $row) {
+            $username = $row->username;
+        }
+        if ($username == $this->request->getVar('username')) {
+            $rule_username = 'required';
+        } else {
+            $rule_username = 'required|is_unique[users.username]';
+        }
 
         // Cek Email
-        // $old_email = $this->UsersModel->getUsers($this->request->getVar('id'));
-        // if ($old_email['email'] == $this->request->getVar('email')) {
-        //     $rule_email = 'required';
-        // } else {
-        //     $rule_email = 'required|is_unique[users.email]';
-        // }
+        $old_email = $this->UsersModel->getEmail($this->request->getVar('id'));
+        $email = NULL;
+        foreach ($old_email as $row) {
+            $email = $row->email;
+        }
+        if ($email == $this->request->getVar('email')) {
+            $rule_email = 'required';
+        } else {
+            $rule_email = 'required|is_unique[users.email]';
+        }
 
         // Input Validation
-        // if (!$this->validate([
-        //     'username' => [
-        //         'rules' => $rule_username,
-        //         'errors' => [
-        //             'required' => '{field} cannot be empty',
-        //             'is_unique' => '{field} is already in use'
-        //         ]
-        //     ],
-        //     'email' => [
-        //         'rules' => $rule_email,
-        //         'errors' => [
-        //             'required' => '{field} cannot be empty',
-        //             'is_unique' => '{field} is already in use'
-        //         ]
-        //     ]
-        // ])) {
-        //     $validation = \Config\Services::validation();
-        //     return redirect()->to('admin/user-setting/' . $this->request->getVar('id'))->withInput()->with('validation', $validation);
-        // }
+        if (!$this->validate([
+            'username' => [
+                'rules' => $rule_username,
+                'errors' => [
+                    'required' => '{field} cannot be empty',
+                    'is_unique' => '{field} is already in use'
+                ]
+            ],
+            'email' => [
+                'rules' => $rule_email,
+                'errors' => [
+                    'required' => '{field} cannot be empty',
+                    'is_unique' => '{field} is already in use'
+                ]
+            ]
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('admin/user-setting/' . $this->request->getVar('id'))->withInput()->with('validation', $validation);
+        }
 
         $this->UsersModel->save([
             'id' => $id,
@@ -290,13 +301,18 @@ class Users extends BaseController
     public function delete($id)
     {
         // Find Photo Profile
-        $user = $this->UsersModel->find($id);
+        // $user = $this->UsersModel->find($id);
+        $gambarUser = $this->UsersModel->getImage($id);
+        $gambar = NULL;
+        foreach ($gambarUser as $row) {
+            $gambar = $row->user_image;
+        }
 
         // Check Default Photo Profile
-        // if ($user['user_image' != 'defaul.png']) {
-        // Delete Photo Profile
-        // unlink('assets/img/avatars/' . $user['user_image']);
-        // }
+        if ($gambar != 'default.png') {
+            // Delete Photo Profile
+            unlink('assets/img/avatars/' . $gambar);
+        }
 
         $this->UsersModel->delete($id);
         session()->setFlashdata('delete', 'User has been successfully deleted');
