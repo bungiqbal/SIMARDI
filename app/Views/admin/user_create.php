@@ -24,10 +24,10 @@
                     </ul>
                 </div> -->
                 <div class="card mb-6">
+                    <!-- Account -->
                     <div class="card-body pt-0">
                         <form action="<?= base_url('admin/user-create/create') ?>" method="post" id="usercreate" enctype="multipart/form-data">
                             <!-- <?= csrf_field(); ?> -->
-                            <!-- Account -->
                             <div class="card-body">
                                 <div class="d-flex align-items-start align-items-sm-center gap-6">
                                     <img src="<?php echo base_url('') ?>assets/img/avatars/default.png" class="d-block w-px-100 h-px-100 rounded img-thumbnail img-preview" id="uploadedAvatar" alt="user-avatar" />

@@ -253,6 +253,18 @@ class Users extends BaseController
             $rule_email = 'required|is_unique[users.email]';
         }
 
+        // Cek Image
+        $old_image = $this->UsersModel->getImage($this->request->getVar('id'));
+        $image = NULL;
+        foreach ($old_image as $row) {
+            $image = $row->image;
+        }
+        if ($image == $this->request->getVar('user_image')) {
+            $rule_image = 'uploaded';
+        } else {
+            $rule_image = 'required';
+        }
+
         // Input Validation
         if (!$this->validate([
             'username' => [
@@ -267,6 +279,16 @@ class Users extends BaseController
                 'errors' => [
                     'required' => '{field} cannot be empty',
                     'is_unique' => '{field} is already in use'
+                ]
+            ],
+            'upload' => [
+                // 'rules' => 'uploaded[photo]|max_size[photo,1024]|is_image[photo]|mime_in[photo,image/jpg,image/jpeg,image/png]',
+                'rules' => 'max_size[upload,1024]|is_image[upload]|mime_in[upload,image/jpg,image/jpeg,image/png]',
+                'errors' => [
+                    'uploaded' => 'Select the image first',
+                    'max_size' => 'Image size is too large',
+                    'is_image' => 'This is not a picture',
+                    'mime_in' => 'This is not a picture'
                 ]
             ]
         ])) {
