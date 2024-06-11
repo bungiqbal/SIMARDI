@@ -204,104 +204,103 @@
     <!-- Striped Rows -->
     <div class="card">
       <h5 class="card-header">Users Manager</h5>
-      <div class="alert alert-success" role="alert">
-        <?php if (session()->getFlashdata('create')) : ?>
-          <div class="alert alert-success" role="alert">
-            <?= session()->getFlashdata('create'); ?>
-          </div>
-        <?php endif; ?>
-        <?php if (session()->getFlashdata('update')) : ?>
-          <div class="alert alert-warning" role="alert">
-            <?= session()->getFlashdata('update'); ?>
-          </div>
-        <?php endif; ?>
-        <?php if (session()->getFlashdata('delete')) : ?>
-          <div class="alert alert-danger" role="alert">
-            <?= session()->getFlashdata('delete'); ?>
-          </div>
-        <?php endif; ?>
-        <div class="table-responsive text-nowrap">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th><b>No</b></th>
-                <th><b>Profile</b></th>
-                <th><b>Full Name</b></th>
-                <th><b>Username</b></th>
-                <th><b>Email</b></th>
-                <th><b>Role</b></th>
-                <th><b>Status</b></th>
-                <th><b>Action</b></th>
-              </tr>
-            </thead>
-            <tbody class="table-border-bottom-0">
-              <?php $i = 1; ?>
-              <?php foreach ($users as $user) : ?>
-                <tr>
-                  <td><?= $i++; ?></td>
-                  <td>
-                    <a href="<?= base_url('admin/user-profile/' . $user->userid); ?>">
-                      <img src="<?= base_url(''); ?>assets/img/avatars/<?= $user->user_image; ?>" alt="Avatar" class="rounded-circle user-manager-profile">
-                    </a>
-                  </td>
-                  <td><?= $user->fullname; ?></td>
-                  <td><?= $user->username; ?></td>
-                  <td><?= $user->email; ?></td>
-
-                  <?php
-                  if ($user->name == 'admin') { ?>
-                    <td><span class="badge rounded-pill bg-label-danger me-1">Administrator</span></td>
-                  <?php } else if ($user->name == 'operator') { ?>
-                    <td><span class="badge rounded-pill bg-label-warning me-1">Operator</span></td>
-                  <?php } else if ($user->name == 'user') { ?>
-                    <td><span class="badge rounded-pill bg-label-success me-1">User</span></td>
-                  <?php } ?>
-
-                  <?php
-                  if ($user->active == 0) { ?>
-                    <td><span class="badge rounded-pill bg-label-danger me-1">Inctive</span></td>
-                  <?php } else if ($user->active == 1) { ?>
-                    <td><span class="badge rounded-pill bg-label-success me-1">Active</span></td>
-                  <?php } ?>
-
-                  <td>
-                    <div class="dropdown">
-                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ri-more-2-line"></i></button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="<?= base_url('admin/user-account/' . $user->userid); ?>">
-                          <i class="ri-information-line me-1"></i>
-                          Detail
-                        </a>
-                        <a class="dropdown-item" href="<?= base_url('admin/user-profile/' . $user->userid); ?>">
-                          <i class="ri-user-line me-1"></i>
-                          Profile
-                        </a>
-                        <a class="dropdown-item" href="<?= base_url('admin/user-setting/' . $user->userid); ?>">
-                          <i class="ri-settings-2-line me-1"></i>
-                          Setting
-                        </a>
-                        <?php if (in_groups('admin')) : ?>
-                          <a class="dropdown-item" href="<?= base_url('admin/user-password/' . $user->userid); ?>">
-                            <i class="ri-fingerprint-line me-1"></i>
-                            Password
-                          </a>
-                          <a class="dropdown-item" href="javascript:void(0);">
-                            <i class="ri-delete-bin-6-line me-1"></i>
-                            Delete
-                          </a>
-                        <?php endif; ?>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              <?php endforeach; ?>
-            </tbody>
-          </table>
+      <?php if (session()->getFlashdata('create')) : ?>
+        <div class="alert alert-success" role="alert">
+          <?= session()->getFlashdata('create'); ?>
         </div>
+      <?php endif; ?>
+      <?php if (session()->getFlashdata('update')) : ?>
+        <div class="alert alert-warning" role="alert">
+          <?= session()->getFlashdata('update'); ?>
+        </div>
+      <?php endif; ?>
+      <?php if (session()->getFlashdata('delete')) : ?>
+        <div class="alert alert-danger" role="alert">
+          <?= session()->getFlashdata('delete'); ?>
+        </div>
+      <?php endif; ?>
+      <div class="table-responsive text-nowrap">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th><b>No</b></th>
+              <th><b>Profile</b></th>
+              <th><b>Full Name</b></th>
+              <th><b>Username</b></th>
+              <th><b>Email</b></th>
+              <th><b>Role</b></th>
+              <th><b>Status</b></th>
+              <th><b>Action</b></th>
+            </tr>
+          </thead>
+          <tbody class="table-border-bottom-0">
+            <?php $i = 1; ?>
+            <?php foreach ($users as $user) : ?>
+              <tr>
+                <td><?= $i++; ?></td>
+                <td>
+                  <a href="<?= base_url('admin/user-profile/' . $user->userid); ?>">
+                    <img src="<?= base_url(''); ?>assets/img/avatars/<?= $user->user_image; ?>" alt="Avatar" class="rounded-circle user-manager-profile">
+                  </a>
+                </td>
+                <td><?= $user->fullname; ?></td>
+                <td><?= $user->username; ?></td>
+                <td><?= $user->email; ?></td>
+
+                <?php
+                if ($user->name == 'admin') { ?>
+                  <td><span class="badge rounded-pill bg-label-danger me-1">Administrator</span></td>
+                <?php } else if ($user->name == 'operator') { ?>
+                  <td><span class="badge rounded-pill bg-label-warning me-1">Operator</span></td>
+                <?php } else if ($user->name == 'user') { ?>
+                  <td><span class="badge rounded-pill bg-label-success me-1">User</span></td>
+                <?php } ?>
+
+                <?php
+                if ($user->active == 0) { ?>
+                  <td><span class="badge rounded-pill bg-label-danger me-1">Inctive</span></td>
+                <?php } else if ($user->active == 1) { ?>
+                  <td><span class="badge rounded-pill bg-label-success me-1">Active</span></td>
+                <?php } ?>
+
+                <td>
+                  <div class="dropdown">
+                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ri-more-2-line"></i></button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="<?= base_url('admin/user-account/' . $user->userid); ?>">
+                        <i class="ri-information-line me-1"></i>
+                        Detail
+                      </a>
+                      <a class="dropdown-item" href="<?= base_url('admin/user-profile/' . $user->userid); ?>">
+                        <i class="ri-user-line me-1"></i>
+                        Profile
+                      </a>
+                      <a class="dropdown-item" href="<?= base_url('admin/user-setting/' . $user->userid); ?>">
+                        <i class="ri-settings-2-line me-1"></i>
+                        Setting
+                      </a>
+                      <?php if (in_groups('admin')) : ?>
+                        <a class="dropdown-item" href="<?= base_url('admin/user-password/' . $user->userid); ?>">
+                          <i class="ri-fingerprint-line me-1"></i>
+                          Password
+                        </a>
+                        <a class="dropdown-item" href="javascript:void(0);">
+                          <i class="ri-delete-bin-6-line me-1"></i>
+                          Delete
+                        </a>
+                      <?php endif; ?>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
       </div>
-      <!--/ Striped Rows -->
     </div>
+    <!--/ Striped Rows -->
+  </div>
 
-    <!-- / Content -->
+  <!-- / Content -->
 
-    <?= $this->endSection(); ?>
+  <?= $this->endSection(); ?>

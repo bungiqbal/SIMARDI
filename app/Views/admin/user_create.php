@@ -249,6 +249,24 @@
         </div>
     </div>
 
+    <!-- Preview Upload Photo Profile -->
+    <script>
+        function previewupload() {
+            const upload = document.querySelector('#upload');
+            const uploadlabel = document.querySelector('.btn btn-sm btn-primary me-3 mb-4');
+            const imgpreview = document.querySelector('.img-preview');
+
+            uploadlabel.textContent = sampul.files[0].name;
+
+            const fileupload = new FileReader();
+            fileupload.readAsDataURL(sampul.files[0]);
+
+            fileupload.onload = function(e) {
+                imgpreview.src = e.target.result;
+            }
+        }
+    </script>
+
     <script>
         $(document).ready(function() {
             $('#province').change(function() {

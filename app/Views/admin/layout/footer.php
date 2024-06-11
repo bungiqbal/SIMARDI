@@ -83,24 +83,6 @@
 <script src="<?php echo base_url('') ?>assets/js/form-basic-inputs.js"></script>
 <script src="<?php echo base_url('') ?>assets/js/form-validation.js"></script>
 
-<!-- Preview Upload Photo Profile -->
-<script>
-    function previewupload() {
-        const upload = document.querySelector('#upload');
-        const uploadlabel = document.querySelector('.btn btn-sm btn-primary me-3 mb-4');
-        const imgpreview = document.querySelector('.img-preview');
-
-        uploadlabel.textContent = sampul.files[0].name;
-
-        const fileupload = new FileReader();
-        fileupload.readAsDataURL(sampul.files[0]);
-
-        fileupload.onload = function(e) {
-            imgpreview.src = e.target.result;
-        }
-    }
-</script>
-
 </body>
 <!-- Mirrored from demos.themeselection.com/materio-bootstrap-html-admin-template/html/vertical-menu-template/dashboards-crm.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Apr 2024 02:34:07 GMT -->
 

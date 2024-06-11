@@ -26,9 +26,10 @@
                 <div class="card mb-6">
                     <!-- Account -->
                     <div class="card-body pt-0">
-                        <form action="/admin/user-update/<?= $user->userid; ?>" method="post">
+                        <form action="/admin/user-update/<?= $user->userid; ?>" method="post" enctype="multipart/form-data">
                             <!-- <?= csrf_field(); ?> -->
                             <div class="card-body">
+                                <input type="hidden" name="oldupload" value="<?= $user->user_image ?>" />
                                 <div class="d-flex align-items-start align-items-sm-center gap-6">
                                     <img src="<?php echo base_url('') ?>assets/img/avatars/<?= $user->user_image ?>" class="d-block w-px-100 h-px-100 rounded img-thumbnail img-preview" id="uploadedAvatar" alt="user-avatar" />
                                     <div class="button-wrapper">
@@ -418,9 +419,26 @@
                 <?php endif; ?>
             </div>
         </div>
-
-
     </div>
+
+    <!-- Preview Upload Photo Profile -->
+    <script>
+        function previewupload() {
+            const upload = document.querySelector('#upload');
+            const uploadlabel = document.querySelector('.btn btn-sm btn-primary me-3 mb-4');
+            const imgpreview = document.querySelector('.img-preview');
+
+            uploadlabel.textContent = sampul.files[0].name;
+
+            const fileupload = new FileReader();
+            fileupload.readAsDataURL(sampul.files[0]);
+
+            fileupload.onload = function(e) {
+                imgpreview.src = e.target.result;
+            }
+        }
+    </script>
+
     <!-- / Content -->
 
     <!-- / Content -->

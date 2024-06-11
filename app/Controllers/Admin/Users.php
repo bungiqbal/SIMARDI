@@ -223,8 +223,6 @@ class Users extends BaseController
         session()->setFlashdata('create', 'New user has been added');
 
         return redirect()->to(site_url('admin/user-all'));
-
-        // echo $uploadname;
     }
 
     public function update($id)
@@ -254,16 +252,16 @@ class Users extends BaseController
         }
 
         // Cek Image
-        $old_image = $this->UsersModel->getImage($this->request->getVar('id'));
-        $image = NULL;
-        foreach ($old_image as $row) {
-            $image = $row->image;
-        }
-        if ($image == $this->request->getVar('user_image')) {
-            $rule_image = 'uploaded';
-        } else {
-            $rule_image = 'required';
-        }
+        // $old_image = $this->UsersModel->getImage($this->request->getVar('id'));
+        // $image = NULL;
+        // foreach ($old_image as $row) {
+        //     $image = $row->image;
+        // }
+        // if ($image == $this->request->getVar('user_image')) {
+        //     $rule_image = 'uploaded';
+        // } else {
+        //     $rule_image = 'required';
+        // }
 
         // Input Validation
         if (!$this->validate([
@@ -292,8 +290,28 @@ class Users extends BaseController
                 ]
             ]
         ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('admin/user-setting/' . $this->request->getVar('id'))->withInput()->with('validation', $validation);
+            // $validation = \Config\Services::validation();
+            // return redirect()->to('admin/user-setting/' . $this->request->getVar('id'))->withInput()->with('validation', $validation);
+            return redirect()->to('admin/user-setting/' . $this->request->getVar('id'))->withInput();
+        }
+
+        // Get Files
+        $uploadfile = $this->request->getFile('upload');
+        // Get Old Files
+        $uploadold = $this->request->getVar('oldupload');
+        // Cek Upload, Old or New
+        if ($uploadfile->getError() == 4) {
+            $uploadname = $this->request->getVar('oldupload');
+        } else {
+            // Generate Name
+            $uploadname = $uploadfile->getRandomName();
+            // Move to Public
+            $uploadfile->move('assets/img/avatars', $uploadname);
+            // Check Default Photo Profile
+            if ($uploadold != 'default.png') {
+                // Delete Old Photo
+                unlink('assets/img/avatars/' . $uploadold);
+            }
         }
 
         $this->UsersModel->save([
@@ -312,7 +330,8 @@ class Users extends BaseController
             'subdistrict' =>  $this->request->getVar('subdistrict'),
             'village' =>  $this->request->getVar('village'),
             'postal_code' =>  $this->request->getVar('postal_code'),
-            'address' =>  $this->request->getVar('address')
+            'address' =>  $this->request->getVar('address'),
+            'user_image' =>  $uploadname
         ]);
 
         session()->setFlashdata('update', 'User updated successfully');
