@@ -251,6 +251,7 @@
 
     <!-- Preview Upload Photo Profile -->
     <script>
+        // Profile Preview
         function previewupload() {
             // const upload = document.querySelector('#upload');
             // const uploadlabel = document.querySelector('.btn btn-sm btn-primary me-3 mb-4');
@@ -268,9 +269,8 @@
             var image = document.getElementById("uploadedAvatar");
             image.src = URL.createObjectURL(event.target.files[0]);
         }
-    </script>
 
-    <script>
+        // Select Area
         $(document).ready(function() {
             $('#province').change(function() {
                 var province = $('#province').val();
