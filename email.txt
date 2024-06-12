@@ -1,4 +1,4 @@
-perpus@negeri.or.id
-#EmailPerpus123
-mail.negeri.or.id
+perpus@document.biz.id
+perpus@document.biz.id
+mail.document.biz.id
 587

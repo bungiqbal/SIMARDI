@@ -252,18 +252,21 @@
     <!-- Preview Upload Photo Profile -->
     <script>
         function previewupload() {
-            const upload = document.querySelector('#upload');
-            const uploadlabel = document.querySelector('.btn btn-sm btn-primary me-3 mb-4');
-            const imgpreview = document.querySelector('.img-preview');
+            // const upload = document.querySelector('#upload');
+            // const uploadlabel = document.querySelector('.btn btn-sm btn-primary me-3 mb-4');
+            // const imgpreview = document.querySelector('.img-preview');
 
-            uploadlabel.textContent = sampul.files[0].name;
+            // uploadlabel.textContent = sampul.files[0].name;
 
-            const fileupload = new FileReader();
-            fileupload.readAsDataURL(sampul.files[0]);
+            // const fileupload = new FileReader();
+            // fileupload.readAsDataURL(sampul.files[0]);
 
-            fileupload.onload = function(e) {
-                imgpreview.src = e.target.result;
-            }
+            // fileupload.onload = function(e) {
+            //     imgpreview.src = e.target.result;
+            // }
+
+            var image = document.getElementById("uploadedAvatar");
+            image.src = URL.createObjectURL(event.target.files[0]);
         }
     </script>
 
