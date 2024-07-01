@@ -278,7 +278,7 @@
                     type: "POST",
                     url: "<?= base_url('Users/regency') ?>",
                     data: {
-                        prov_id: province
+                        prov_id: prov_id
                     },
                     dataType: "datatype",
                     success: function(response) {
