@@ -15,7 +15,7 @@ class AreaModel extends Model
     public function AllRegency($prov_id)
     {
         return $this->db->table('area_regency')
-            ->Where('city_id', $prov_id)
+            ->Where('prov_id', $prov_id)
             ->Get()->getResultArray();
     }
 

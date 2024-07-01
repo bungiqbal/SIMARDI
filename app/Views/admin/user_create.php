@@ -142,11 +142,11 @@
                                         <div class="form-floating form-floating-outline">
                                             <select id="country" name="country" class="select2 form-select">
                                                 <option value=""></option>
-                                                <option value="">Indonesia</option>
-                                                <option value="">Malaysia</option>
-                                                <option value="">Thailand</option>
-                                                <option value="">Singapore</option>
-                                                <option value="">Brunei Darussalam</option>
+                                                <option value="Indonesia">Indonesia</option>
+                                                <option value="Malaysia">Malaysia</option>
+                                                <option value="Thailand">Thailand</option>
+                                                <option value="Singapore">Singapore</option>
+                                                <option value="Brunei Darussalam">Brunei Darussalam</option>
                                             </select>
                                             <label for="country">Country</label>
                                         </div>
@@ -273,14 +273,14 @@
         // Select Area
         $(document).ready(function() {
             $('#province').change(function() {
-                var province = $('#province').val();
+                var prov_id = $('#province').val();
                 $.ajax({
                     type: "POST",
                     url: "<?= base_url('Users/regency') ?>",
                     data: {
-                        province: province
+                        prov_id: province
                     },
-
+                    dataType: "datatype",
                     success: function(response) {
                         $("#regency").html(response);
                     }

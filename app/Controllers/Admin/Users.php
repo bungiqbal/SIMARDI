@@ -364,9 +364,9 @@ class Users extends BaseController
     public function regency()
     {
         $model = new AreaModel;
-        $province = $this->request->getpost('province');
-        $regency = $model->AllRegency($province);
-        echo '<option value="">Select Regency</option>';
+        $prov_id = $this->request->getpost('prov_id');
+        $regency = $model->AllRegency($prov_id);
+        echo '<option>Select Regency</option>';
         foreach ($regency as $key => $value) {
             echo "<option value=" . $value['city_id'] . ">" . $value['city_name'] . "</option>";
         }
