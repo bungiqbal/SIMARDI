@@ -1,4 +1,4 @@
-perpus@document.biz.id
-perpus@document.biz.id
-mail.document.biz.id
-587
+username    : perpus@document.biz.id
+password    : perpus@document.biz.id
+server      : mail.document.biz.id
+port        : 587
