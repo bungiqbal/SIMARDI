@@ -280,7 +280,7 @@
                     data: {
                         prov_id: prov_id
                     },
-                    dataType: "datatype",
+                    datatype: "datatype",
                     success: function(response) {
                         $("#regency").html(response);
                     }
