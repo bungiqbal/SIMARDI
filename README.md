@@ -1,3 +1,6 @@
+# SIMARDI
+Sistem Informasi Arsip Dinamis
+
 # CodeIgniter 4 Application Starter
 
 ## What is CodeIgniter?
